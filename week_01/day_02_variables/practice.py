@@ -12,6 +12,17 @@
 #
 # Напиши код здесь:
 
+qa_name = "Sergey"
+qa_age = 25
+qa_experience = 3.0
+qa_is_active = True
+
+fo = print
+fo(f"Имя: {qa_name} ", type(qa_name))
+fo(f"Возраст: {qa_age} ", type(qa_age))
+fo(f"Опыт в годах: {qa_experience} ", type(qa_experience))
+fo(f"Работает сейчас: {qa_is_active} ", type(qa_is_active))
+
 
 # Задание 2
 # Посчитай и выведи результаты:
@@ -22,6 +33,11 @@
 #
 # Напиши код здесь:
 
+hour_in_course = 9*7*4
+minute_in_course = hour_in_course * 60 
+print(f"Сколько часов в 9 неделях? (9 недель * 7 дней * 4 часа) = {hour_in_course} часа")
+print(f"Сколько минут в 9 неделях? (9 недель * 7 дней * 4 часа * 60 минут) = {minute_in_course} минут")
+print(f"Остаток от деления 253 на 7 = {253%7}")
 
 # Задание 3
 # Дана строка: age_str = "28"
@@ -32,17 +48,23 @@
 # Напиши код здесь:
 
 age_str = "28"
-
+age_int = int(age_str)
+print(f"Сейчас: {age_int}. Через 5 лет: {age_int+5}")
 
 # Задание 4
 # Что выведет этот код? Ответь комментарием ПЕРЕД запуском,
 # потом проверь запустив файл.
 #
-print(type(True))
-print(type(None))
-print(10 // 3)
-print(10 % 3)
-print(bool(0))
-print(bool(100))
+print(type(True)) # class 'bool'
+print(type(None)) # NoneType
+print(10 // 3)    # 3
+print(10 % 3)     # 1
+print(bool(0))    # False
+print(bool(100))  # True
 # Мои ответы (напиши здесь до запуска):
-#
+# class 'bool'
+# NoneType
+# 3
+# 1
+# False
+# True
