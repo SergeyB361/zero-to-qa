@@ -34,7 +34,7 @@ deactivate
 
 После активации терминал выглядит так:
 ```
-(venv) PS C:\Users\serge\gh2>
+(venv) PS C:\Users\serge\zero-to-qa>
 ```
 
 ---
