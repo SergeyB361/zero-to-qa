@@ -12,6 +12,22 @@ status_codes = [200, 404, 200, 500, 301, 200, 503, 404]
 #
 # Напиши код здесь:
 
+summ_200 = summ_400 = summ_500 = 0
+
+for status in status_codes:
+    code = status // 100
+    #print (status, code)
+    if code == 2:
+        summ_200 += 1
+    elif code == 4:
+        summ_400 += 1
+    elif code == 5:
+        summ_500 += 1
+    
+print(f"Успешных={summ_200}, Клиентских ошибок={summ_400}, Серверных ошибок={summ_500}")
+
+
+
 
 # Задание 2
 # Выведи таблицу умножения для числа 7 от 1 до 10:
@@ -21,6 +37,11 @@ status_codes = [200, 404, 200, 500, 301, 200, 503, 404]
 #   7 x 10 = 70
 #
 # Напиши код здесь:
+
+input_data = 7
+for i in range (1, 11):
+    print(f"{input_data} x {i} = {input_data * i}")
+
 
 
 # Задание 3
@@ -33,6 +54,17 @@ log_line = "ERROR 404 GET /api/users - Not Found"
 # Выведи результат.
 #
 # Напиши код здесь:
+space_bar = 0
+num_bar = 0
+
+for i in log_line:
+    if i == " ":
+        space_bar += 1
+    elif i.isdigit():
+        num_bar += 1
+print(f"В строке {space_bar} пробелов и {num_bar} цифр")
+
+
 
 
 # Задание 4
@@ -42,6 +74,18 @@ log_line = "ERROR 404 GET /api/users - Not Found"
 # Выведи это число.
 #
 # Напиши код здесь:
+
+max_count = 100
+i = 1
+
+while i <= max_count:
+    #print(i)
+    if (i % 3) == 0 and (i % 7) == 0:
+        break
+    i +=1
+print(i)
+
+
 
 
 # Задание 5
@@ -60,3 +104,11 @@ for i in range(5):
     print(i, end=" ")
 # Мои ответы (напиши здесь до запуска):
 #
+# 0 0 " "
+# 1 0 " " 
+# 2 0 " "
+# 
+# 0 " "
+# 1 " "
+# 2 " "
+# 4 " "
