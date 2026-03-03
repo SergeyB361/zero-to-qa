@@ -23,7 +23,7 @@
 
 | # | Тема | Ключевые понятия |
 |---|------|-----------------|
-| 1 | Списки                 | list, индексы, срезы, append/remove/sort |
+| 1 | Списки                 | list, индексы, срезы, append/remove/sort, list comprehension |
 | 2 | Кортежи и множества    | tuple, set, операции над множествами |
 | 3 | Словари                | dict, get/keys/values/items, вложенные |
 | 4 | Строки                 | f-строки, split/join/replace/strip |
