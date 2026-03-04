@@ -56,9 +56,10 @@ print(average(10,20))
 
 def format_profile(**kwargs):
     person = (kwargs)
-    for key, value in person.items():
-    
-    return f"{key}={value}"
+    stroka = []
+    for key in sorted(person):
+        stroka.append(f"{key}={person[key]}")
+    return ", ".join(stroka)
 
 print(format_profile(name="Sergey", role="QA", level="junior"))
 
@@ -76,3 +77,6 @@ users = [
 # Отсортируй users по score по убыванию с помощью sorted(..., key=lambda ...)
 # и выведи результат.
 # Напиши код здесь:
+
+user_score = sorted(users, key=lambda u: u["score"], reverse=True)
+print(user_score)
