@@ -49,22 +49,22 @@ def main():
 
         elif menu_choice == "+":
             a = read_number("Введите первое число:")
-            b = read_number("Введите второе число")
+            b = read_number("Введите второе число:")
             print(f"Результат: {add(a, b)}")
 
         elif menu_choice == "-":
             a = read_number("Введите первое число:")
-            b = read_number("Введите второе число")
+            b = read_number("Введите второе число:")
             print(f"Результат: {sub(a, b)}")
 
         elif menu_choice == "*":
             a = read_number("Введите первое число:")
-            b = read_number("Введите второе число")
+            b = read_number("Введите второе число:")
             print(f"Результат: {mul(a, b)}")
 
         elif menu_choice == "/":
             a = read_number("Введите первое число:")
-            b = read_number("Введите второе число")
+            b = read_number("Введите второе число:")
             print(f"Результат: {div(a, b)}")    
         else: 
             print("Unknown operation")      
