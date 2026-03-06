@@ -1,6 +1,6 @@
 # Путь с нуля до QA 🐍
 
-**9-недельный курс:** Python + PyTest + Playwright → Junior QA Automation Engineer
+**10-недельный курс:** Python + PyTest + Playwright → Junior QA Automation Engineer
 
 ## Структура курса
 - `week_01/` — Python с нуля
@@ -12,6 +12,7 @@
 - `week_07/` — SQL + Инструменты
 - `week_08/` — UI-тестирование (Playwright)
 - `week_09/` — Портфолио + Резюме
+- `week_10/` — Множества (Set) и операции над ними
 
 ## Каждый день
 ```
