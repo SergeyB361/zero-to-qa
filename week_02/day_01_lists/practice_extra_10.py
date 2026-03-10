@@ -93,7 +93,8 @@ print(word_lengths)
 # сохранив порядок первого появления элементов.
 # (Решить без set — только списки и условия.)
 nums = [3, 1, 3, 2, 1, 4, 2]
-unique_nums = [nums.index(num) for num in nums]
+
+unique_nums = [num for i, num in enumerate(nums) if nums.index(num) == i]
 print(unique_nums)
 
 
@@ -105,3 +106,14 @@ print(unique_nums)
 # 3) Итоговый баланс (sum всех)
 # 4) Количество операций каждого типа
 # Выведи результаты в читаемом виде.
+
+transactions = [120, -50, 340, -20, -10, 500]
+
+income = [trans for trans in transactions if trans >= 0]
+expence = [trans for trans in transactions if trans < 0]
+summ_trans = sum(transactions)
+
+print(f"Список доходов: {income}, Список расходов: {expence}, Итоговый баланс: {summ_trans}")
+print(f"Количество операций доходов: {len(income)}")
+print(f"Количество операций расходов: {len(expence)}")
+
