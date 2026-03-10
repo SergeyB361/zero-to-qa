@@ -9,6 +9,12 @@
 # 3) Сколько раз встречается 20
 # Напиши код здесь:
 
+numbers = (10, 20, 30, 20, 40)
+print(numbers[0])
+print(numbers[-1])
+print(len(numbers))
+print(numbers.count(20))
+
 
 # Задание 2
 # Дан кортеж user = ("ann", 25, "tester")
@@ -16,6 +22,9 @@
 # Распакуй кортеж в переменные name, age, role и выведи их.
 # Напиши код здесь:
 
+user = ("ann", 25, "tester")
+name, age, role = user
+print(f"Имя: {name}, Возраст: {age}, Роль: {role}")
 
 # Задание 3
 # Дан кортеж config = ("localhost", 8080, True)
@@ -26,6 +35,10 @@
 # Выведи результаты проверки.
 # Напиши код здесь:
 
+config = ("localhost", 8080, True)
+print(("В кортеже нет значения 8080", "В кортеже есть значение 8080") [8080 in config])
+print(("В кортеже нет значения False", "В кортеже есть значение False") [False in config])
+
 
 # Задание 4
 # Дан кортеж values = (1, 2, 3)
@@ -34,3 +47,9 @@
 # Затем создай новый кортеж new_values, где первый элемент равен 100,
 # а остальные взяты из старого кортежа.
 # Напиши код здесь:
+
+values = (1, 2, 3)
+#values[1] = 100 # TypeError
+
+new_values = (100,) + (values[1:3])
+print(new_values)
