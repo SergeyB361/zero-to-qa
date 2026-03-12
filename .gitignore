@@ -10,9 +10,4 @@ allure-report/
 .claude/
 .vscode/
 
-# Lesson artifacts (week 2 day 5)
-/day5_note.txt
-/week_02/day_05_files_json/day5_note.txt
-/week_02/day_05_files_json/logs.txt
-/week_02/day_05_files_json/products.json
-/week_02/day_05_files_json/user_data.json
+

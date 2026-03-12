@@ -1,0 +1,4 @@
+INFO: start
+ERROR: timeout
+INFO: retry
+ERROR: bad gateway
