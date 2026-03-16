@@ -28,7 +28,7 @@
 | 3 | Словари                | dict, get/keys/values/items, вложенные |
 | 4 | Строки                 | f-строки, split/join/replace/strip |
 | 5 | Файлы + JSON           | open/read/write, with, json.loads/dumps |
-| 6 | pathlib                | Path, exists, name/stem/suffix, parent |
+| 6 | Множества              | set, уникальность, add/remove, union/intersection |
 | 7 | **Мини-проект**        | Парсер JSON-файла со статистикой |
 
 ---
@@ -40,7 +40,7 @@
 | 1 | Исключения             | try/except/else/finally, raise, типы ошибок |
 | 2 | Декораторы — база      | decorator, wrapper, @syntax, *args/**kwargs |
 | 3 | Type hints             | type hints, Optional, list[str], dict[str, int] |
-| 4 | Dataclasses            | @dataclass, default_factory, repr |
+| 4 | collections            | Counter, defaultdict, удобная работа с данными |
 | 5 | Logging                | logging, уровни логов, формат сообщений |
 | 6 | pathlib и утилиты      | Path, exists, glob, удобная работа с файлами |
 | 7 | **Мини-проект**        | CLI-утилита анализа тестовых артефактов |
@@ -226,14 +226,14 @@
 - [x] День 3 — Словари
 - [x] День 4 — Строки
 - [x] День 5 — Файлы + JSON
-- [ ] День 6 — pathlib
+- [ ] День 6 — Множества
 - [x] День 7 — Мини-проект: Парсер JSON
 
 ### Неделя 3 — Продвинутый Python для QA
 - [ ] День 1 — Исключения
 - [ ] День 2 — Декораторы: база
 - [ ] День 3 — Type hints
-- [ ] День 4 — Dataclasses
+- [ ] День 4 — collections
 - [ ] День 5 — Logging
 - [ ] День 6 — pathlib и утилиты
 - [ ] День 7 — Мини-проект: CLI-анализатор артефактов
@@ -322,3 +322,7 @@
 ---
 
 *Старт → Неделя 1, День 1: Настройка окружения*
+
+
+
+
