@@ -1,4 +1,4 @@
-# Неделя 2, День 6 — Примеры
+# Неделя 3, День 1 — Примеры
 
 from pathlib import Path
 
@@ -48,3 +48,4 @@ if __name__ == "__main__":
         validate_age(-1)
     except ValueError as err:
         print("Ошибка валидации:", err)
+

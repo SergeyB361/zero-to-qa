@@ -1,3 +1,0 @@
-1) "Python"
-2) "QA"
-3) "Automation"

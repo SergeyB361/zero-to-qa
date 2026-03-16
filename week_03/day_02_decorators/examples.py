@@ -1,4 +1,4 @@
-# Неделя 2, День 6 — Примеры
+# Неделя 3, День 2 — Примеры
 
 
 def simple_decorator(func):
@@ -30,3 +30,4 @@ def add(a, b):
 if __name__ == "__main__":
     greet()
     print(add(2, 3))
+

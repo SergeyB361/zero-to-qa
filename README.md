@@ -1,6 +1,6 @@
 # Путь с нуля до QA 🐍
 
-**12-недельный курс:** Python + PyTest + Playwright → Junior QA Automation Engineer
+**12-недельный курс:** Python + PyTest + Playwright -> Junior QA Automation Engineer
 
 ## Структура курса
 - `week_01/` — Python с нуля
@@ -16,14 +16,31 @@
 - `week_11/` — Множества (Set) и операции над ними
 - `week_12/` — Финализация портфолио и карьерный блок
 
-## Каждый день
+Важно:
+- `ROADMAP.md` описывает полный план курса на 12 недель.
+- Папки следующих недель могут появляться постепенно по мере прохождения.
+
+## Формат дня
+Обычный учебный день обычно содержит:
 ```
 week_XX/
-  day_XX_тема/
-    notes.md      ← теория и конспект
-    examples.py   ← разобранные примеры
-    practice.py   ← практические задания
+  day_XX_topic/
+    notes.md
+    examples.py
+    practice.py
 ```
+
+Мини-проектный день может иметь другую структуру:
+```
+week_XX/
+  day_XX_miniproject_name/
+    notes.md
+    spec.md
+    main_file.py
+    data.json
+```
+
+Некоторые уроки также могут содержать дополнительные файлы данных (`.txt`, `.json`) как часть практики.
 
 ## Стек
 Python 3.14 · PyTest · Requests · Playwright · SQLite · Allure · GitHub Actions
