@@ -32,6 +32,21 @@ hello()
 # Используй его для функции bye(), которая печатает "bye".
 # Напиши код здесь:
 
+def show_start_end(func):
+    def wrapper():
+        print("start")
+        func()
+        print("end")
+    return wrapper
+
+
+@show_start_end
+def bye():
+    print("bye")
+
+bye()
+
+
 
 # Задание 3
 # Напиши декоратор log_call, который работает с функцией с аргументами.
@@ -40,10 +55,43 @@ hello()
 # Затем выведи результат multiply(3, 4).
 # Напиши код здесь:
 
+def log_call(func):
+    def wrapper(*args):
+        print("calling function")
+        result = func(*args)
+        return result
+    return wrapper
+
+@log_call
+def  multiply(a, b):
+    return a * b
+
+
+print(multiply(3, 4))
+
 
 # Задание 4
-# Напиши декоратор double_result, который удваивает результат функции.
+# Напиши декоратор double_result, который:
+# - вызывает исходную функцию
+# - получает её результат
+# - возвращает результат, умноженный на 2
+
 # Используй его для функции get_number(), которая возвращает 5.
-# Выведи результат.
+# Затем выведи результат вызова get_number().
+# Ожидаемый результат: 10
 # Напиши код здесь:
 
+
+def double_result(func):
+    def wrapper():
+        result = func() * 2
+        return result
+    return wrapper
+
+
+@double_result
+def get_number():
+    return 5
+
+
+print(get_number())
