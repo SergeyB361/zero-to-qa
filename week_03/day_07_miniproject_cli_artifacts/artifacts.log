@@ -1,0 +1,7 @@
+INFO TestCase id=101 started
+TEST PASSED id=101
+WARNING Retry for id=102
+TEST FAILED id=102
+ERROR Timeout while processing id=102
+INFO TestCase id=103 started
+TEST PASSED id=103
