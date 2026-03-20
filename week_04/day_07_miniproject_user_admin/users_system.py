@@ -3,49 +3,57 @@
 
 class User:
     def __init__(self, username: str, email: str) -> None:
-        self.username = username
-        self.email = email
-        self._active = True
+        # TODO: сохрани username и email в атрибутах объекта
+        # TODO: создай приватный атрибут _active со значением True
+        pass
 
     @property
     def is_active(self) -> bool:
-        return self._active
+        # TODO: верни текущий статус активности пользователя
+        raise NotImplementedError
 
     def deactivate(self) -> None:
-        self._active = False
+        # TODO: переведи пользователя в неактивное состояние
+        raise NotImplementedError
 
     def describe(self) -> str:
-        return f"User(username={self.username}, active={self.is_active})"
+        # TODO: верни строку формата:
+        # User(username=<username>, active=<True/False>)
+        raise NotImplementedError
 
 
 class Admin(User):
     def __init__(self, username: str, email: str, permissions: list[str]) -> None:
+        # TODO: вызови super().__init__(...)
+        # TODO: сохрани permissions
         super().__init__(username, email)
-        self.permissions = permissions
+        raise NotImplementedError
 
     def has_permission(self, permission: str) -> bool:
-        return permission in self.permissions
+        # TODO: проверь, есть ли permission в списке permissions
+        raise NotImplementedError
 
     def describe(self) -> str:
-        count = len(self.permissions)
-        return f"Admin(username={self.username}, permissions={count}, active={self.is_active})"
+        # TODO: верни строку формата:
+        # Admin(username=<username>, permissions=<count>, active=<True/False>)
+        raise NotImplementedError
 
 
 def print_access_report(user: User) -> None:
-    print(user.describe())
-    if isinstance(user, Admin):
-        print(f"Can delete: {user.has_permission('delete')}")
+    # TODO: напечатай результат user.describe()
+    # TODO: если это Admin, дополнительно напечатай:
+    # Can delete: <True/False>
+    raise NotImplementedError
 
 
 def main() -> None:
-    user = User("anna", "anna@example.com")
-    admin = Admin("root", "root@example.com", ["read", "write", "delete"])
-
-    print_access_report(user)
-    print_access_report(admin)
-
-    user.deactivate()
-    print_access_report(user)
+    # TODO:
+    # 1. создай обычного пользователя
+    # 2. создай администратора
+    # 3. выведи отчёт для обоих
+    # 4. деактивируй обычного пользователя
+    # 5. снова выведи отчёт
+    raise NotImplementedError
 
 
 if __name__ == "__main__":
