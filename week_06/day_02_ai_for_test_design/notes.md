@@ -38,5 +38,11 @@ AI хорошо помогает на раннем этапе:
 - указывает рисковые зоны
 - не подменяет тест-дизайн водой
 
+## Официальные материалы
+- [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
+- [Anthropic Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
+- [GitHub Copilot prompt engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_06/references.md)
+
 ## Практика дня
 Открой `practice.py` и потренируй формулировки промптов на реальных функциях курса.

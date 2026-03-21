@@ -29,5 +29,12 @@ AI ускоряет работу, но повышает риск тихих ош
 4. прочитать diff вручную
 5. убедиться, что секреты и приватные данные не ушли в промпт
 
+## Официальные материалы
+- [OpenAI Working with evals](https://developers.openai.com/api/docs/guides/evals)
+- [OpenAI Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
+- [Anthropic Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
+- [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_06/references.md)
+
 ## Практика дня
 Открой `practice.py` и сформулируй свой набор безопасных правил работы с AI.

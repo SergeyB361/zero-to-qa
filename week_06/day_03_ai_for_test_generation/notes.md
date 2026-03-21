@@ -38,5 +38,12 @@ AI пишет тесты правдоподобно, но нередко:
 - функции из JSON parser мини-проекта
 - простые методы `User` и `Admin`
 
+## Официальные материалы
+- [pytest documentation](https://docs.pytest.org/en/stable/)
+- [pytest fixtures guide](https://docs.pytest.org/en/stable/how-to/fixtures.html)
+- [Playwright: Writing tests](https://playwright.dev/docs/writing-tests)
+- [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_06/references.md)
+
 ## Практика дня
 Открой `practice.py` и потренируй генерацию тестов с обязательной ручной верификацией.

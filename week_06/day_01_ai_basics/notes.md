@@ -35,5 +35,11 @@ AI не заменяет инженера. Он ускоряет:
 - `week_04/day_07_miniproject_user_admin/users_system.py`
 - функции и практики из `week_01` и `week_02`
 
+## Официальные материалы
+- [OpenAI Codex](https://openai.com/codex/)
+- [Claude Code overview](https://code.claude.com/docs/en/overview)
+- [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_06/references.md)
+
 ## Практика дня
 Открой `practice.py` и разложи реальные задачи репозитория по ролям AI-инструментов.

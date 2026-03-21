@@ -32,5 +32,11 @@
 - советы в духе "улучшить читаемость"
 - выдуманные проблемы, которых нет в проекте
 
+## Официальные материалы
+- [OpenAI Working with evals](https://developers.openai.com/api/docs/guides/evals)
+- [OpenAI Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
+- [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_06/references.md)
+
 ## Практика дня
 Открой `practice.py` и потренируй AI-oriented review и debug на реальных учебных файлах курса.
