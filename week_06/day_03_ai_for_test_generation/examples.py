@@ -1,7 +1,7 @@
 TEST_GENERATION_TASKS = [
-    "Сгенерируй pytest-тесты для функции normalize_email(email).",
-    "Подготовь черновик API-теста на POST /users с проверкой status code и body.",
-    "Напиши UI-тест логина с Page Object Model и explain assumptions.",
+    "Сгенерируй pytest-тесты для функции из week_01/day_07_miniproject_calculator/calculator.py и отдельно перечисли assumptions.",
+    "Подготовь черновик тестов для метода has_permission() из solution_users_system.py.",
+    "Сгенерируй тесты и отдельно скажи, что обязательно проверить вручную перед коммитом.",
 ]
 
 
