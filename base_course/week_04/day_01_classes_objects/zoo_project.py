@@ -95,7 +95,7 @@ class Parrot(Animal):
         super().__init__(name, species, energy)
 
     def talk(phrase):
-        return print("Кеша говорит: привет!")
+        return print(f"{Parrot.name} говорит {phrase}")
 
 class Turtle(Animal):
     def __init__(self, name, species, energy):
