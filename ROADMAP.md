@@ -289,6 +289,34 @@
 | 7 | **Capstone**           | Advanced QA project |
 
 ---
+
+### НЕДЕЛЯ 9 — Test Design и Requirements Engineering
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | EARS                  | Easy Approach to Requirements Syntax, шаблоны требований |
+| 2 | Decision tables       | условия, действия, покрытие комбинаций |
+| 3 | State machines        | state transition testing, переходы и события |
+| 4 | BVA и Equivalence Partitioning | границы, классы эквивалентности |
+| 5 | Pairwise testing      | комбинаторное покрытие, сокращение комбинаций |
+| 6 | Use cases и user flows | сценарии пользователя, основной и альтернативные потоки |
+| 7 | **Мини-проект**       | Пакет тест-дизайна по набору требований |
+
+---
+
+### НЕДЕЛЯ 10 — Quality Engineering и системное мышление
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Traceability matrix   | связь требований, тестов и дефектов |
+| 2 | Test oracles          | источники ожидаемого результата |
+| 3 | Test heuristics       | HICCUPPS, CRUD, RCRCRC, эвристики поиска идей |
+| 4 | Failure modeling      | failure modes, точки отказа, деградация |
+| 5 | Non-functional test design | надежность, usability, resilience |
+| 6 | Requirements-to-tests workshop | преобразование требований в набор тестов |
+| 7 | **Capstone**          | Quality engineering review pack |
+
+---
 ## 🎯 Итоговый портфолио-проект
 
 **Репозиторий:** `qa-automation-portfolio`
@@ -452,6 +480,8 @@
 Неделя 6    UI       ░░░░░░░░░░░░░░░░  0%
 Неделя 7    Infra    ░░░░░░░░░░░░░░░░  0%
 Неделя 8    Senior   ░░░░░░░░░░░░░░░░  0%
+Неделя 9    Design   ░░░░░░░░░░░░░░░░  0%
+Неделя 10   QE       ░░░░░░░░░░░░░░░░  0%
 ```
 
 ---
@@ -530,3 +560,20 @@
 - [ ] День 6 — Capstone preparation
 - [ ] День 7 — Capstone project
 
+### Неделя 9 — Test Design и Requirements Engineering
+- [ ] День 1 — EARS
+- [ ] День 2 — Decision tables
+- [ ] День 3 — State machines
+- [ ] День 4 — BVA и Equivalence Partitioning
+- [ ] День 5 — Pairwise testing
+- [ ] День 6 — Use cases и user flows
+- [ ] День 7 — Мини-проект: пакет тест-дизайна по требованиям
+
+### Неделя 10 — Quality Engineering и системное мышление
+- [ ] День 1 — Traceability matrix
+- [ ] День 2 — Test oracles
+- [ ] День 3 — Test heuristics
+- [ ] День 4 — Failure modeling
+- [ ] День 5 — Non-functional test design
+- [ ] День 6 — Requirements-to-tests workshop
+- [ ] День 7 — Capstone: quality engineering review pack

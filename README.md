@@ -25,6 +25,8 @@
 - `advanced_week_06/` — UI: качество и масштабирование
 - `advanced_week_07/` — Infrastructure for QA
 - `advanced_week_08/` — Senior QA Engineering
+- `advanced_week_09/` — Test Design и Requirements Engineering
+- `advanced_week_10/` — Quality Engineering и системное мышление
 
 Важно:
 - `ROADMAP.md` описывает полный план базового курса и расширенного трека.
