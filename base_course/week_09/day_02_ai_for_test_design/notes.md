@@ -27,9 +27,9 @@ AI хорошо помогает на раннем этапе:
 Лучше брать не абстрактную функцию, а реальный код из курса.
 
 Подходящие цели:
-- функции из `week_01/day_07_miniproject_calculator`
-- парсер из `week_02/day_07_miniproject_json_parser`
-- методы из `week_04/day_07_miniproject_user_admin/solution_users_system.py`
+- функции из `base_course/week_01/day_07_miniproject_calculator`
+- парсер из `base_course/week_02/day_07_miniproject_json_parser`
+- методы из `base_course/week_04/day_07_miniproject_user_admin/solution_users_system.py`
 
 ## Хороший результат от AI
 Полезный ответ на test design задачу обычно:
@@ -42,7 +42,7 @@ AI хорошо помогает на раннем этапе:
 - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
 - [Anthropic Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
 - [GitHub Copilot prompt engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
-- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_09/references.md)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 
 ## Практика дня
 Открой `practice.py` и потренируй формулировки промптов на реальных функциях курса.

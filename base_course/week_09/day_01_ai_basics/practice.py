@@ -12,7 +12,7 @@
 
 # Задание 2
 # Разложи реальные задачи этого репозитория по типу инструмента:
-# - разобрать, почему week_03/day_07_miniproject_cli_artifacts/artifact_cli.py не завершен
+# - разобрать, почему base_course/week_03/day_07_miniproject_cli_artifacts/artifact_cli.py не завершен
 # - быстро дописать boilerplate теста
 # - подготовить план изменений в README и ROADMAP
 # - придумать тест-кейсы для users_system.py

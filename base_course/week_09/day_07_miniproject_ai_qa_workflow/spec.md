@@ -20,9 +20,9 @@
 - ограничения и риски
 
 ## Рекомендуемые реальные цели
-- `week_03/day_07_miniproject_cli_artifacts/artifact_cli.py`
-- `week_04/day_07_miniproject_user_admin/users_system.py`
-- одна простая функция из `week_01` или `week_02`
+- `base_course/week_03/day_07_miniproject_cli_artifacts/artifact_cli.py`
+- `base_course/week_04/day_07_miniproject_user_admin/users_system.py`
+- одна простая функция из `base_course/week_01` или `base_course/week_02`
 
 ## Обязательное требование
 Нужно не только попросить AI о помощи, но и отдельно зафиксировать:
@@ -31,7 +31,7 @@
 - что пришлось исправить вручную
 
 ## Что использовать как источники при проверке
-- материалы из [references.md](C:/Users/serge/zero-to-qa/week_09/references.md)
+- материалы из [references.md](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 - `pytest` docs для unit-тестов
 - `Playwright` docs для UI-тестов
 - официальные материалы по prompt engineering и evals для оценки качества AI-ответа

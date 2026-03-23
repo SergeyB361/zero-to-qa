@@ -43,17 +43,19 @@ deactivate
 
 ```
 zero-to-qa/
-├── README.md           ← описание проекта
-├── ROADMAP.md          ← план курса и прогресс
-├── .gitignore          ← что не добавлять в git
-├── venv/               ← виртуальное окружение (не в git!)
-├── week_01/
-│   ├── day_01_setup/
-│   │   ├── notes.md    ← теория (этот файл)
-│   │   ├── examples.py ← разобранные примеры
-│   │   └── practice.py ← твои задания
-│   └── ...
-└── week_02/
+├── README.md              ← описание проекта
+├── ROADMAP.md             ← план курса и прогресс
+├── .gitignore             ← что не добавлять в git
+├── venv/                  ← виртуальное окружение (не в git!)
+├── base_course/
+│   ├── week_01/
+│   │   ├── day_01_setup/
+│   │   │   ├── notes.md   ← теория (этот файл)
+│   │   │   ├── examples.py
+│   │   │   └── practice.py
+│   │   └── ...
+│   └── week_02/
+└── advanced_course/
 ```
 
 ---

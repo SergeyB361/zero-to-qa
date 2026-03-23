@@ -34,7 +34,7 @@ AI ускоряет работу, но повышает риск тихих ош
 - [OpenAI Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
 - [Anthropic Prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
 - [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
-- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_09/references.md)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 
 ## Практика дня
 Открой `practice.py` и сформулируй свой набор безопасных правил работы с AI.

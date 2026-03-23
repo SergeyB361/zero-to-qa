@@ -1,5 +1,5 @@
 TEST_GENERATION_TASKS = [
-    "Сгенерируй pytest-тесты для функции из week_01/day_07_miniproject_calculator/calculator.py и отдельно перечисли assumptions.",
+    "Сгенерируй pytest-тесты для функции из base_course/week_01/day_07_miniproject_calculator/calculator.py и отдельно перечисли assumptions.",
     "Подготовь черновик тестов для метода has_permission() из solution_users_system.py.",
     "Сгенерируй тесты и отдельно скажи, что обязательно проверить вручную перед коммитом.",
 ]

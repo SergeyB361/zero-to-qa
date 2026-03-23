@@ -31,15 +31,15 @@ AI не заменяет инженера. Он ускоряет:
 
 ## Репозиторий как поле практики
 На этой неделе полезно работать не на абстрактных примерах, а на реальных файлах курса:
-- `week_03/day_07_miniproject_cli_artifacts/artifact_cli.py`
-- `week_04/day_07_miniproject_user_admin/users_system.py`
-- функции и практики из `week_01` и `week_02`
+- `base_course/week_03/day_07_miniproject_cli_artifacts/artifact_cli.py`
+- `base_course/week_04/day_07_miniproject_user_admin/users_system.py`
+- функции и практики из `base_course/week_01` и `base_course/week_02`
 
 ## Официальные материалы
 - [OpenAI Codex](https://openai.com/codex/)
 - [Claude Code overview](https://code.claude.com/docs/en/overview)
 - [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
-- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_09/references.md)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 
 ## Практика дня
 Открой `practice.py` и разложи реальные задачи репозитория по ролям AI-инструментов.

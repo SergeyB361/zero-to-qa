@@ -43,7 +43,7 @@ AI пишет тесты правдоподобно, но нередко:
 - [pytest fixtures guide](https://docs.pytest.org/en/stable/how-to/fixtures.html)
 - [Playwright: Writing tests](https://playwright.dev/docs/writing-tests)
 - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
-- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_09/references.md)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 
 ## Практика дня
 Открой `practice.py` и потренируй генерацию тестов с обязательной ручной верификацией.

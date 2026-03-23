@@ -38,7 +38,7 @@
 - [OpenAI Codex](https://openai.com/codex/)
 - [Claude Code overview](https://code.claude.com/docs/en/overview)
 - [GitHub Copilot best practices](https://docs.github.com/en/copilot/get-started/best-practices)
-- [Общий список материалов недели](C:/Users/serge/zero-to-qa/week_09/references.md)
+- [Общий список материалов недели](C:/Users/serge/zero-to-qa/base_course/week_09/references.md)
 
 ## Практическое правило
 Чем точнее формулировка задачи для агента, тем меньше лишнего кода и неверных изменений.
