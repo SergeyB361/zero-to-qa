@@ -1,4 +1,4 @@
-# 🐍 Junior QA Automation Engineer — 12-недельный план
+# 🐍 Junior QA Automation Engineer — базовый курс + расширенный трек
 
 **Цель:** Python + PyTest + портфолио → Junior QA Automation Engineer
 **Темп:** 4 часа в день | **Язык:** Русский
@@ -75,31 +75,31 @@
 
 ---
 
-## НЕДЕЛЯ 6 — AI в тестировании и разработке ПО
+## НЕДЕЛЯ 6 — Тестирование API
 
-| # | Тема | Ключевые понятия |
-|---|------|-----------------|
-| 1 | AI-инструменты и роли  | Codex, Claude Code, Copilot, ChatGPT, coding agents |
-| 2 | AI для тест-дизайна    | test cases, edge cases, risk-based thinking, prompts |
-| 3 | AI для генерации тестов| unit/API/UI тесты, pytest, review generated code |
-| 4 | AI-агенты и workflows  | delegation, parallel work, codebase analysis, guardrails |
-| 5 | AI для review и debug  | code review, stack traces, logs, root cause analysis |
-| 6 | Безопасное использование AI | verification, hallucinations, privacy, validation |
-| 7 | **Мини-проект**        | AI-assisted QA workflow: playbook, prompts, review rules |
+| # | Тема | Что изучаем |
+|---|------|-------------|
+| 1 | HTTP и REST          | методы, коды ответов, JSON, headers |
+| 2 | requests             | GET, POST, params, json, headers |
+| 3 | Первые API-тесты     | PyTest + requests, проверки статуса и тела |
+| 4 | Валидация данных     | JSON schema, ключи, типы, вложенные объекты |
+| 5 | API тест-фреймворк   | clients, endpoints, utils, config |
+| 6 | Авторизация в API    | token, headers, auth flow |
+| 7 | **Мини-проект**      | CRUD API tests для reqres.in |
 
 ---
 
-## НЕДЕЛЯ 7 — Тестирование API
+## НЕДЕЛЯ 7 — UI-тестирование (Playwright)
 
 | # | Тема | Ключевые понятия |
 |---|------|-----------------|
-| 1 | HTTP и REST            | GET/POST/PUT/DELETE, статус-коды, заголовки |
-| 2 | requests               | requests.get/post, params, headers, json() |
-| 3 | Первые API-тесты       | reqres.in, проверка статус-кодов и тела |
-| 4 | Валидация данных       | JSON-схемы, jsonschema, проверка полей |
-| 5 | API тест-фреймворк     | Базовый клиент, хелперы, conftest.py |
-| 6 | Авторизация в API      | Bearer-токен, Basic Auth, сессии |
-| 7 | **Мини-проект**        | Полный CRUD API-тест reqres.in |
+| 1 | Основы Playwright      | Установка, первый тест, headless-режим |
+| 2 | Локаторы               | CSS, XPath, text, role селекторы |
+| 3 | Действия               | click, fill, navigate, hover, screenshot |
+| 4 | Assertions             | expect(), видимость / текст / URL |
+| 5 | Page Object Model      | Паттерн POM, BasePage, дочерние страницы |
+| 6 | Playwright + PyTest    | pytest-playwright, фикстуры browser/page |
+| 7 | **Мини-проект**        | UI-тесты публичного сайта с POM |
 
 ---
 
@@ -117,17 +117,17 @@
 
 ---
 
-## НЕДЕЛЯ 9 — UI-тестирование (Playwright)
+## НЕДЕЛЯ 9 — AI в тестировании и разработке ПО
 
 | # | Тема | Ключевые понятия |
 |---|------|-----------------|
-| 1 | Основы Playwright      | Установка, первый тест, headless-режим |
-| 2 | Локаторы               | CSS, XPath, text, role селекторы |
-| 3 | Действия               | click, fill, navigate, hover, screenshot |
-| 4 | Assertions             | expect(), видимость / текст / URL |
-| 5 | Page Object Model      | Паттерн POM, BasePage, дочерние страницы |
-| 6 | Playwright + PyTest    | pytest-playwright, фикстуры browser/page |
-| 7 | **Мини-проект**        | UI-тесты публичного сайта с POM |
+| 1 | AI-инструменты и роли  | ChatGPT, Codex, Cursor, Copilot, где что применять |
+| 2 | AI для тест-дизайна    | генерация тест-кейсов, граничные значения, чек-листы |
+| 3 | AI для генерации тестов | unit/API/UI тесты с последующей верификацией |
+| 4 | AI-агенты и workflows  | multi-step задачи, оркестрация, review loop |
+| 5 | AI для review и debug  | анализ логов, ошибок, flaky-тестов |
+| 6 | Безопасное использование AI | privacy, secrets, валидация ответов, hallucinations |
+| 7 | **Мини-проект**        | AI-assisted QA workflow |
 
 ---
 
@@ -173,6 +173,122 @@
 
 ---
 
+
+---
+
+## РАСШИРЕННЫЙ КУРС
+
+### НЕДЕЛЯ 1 — PyTest: продвинутый уровень
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Advanced fixtures      | fixture composition, scope, yield, teardown |
+| 2 | Parametrization patterns | data-driven tests, ids, indirect parametrization |
+| 3 | Markers и test selection | custom markers, selective runs, grouping |
+| 4 | Mocking deeper         | patch, side_effect, spy pattern, isolation |
+| 5 | Flaky tests            | причины нестабильности, диагностика, стабилизация |
+| 6 | pytest-xdist           | параллельный запуск, shared state, порядок выполнения |
+| 7 | **Мини-проект**        | Устойчивый PyTest suite |
+
+---
+
+### НЕДЕЛЯ 2 — Test Data Engineering
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Factories              | фабрики объектов, переиспользуемые данные |
+| 2 | Builder pattern        | пошаговая сборка тестовых сущностей |
+| 3 | Test data management   | хранение, версии, наборы данных, test fixtures |
+| 4 | Property-based testing | hypothesis, strategies, генерация по свойствам |
+| 5 | Edge cases             | граничные значения, equivalence classes |
+| 6 | Reusable datasets      | повторное использование данных между слоями тестов |
+| 7 | **Мини-проект**        | Генерация и проверка тестовых данных |
+
+---
+
+### НЕДЕЛЯ 3 — API: продвинутый уровень
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Auth flows             | token, OAuth, JWT, refresh, expiry |
+| 2 | Retries и idempotency  | retry logic, safe methods, backoff |
+| 3 | Negative scenarios     | bad payloads, auth failures, boundary cases |
+| 4 | Schema validation      | JSON schema, OpenAPI checks |
+| 5 | Contract testing       | consumer/provider contracts, schema drift |
+| 6 | Mock servers           | stub server, fake responses, isolation |
+| 7 | **Мини-проект**        | Advanced API suite |
+
+---
+
+### НЕДЕЛЯ 4 — API: reliability и integration
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Async API и polling    | eventual consistency, wait loops, timeouts |
+| 2 | Pagination и filtering | list endpoints, limits, ordering |
+| 3 | Stateful scenarios     | цепочки запросов, зависимые состояния |
+| 4 | Config и secrets       | env vars, secret handling, config layers |
+| 5 | API test architecture  | clients, services, utils, config |
+| 6 | Reporting и diagnostics | логи, артефакты, трассировка проблем |
+| 7 | **Мини-проект**        | API framework with config layers |
+
+---
+
+### НЕДЕЛЯ 5 — UI: продвинутый уровень
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Auth state             | storage state, cookies, session reuse |
+| 2 | Network interception   | route, mock, HAR, deterministic UI tests |
+| 3 | Advanced waits         | race conditions, sync points, stability |
+| 4 | Locator strategy       | устойчивые локаторы, anti-patterns |
+| 5 | Page Object architecture | page components, reusable flows |
+| 6 | Debugging UI failures  | traces, screenshots, video, logs |
+| 7 | **Мини-проект**        | Stable UI suite |
+
+---
+
+### НЕДЕЛЯ 6 — UI: качество и масштабирование
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Visual regression      | snapshots, baseline, acceptable diffs |
+| 2 | Accessibility basics   | a11y checks, roles, labels, keyboard paths |
+| 3 | Cross-browser strategy | browser matrix, risk-based coverage |
+| 4 | Test data in UI tests  | изоляция данных, состояние окружения |
+| 5 | Parallel UI execution  | concurrency risks, test isolation |
+| 6 | CI for UI tests        | selective runs, retries, artifacts |
+| 7 | **Мини-проект**        | UI suite in CI |
+
+---
+
+### НЕДЕЛЯ 7 — Infrastructure for QA
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Docker for QA          | контейнеры, reproducible env, compose basics |
+| 2 | docker-compose basics  | multi-service env, dependencies |
+| 3 | CI pipelines           | matrix builds, caching, selective runs |
+| 4 | Quality gates          | coverage thresholds, fail-fast rules |
+| 5 | Observability          | logs, metrics, traces |
+| 6 | Artifacts и reports    | screenshots, videos, logs, allure artifacts |
+| 7 | **Мини-проект**        | CI-ready test environment |
+
+---
+
+### НЕДЕЛЯ 8 — Senior QA Engineering
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Security testing basics | OWASP mindset, auth risks, secrets |
+| 2 | Performance testing basics | latency, throughput, smoke perf checks |
+| 3 | Test strategy          | risk-based planning, scope, trade-offs |
+| 4 | Risk-based testing     | приоритизация и глубина покрытия |
+| 5 | Architecture review    | анализ тестовой архитектуры и техдолга |
+| 6 | Capstone preparation   | планирование, scope, quality bar |
+| 7 | **Capstone**           | Advanced QA project |
+
+---
 ## 🎯 Итоговый портфолио-проект
 
 **Репозиторий:** `qa-automation-portfolio`
@@ -198,10 +314,10 @@
 Неделя 3    Python   ███████████░░░░░  71%
 Неделя 4    ООП      ░░░░░░░░░░░░░░░░  0%
 Неделя 5    PyTest   ░░░░░░░░░░░░░░░░  0%
-Неделя 6    AI       ░░░░░░░░░░░░░░░░  0%
-Неделя 7    API      ░░░░░░░░░░░░░░░░  0%
+Неделя 6    API      ░░░░░░░░░░░░░░░░  0%
+Неделя 7    UI       ░░░░░░░░░░░░░░░░  0%
 Неделя 8    SQL+Tools░░░░░░░░░░░░░░░░  0%
-Неделя 9    UI       ░░░░░░░░░░░░░░░░  0%
+Неделя 9    AI       ░░░░░░░░░░░░░░░░  0%
 Неделя 10   Project  ░░░░░░░░░░░░░░░░  0%
 Неделя 11   PyTest   ░░░░░░░░░░░░░░░░  0%
 Неделя 12   Career   ░░░░░░░░░░░░░░░░  0%
@@ -256,16 +372,7 @@
 - [ ] День 6 — Запуск и отчёты Allure
 - [ ] День 7 — Мини-проект: тесты функций
 
-### Неделя 6 — AI в тестировании и разработке ПО
-- [ ] День 1 — AI-инструменты и роли
-- [ ] День 2 — AI для тест-дизайна
-- [ ] День 3 — AI для генерации тестов
-- [ ] День 4 — AI-агенты и workflows
-- [ ] День 5 — AI для review и debug
-- [ ] День 6 — Безопасное использование AI
-- [ ] День 7 — Мини-проект: AI-assisted QA workflow
-
-### Неделя 7 — Тестирование API
+### Неделя 6 — Тестирование API
 - [ ] День 1 — HTTP и REST
 - [ ] День 2 — requests
 - [ ] День 3 — Первые API-тесты
@@ -273,6 +380,15 @@
 - [ ] День 5 — API тест-фреймворк
 - [ ] День 6 — Авторизация в API
 - [ ] День 7 — Мини-проект: CRUD reqres.in
+
+### Неделя 7 — UI-тестирование (Playwright)
+- [ ] День 1 — Основы Playwright
+- [ ] День 2 — Локаторы
+- [ ] День 3 — Действия
+- [ ] День 4 — Assertions
+- [ ] День 5 — Page Object Model
+- [ ] День 6 — Playwright + PyTest
+- [ ] День 7 — Мини-проект: UI-тесты с POM
 
 ### Неделя 8 — SQL + Инструменты
 - [ ] День 1 — SQL: основы
@@ -283,7 +399,7 @@
 - [ ] День 6 — Повторение и практика
 - [ ] День 7 — Мини-проект: API + Allure + SQLite
 
-### Неделя 9 — UI-тестирование (Playwright)
+### НЕДЕЛЯ 9 — AI в тестировании и разработке ПО
 - [ ] День 1 — Основы Playwright
 - [ ] День 2 — Локаторы
 - [ ] День 3 — Действия
@@ -323,14 +439,93 @@
 
 *Старт → Неделя 1, День 1: Настройка окружения*
 
+## 📊 Прогресс по расширенному курсу
 
+> Обновляется автоматически по результатам обучения
 
+```
+Неделя 1    PyTest   ░░░░░░░░░░░░░░░░  0%
+Неделя 2    Data     ░░░░░░░░░░░░░░░░  0%
+Неделя 3    API      ░░░░░░░░░░░░░░░░  0%
+Неделя 4    API      ░░░░░░░░░░░░░░░░  0%
+Неделя 5    UI       ░░░░░░░░░░░░░░░░  0%
+Неделя 6    UI       ░░░░░░░░░░░░░░░░  0%
+Неделя 7    Infra    ░░░░░░░░░░░░░░░░  0%
+Неделя 8    Senior   ░░░░░░░░░░░░░░░░  0%
+```
 
+---
 
+## ✅ Дорожная карта по дням — Расширенный курс
 
+### Неделя 1 — PyTest: продвинутый уровень
+- [ ] День 1 — Advanced fixtures
+- [ ] День 2 — Parametrization patterns
+- [ ] День 3 — Markers и test selection
+- [ ] День 4 — Mocking deeper
+- [ ] День 5 — Flaky tests
+- [ ] День 6 — pytest-xdist
+- [ ] День 7 — Мини-проект: устойчивый PyTest suite
 
+### Неделя 2 — Test Data Engineering
+- [ ] День 1 — Factories
+- [ ] День 2 — Builder pattern
+- [ ] День 3 — Test data management
+- [ ] День 4 — Property-based testing
+- [ ] День 5 — Edge cases
+- [ ] День 6 — Reusable datasets
+- [ ] День 7 — Мини-проект: генерация и проверка тестовых данных
 
+### Неделя 3 — API: продвинутый уровень
+- [ ] День 1 — Auth flows
+- [ ] День 2 — Retries и idempotency
+- [ ] День 3 — Negative scenarios
+- [ ] День 4 — Schema validation
+- [ ] День 5 — Contract testing
+- [ ] День 6 — Mock servers
+- [ ] День 7 — Мини-проект: advanced API suite
 
+### Неделя 4 — API: reliability и integration
+- [ ] День 1 — Async API и polling
+- [ ] День 2 — Pagination и filtering
+- [ ] День 3 — Stateful scenarios
+- [ ] День 4 — Config и secrets
+- [ ] День 5 — API test architecture
+- [ ] День 6 — Reporting и diagnostics
+- [ ] День 7 — Мини-проект: API framework with config layers
 
+### Неделя 5 — UI: продвинутый уровень
+- [ ] День 1 — Auth state
+- [ ] День 2 — Network interception
+- [ ] День 3 — Advanced waits
+- [ ] День 4 — Locator strategy
+- [ ] День 5 — Page Object architecture
+- [ ] День 6 — Debugging UI failures
+- [ ] День 7 — Мини-проект: stable UI suite
 
+### Неделя 6 — UI: качество и масштабирование
+- [ ] День 1 — Visual regression
+- [ ] День 2 — Accessibility basics
+- [ ] День 3 — Cross-browser strategy
+- [ ] День 4 — Test data in UI tests
+- [ ] День 5 — Parallel UI execution
+- [ ] День 6 — CI for UI tests
+- [ ] День 7 — Мини-проект: UI suite in CI
 
+### Неделя 7 — Infrastructure for QA
+- [ ] День 1 — Docker for QA
+- [ ] День 2 — docker-compose basics
+- [ ] День 3 — CI pipelines
+- [ ] День 4 — Quality gates
+- [ ] День 5 — Observability
+- [ ] День 6 — Artifacts и reports
+- [ ] День 7 — Мини-проект: CI-ready test environment
+
+### Неделя 8 — Senior QA Engineering
+- [ ] День 1 — Security testing basics
+- [ ] День 2 — Performance testing basics
+- [ ] День 3 — Test strategy
+- [ ] День 4 — Risk-based testing
+- [ ] День 5 — Architecture review
+- [ ] День 6 — Capstone preparation
+- [ ] День 7 — Capstone project

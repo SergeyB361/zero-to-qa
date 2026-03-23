@@ -1,23 +1,33 @@
 # Путь с нуля до QA 🐍
 
-**12-недельный курс:** Python + PyTest + Playwright -> Junior QA Automation Engineer
+**12-недельный базовый курс + расширенный трек:** Python + PyTest + Playwright -> Junior QA Automation Engineer
 
-## Структура курса
+## Структура базового курса
 - `week_01/` — Python с нуля
 - `week_02/` — Структуры данных
 - `week_03/` — Продвинутый Python для QA
 - `week_04/` — ООП
 - `week_05/` — Основы тестирования + PyTest
-- `week_06/` — AI в тестировании и разработке ПО
-- `week_07/` — Тестирование API
+- `week_06/` — Тестирование API
+- `week_07/` — UI-тестирование (Playwright)
 - `week_08/` — SQL + Инструменты
-- `week_09/` — UI-тестирование (Playwright)
+- `week_09/` — AI в тестировании и разработке ПО
 - `week_10/` — Портфолио + Резюме
 - `week_11/` — PyTest продвинутый уровень
 - `week_12/` — Финализация портфолио и карьерный блок
 
+## Структура расширенного курса
+- `advanced_week_01/` — PyTest: продвинутый уровень
+- `advanced_week_02/` — Test Data Engineering
+- `advanced_week_03/` — API: продвинутый уровень
+- `advanced_week_04/` — API: reliability и integration
+- `advanced_week_05/` — UI: продвинутый уровень
+- `advanced_week_06/` — UI: качество и масштабирование
+- `advanced_week_07/` — Infrastructure for QA
+- `advanced_week_08/` — Senior QA Engineering
+
 Важно:
-- `ROADMAP.md` описывает полный план курса на 12 недель.
+- `ROADMAP.md` описывает полный план базового курса и расширенного трека.
 - Папки следующих недель могут появляться постепенно по мере прохождения.
 
 ## Формат дня
@@ -44,3 +54,7 @@ week_XX/
 
 ## Стек
 Python 3.14 · PyTest · Requests · Playwright · SQLite · Allure · GitHub Actions
+
+
+
+
