@@ -10,3 +10,4 @@ allure-report/
 .claude/
 .vscode/*
 !.vscode/settings.json
+!.vscode/launch.json
