@@ -1,4 +1,6 @@
-# Quality Engineering и системное мышление, День 5 — Примеры
+def non_functional_targets() -> list[str]:
+    return ["reliability", "usability", "resilience", "observability"]
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(non_functional_targets())

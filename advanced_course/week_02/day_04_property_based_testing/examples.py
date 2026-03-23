@@ -1,4 +1,13 @@
-# Test Data Engineering, День 4 — Примеры
+try:
+    from hypothesis import given, strategies as st
+except ImportError:  # pragma: no cover
+    raise SystemExit("Install hypothesis to run this example: pip install hypothesis")
 
-if __name__ == \"__main__\":
-    pass
+
+def normalize_email(value: str) -> str:
+    return value.strip().lower()
+
+
+@given(st.text())
+def test_normalize_email_is_lowercase(value: str) -> None:
+    assert normalize_email(value) == normalize_email(value).lower()

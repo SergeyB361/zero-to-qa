@@ -1,4 +1,6 @@
-# Test Design и Requirements Engineering, День 5 — Примеры
+def pairwise_seed() -> list[tuple[str, str]]:
+    return [("chromium", "admin"), ("firefox", "user"), ("webkit", "guest")]
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(pairwise_seed())

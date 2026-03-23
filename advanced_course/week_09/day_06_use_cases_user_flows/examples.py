@@ -1,4 +1,6 @@
-# Test Design и Requirements Engineering, День 6 — Примеры
+def checkout_flow() -> list[str]:
+    return ["open cart", "enter address", "pay", "see confirmation"]
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(checkout_flow())

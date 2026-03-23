@@ -1,4 +1,9 @@
-# UI: продвинутый уровень, День 3 — Примеры
+def wait_for(condition_values: list[bool]) -> bool:
+    for value in condition_values:
+        if value:
+            return True
+    return False
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(wait_for([False, False, True]))

@@ -1,4 +1,12 @@
-# Test Design и Requirements Engineering, День 3 — Примеры
+TRANSITIONS = {
+    "new": {"pay": "paid", "cancel": "cancelled"},
+    "paid": {"refund": "refunded"},
+}
 
-if __name__ == \"__main__\":
-    pass
+
+def next_state(current: str, event: str) -> str | None:
+    return TRANSITIONS.get(current, {}).get(event)
+
+
+if __name__ == "__main__":
+    print(next_state("new", "pay"))

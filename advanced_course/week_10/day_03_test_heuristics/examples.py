@@ -1,4 +1,5 @@
-# Quality Engineering и системное мышление, День 3 — Примеры
+HEURISTICS = ["CRUD", "HICCUPPS", "RCRCRC"]
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(HEURISTICS)

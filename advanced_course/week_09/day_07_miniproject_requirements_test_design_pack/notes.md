@@ -1,3 +1,16 @@
-# Test Design и Requirements Engineering, День 7 — Мини-проект: пакет тест-дизайна по требованиям
+# Test Design и Requirements Engineering, День 7 — Мини-проект: Пакет тест-дизайна по набору требований
 
-Каркас урока создан. Теория и ТЗ будут добавляться по мере прохождения.
+## Цель
+Преобразовать набор требований в набор инженерных артефактов тест-дизайна.
+
+## Что тренируем
+- EARS
+- decision tables
+- state machines
+- BVA и equivalence partitioning
+- pairwise thinking
+- user flows
+
+## Материалы дня
+- spec.md
+- requirements.md

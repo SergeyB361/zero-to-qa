@@ -1,4 +1,8 @@
-# UI: качество и масштабирование, День 6 — Примеры
+def ci_suite(kind: str) -> list[str]:
+    if kind == "smoke":
+        return ["auth", "checkout"]
+    return ["auth", "checkout", "profile", "orders"]
 
-if __name__ == \"__main__\":
-    pass
+
+if __name__ == "__main__":
+    print(ci_suite("smoke"))
