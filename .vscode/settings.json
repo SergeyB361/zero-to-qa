@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "C:/Users/serge/zero-to-qa/venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "cSpell.enabled": false,
+  "spellright.enable": false,
+  "ltex.enabled": false,
+  "grammarly.enabled": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "files.eol": "\n"
+}

@@ -8,6 +8,5 @@ allure-results/
 allure-report/
 .DS_Store
 .claude/
-.vscode/
-
-
+.vscode/*
+!.vscode/settings.json
