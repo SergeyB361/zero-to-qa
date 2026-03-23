@@ -1,13 +1,70 @@
-# День 1 — Практика: auth state
+# Практика: auth state и session reuse
 
-# Задание 1
-# Опиши, зачем хранить storage state отдельно для user и admin.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три причины хранить auth state отдельно по ролям или типам пользователей.',
+    'task_2': 'Коротко объясни разницу между повторным использованием storage state и ручным логином в каждом тесте.',
+    'task_3': 'Назови минимум три риска неправильного reuse auth state.',
+    'task_4': 'Опиши минимальную стратегию хранения auth state для smoke и regression suite.',
+}
 
-# Задание 2
-# Перечисли минимум три риска reuse устаревшей сессии.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Напиши, какие признаки покажут, что auth state протёк между тестами.
+KEYWORDS = {
+    'task_1': ['role', 'reuse'],
+    'task_2': ['state', 'login'],
+    'task_3': ['expired', 'leak'],
+    'task_4': ['smoke', 'regression'],
+}
 
-# Задание 4
-# Коротко объясни, когда повторный логин всё же лучше reuse state.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

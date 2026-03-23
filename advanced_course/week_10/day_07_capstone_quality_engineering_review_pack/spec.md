@@ -1,18 +1,38 @@
-# ТЗ: Capstone — quality engineering review pack
+# ТЗ: Capstone — Quality engineering review pack
 
 ## Исходный файл
 Используй:
 - review_input.md
 
-## Что нужно подготовить
-1. traceability matrix
-2. oracles для ключевых сценариев
-3. heuristics-based idea pack
-4. failure model overview
-5. non-functional test design ideas
-6. requirements-to-tests summary
+## Цель проекта
+Собрать review pack, который связывает требования, риски, oracle, heuristics и failure models в один инженерный вывод.
+
+## Deliverables
+- traceability matrix
+- набор test oracles
+- heuristics-based test ideas
+- failure model для критичных сценариев
+- non-functional checks и review summary
 
 ## Обязательные требования
-- пакет должен быть связным, а не набором независимых заметок
-- каждый артефакт должен ссылаться на requirement или риск
-- вывод должен показывать, как QA принимает решения, а не только перечисляет тесты
+- каждый артефакт ссылается на исходный контекст
+- отделены факт, риск и рекомендация
+- есть минимум одна failure model для critical flow
+- итоговый summary содержит practical next steps
+
+## Формат сдачи
+- один пакет markdown-файлов или consolidated document
+- явный executive summary
+- показать, какие риски устранялись бы первыми и почему
+
+## Рубрика оценки (10 баллов)
+- 2 балла — traceability и oracles привязаны к требованиям
+- 2 балла — heuristics используются по делу
+- 2 балла — failure model отражает реальные режимы отказа
+- 2 балла — non-functional часть не декоративна
+- 2 балла — итоговый pack можно показать как зрелый QA artifact
+
+## Что особенно проверяется
+- решение должно быть структурным, а не набором случайных заметок
+- каждое принятое решение должно быть объяснимо через риск, цель или качество
+- материал должен быть пригоден для ревью и дальнейшего расширения

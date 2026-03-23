@@ -1,13 +1,27 @@
 # День 6 — Практика: mock servers
 
-# Задание 1
-# Перечисли минимум четыре сценария, которые полезно смоделировать через mock server.
+def scenarios_to_mock() -> list[str]:
+    return []
 
-# Задание 2
-# Объясни, когда mock server лучше реального внешнего API.
 
-# Задание 3
-# Объясни, почему mock server не заменяет полностью реальные интеграционные проверки.
+def reasons_to_mock() -> list[str]:
+    return []
 
-# Задание 4
-# Опиши, какой timeout или error scenario ты бы обязательно добавил в mock server.
+
+def run_checks() -> list[tuple[str, bool]]:
+    scenarios = ' '.join(scenarios_to_mock()).lower()
+    reasons = ' '.join(reasons_to_mock()).lower()
+    return [
+        ('scenarios mention timeout', 'timeout' in scenarios),
+        ('scenarios mention 5xx or error', '5xx' in scenarios or 'error' in scenarios),
+        ('scenarios mention provider unavailable', 'unavailable' in scenarios or 'недоступ' in scenarios),
+        ('reasons mention deterministic behavior', 'determin' in reasons or 'предсказ' in reasons),
+        ('reasons mention external dependency', 'external' in reasons or 'внешн' in reasons),
+        ('reasons mention cost or speed', 'speed' in reasons or 'быстр' in reasons or 'cost' in reasons),
+    ]
+
+
+if __name__ == '__main__':
+    print('Опиши, какие сценарии и почему стоит мокать:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

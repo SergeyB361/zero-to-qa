@@ -1,13 +1,22 @@
 # День 5 — Практика: API test architecture
 
-# Задание 1
-# Перечисли слои, которые ты бы выделил в API test framework.
+def layer_mapping() -> dict[str, str]:
+    return {}
 
-# Задание 2
-# Объясни, зачем выносить endpoint paths в client layer.
 
-# Задание 3
-# Напиши два примера того, что стоит вынести в data builders.
+def run_checks() -> list[tuple[str, bool]]:
+    mapping = {k: v.lower() for k, v in layer_mapping().items()}
+    return [
+        ('transport present', 'transport' in mapping),
+        ('data present', 'data' in mapping),
+        ('asserts present', 'asserts' in mapping),
+        ('tests present', 'tests' in mapping),
+        ('transport mentions requests/client', 'request' in mapping.get('transport', '') or 'client' in mapping.get('transport', '')),
+        ('asserts mentions verification', 'assert' in mapping.get('asserts', '') or 'verify' in mapping.get('asserts', '')),
+    ]
 
-# Задание 4
-# Коротко объясни, почему raw requests в каждом тесте плохо масштабируются.
+
+if __name__ == '__main__':
+    print('Опиши responsibilities по слоям:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

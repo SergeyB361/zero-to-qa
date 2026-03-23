@@ -1,11 +1,11 @@
-def build_failure_report(method: str, url: str, status: int, body: dict[str, object]) -> dict[str, object]:
+def diagnostic_record(method: str, url: str, status_code: int, trace_id: str) -> dict[str, object]:
     return {
-        "method": method,
-        "url": url,
-        "status": status,
-        "body": body,
+        'method': method,
+        'url': url,
+        'status_code': status_code,
+        'trace_id': trace_id,
     }
 
 
-if __name__ == "__main__":
-    print(build_failure_report("POST", "/orders", 500, {"error": "db unavailable"}))
+if __name__ == '__main__':
+    print(diagnostic_record('GET', '/orders/1', 500, 'trace-123'))

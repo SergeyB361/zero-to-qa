@@ -1,13 +1,21 @@
 # День 6 — Практика: reporting и diagnostics
 
-# Задание 1
-# Перечисли минимум шесть полей, которые полезно логировать при падении API-теста.
+def diagnostic_record() -> dict[str, object]:
+    return {}
 
-# Задание 2
-# Напиши, какие данные нужно маскировать.
 
-# Задание 3
-# Объясни, зачем correlation id полезен при расследовании проблем.
+def run_checks() -> list[tuple[str, bool]]:
+    record = diagnostic_record()
+    return [
+        ('method present', 'method' in record),
+        ('url present', 'url' in record),
+        ('status code present', 'status_code' in record),
+        ('trace id present', 'trace_id' in record),
+        ('entity id present', 'entity_id' in record),
+    ]
 
-# Задание 4
-# Коротко объясни, почему логи без структуры быстро теряют ценность.
+
+if __name__ == '__main__':
+    print('Добавь базовый diagnostic payload:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

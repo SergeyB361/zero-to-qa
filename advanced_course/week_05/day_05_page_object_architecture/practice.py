@@ -1,13 +1,70 @@
-# День 5 — Практика: Page Object architecture
+# Практика: page object architecture
 
-# Задание 1
-# Объясни, что стоит хранить в Page Object, а что должно оставаться в тесте.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три вещи, которые должны жить внутри Page Object.',
+    'task_2': 'Коротко объясни, что не должно жить внутри Page Object.',
+    'task_3': 'Назови минимум три признака god object в UI framework.',
+    'task_4': 'Опиши, как разделить reusable flow и сам тест.',
+}
 
-# Задание 2
-# Напиши, почему BasePage с десятками методов обычно плохой знак.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Приведи пример page component, который может переиспользоваться на нескольких страницах.
+KEYWORDS = {
+    'task_1': ['locator', 'action'],
+    'task_2': ['assert', 'business'],
+    'task_3': ['basepage', 'too many'],
+    'task_4': ['flow', 'test'],
+}
 
-# Задание 4
-# Коротко объясни, почему бизнес-assert лучше держать в тесте, а не в Page Object.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

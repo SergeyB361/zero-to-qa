@@ -1,10 +1,11 @@
-def is_valid_age(age: int) -> bool:
-    return 18 <= age <= 65
+def age_edges() -> list[int]:
+    return [17, 18, 19, 64, 65, 66]
 
 
-EDGE_CASES = [17, 18, 19, 64, 65, 66]
+def amount_edges() -> list[int]:
+    return [0, 1, 9_999, 10_000, 10_001]
 
 
-if __name__ == "__main__":
-    for value in EDGE_CASES:
-        print(value, is_valid_age(value))
+if __name__ == '__main__':
+    print(age_edges())
+    print(amount_edges())

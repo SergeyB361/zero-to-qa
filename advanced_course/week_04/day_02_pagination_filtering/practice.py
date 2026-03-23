@@ -1,13 +1,26 @@
 # День 2 — Практика: pagination и filtering
 
-# Задание 1
-# Перечисли проверки для page и limit endpoint.
+def paginate(items: list[int], page: int, limit: int) -> list[int]:
+    start = 0
+    end = 0
+    return items[start:end]
 
-# Задание 2
-# Перечисли проверки для filtering по status.
 
-# Задание 3
-# Объясни, почему важно проверять отсутствие дублей между страницами.
+def filter_by_min(items: list[int], min_value: int) -> list[int]:
+    return []
 
-# Задание 4
-# Напиши, какие edge cases есть у page=0, limit=0 и limit больше максимума.
+
+def run_checks() -> list[tuple[str, bool]]:
+    items = [1, 2, 3, 4, 5, 6]
+    return [
+        ('page 1 size 2', paginate(items, page=1, limit=2) == [1, 2]),
+        ('page 2 size 2', paginate(items, page=2, limit=2) == [3, 4]),
+        ('page 3 size 2', paginate(items, page=3, limit=2) == [5, 6]),
+        ('filter by min keeps tail', filter_by_min(items, 4) == [4, 5, 6]),
+    ]
+
+
+if __name__ == '__main__':
+    print('Добавь pagination и filter logic:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

@@ -1,15 +1,24 @@
-COMMON_ROLES = ["user", "admin", "guest"]
-PLAN_PRICES = {"basic": 10, "pro": 25}
+BASELINE_USER = {
+    'email': 'qa@example.com',
+    'role': 'user',
+    'active': True,
+}
+
+ROLE_DATASETS = {
+    'admin': {'role': 'admin'},
+    'guest': {'role': 'guest', 'active': False},
+}
+
+EDGE_TOTALS = [0, 1, 10_000, 10_001]
 
 
-def make_unique_email(seed: int) -> str:
-    return f"user{seed}@example.com"
+def build_user(**overrides: object) -> dict[str, object]:
+    result = dict(BASELINE_USER)
+    result.update(overrides)
+    return result
 
 
-def build_profile(seed: int, role: str = "user") -> dict[str, object]:
-    return {"email": make_unique_email(seed), "role": role, "plan": "basic"}
-
-
-if __name__ == "__main__":
-    print(COMMON_ROLES)
-    print(build_profile(7, role="admin"))
+if __name__ == '__main__':
+    print(build_user())
+    print(build_user(**ROLE_DATASETS['admin']))
+    print(EDGE_TOTALS)

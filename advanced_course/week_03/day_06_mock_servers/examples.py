@@ -1,12 +1,11 @@
-def stub_users_response(case: str) -> tuple[int, dict[str, object]]:
-    if case == "success":
-        return 200, {"users": [{"id": 1, "email": "qa@example.com"}]}
-    if case == "unauthorized":
-        return 401, {"error": "unauthorized"}
-    if case == "timeout":
-        raise TimeoutError("provider timeout")
-    return 500, {"error": "unexpected case"}
+def payment_provider_mock(status: str) -> tuple[int, dict[str, object]]:
+    if status == 'timeout':
+        return 504, {'error': 'timeout'}
+    if status == 'declined':
+        return 402, {'error': 'payment declined'}
+    return 200, {'transaction_id': 'tx-1', 'status': 'approved'}
 
 
-if __name__ == "__main__":
-    print(stub_users_response("success"))
+if __name__ == '__main__':
+    print(payment_provider_mock('declined'))
+    print(payment_provider_mock('approved'))

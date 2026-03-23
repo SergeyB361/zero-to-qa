@@ -4,16 +4,34 @@
 Используй:
 - api_framework.py
 
-## Что нужно построить
-1. config loader
-2. API client layer
-3. auth helper
-4. diagnostics helper
-5. пример stateful или polling сценария
+## Цель проекта
+Собрать маленький API framework skeleton с конфигом, auth headers, client layer и диагностикой.
+
+## Deliverables
+- config.py или аналогичный слой настроек
+- client.py или helper-функции для запросов
+- diagnostics.py или helper для отчётности
+- demo.py или tests
 
 ## Обязательные требования
-- базовый URL должен приходить через config
-- token не должен быть захардкожен в тестах
-- failure report должен содержать method, url, status и body
-- client и business-level helper должны быть разделены
-- должен быть пример одного stateful flow
+- base URL и token приходят из config или env
+- есть отдельный слой для headers или auth
+- есть диагностическая запись для failed request
+- структура отделяет transport, config и diagnostics
+
+## Формат сдачи
+- файлы решения в папке дня
+- короткий walkthrough по слоям
+- один пример happy path и один failed diagnostic record
+
+## Рубрика оценки (10 баллов)
+- 2 балла — слои разделены и не смешаны
+- 2 балла — config работает предсказуемо и без hardcode secrets
+- 2 балла — diagnostics содержит полезные поля
+- 2 балла — client layer читаем и переиспользуем
+- 2 балла — проект объясним и расширяем
+
+## Что особенно проверяется
+- решение должно быть структурным, а не набором случайных заметок
+- каждое принятое решение должно быть объяснимо через риск, цель или качество
+- материал должен быть пригоден для ревью и дальнейшего расширения

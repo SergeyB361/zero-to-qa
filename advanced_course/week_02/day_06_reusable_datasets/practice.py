@@ -1,13 +1,26 @@
 # День 6 — Практика: reusable datasets
 
-# Задание 1
-# Создай словарь USERS с наборами valid_user и blocked_user.
+USER_DATASETS: dict[str, dict[str, object]] = {
+    'valid_user': {},
+    'blocked_user': {},
+}
 
-# Задание 2
-# Создай словарь ORDERS с наборами new_order и paid_order.
+ORDER_STATUSES: list[str] = []
+VIP_CUSTOMER_TYPES: list[str] = []
 
-# Задание 3
-# Напиши, какие из этих datasets подошли бы одновременно для API и UI тестов.
 
-# Задание 4
-# Коротко объясни, чем reusable dataset отличается от случайной генерации.
+def run_checks() -> list[tuple[str, bool]]:
+    return [
+        ('valid_user has active true', USER_DATASETS['valid_user'].get('active') is True),
+        ('blocked_user has active false', USER_DATASETS['blocked_user'].get('active') is False),
+        ('statuses contain new', 'new' in ORDER_STATUSES),
+        ('statuses contain paid', 'paid' in ORDER_STATUSES),
+        ('statuses contain cancelled', 'cancelled' in ORDER_STATUSES),
+        ('vip dataset not empty', len(VIP_CUSTOMER_TYPES) >= 1),
+    ]
+
+
+if __name__ == '__main__':
+    print('Заполни reusable datasets:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

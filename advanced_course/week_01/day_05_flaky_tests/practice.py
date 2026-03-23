@@ -1,24 +1,32 @@
 # День 5 — Практика: flaky tests
 
-# Задание 1
-# Для каждого случая ниже напиши в комментарии, почему тест может стать flaky:
-# - тест пишет в общий файл report.txt
-# - тест использует random без фиксации входных данных
-# - тест зависит от time.sleep(1)
-# - тест использует session fixture с изменяемым списком
+FLAKY_PATTERNS = [
+    'sleep before assert',
+    'shared mutable data between tests',
+    'depends on external unstable service',
+    'assert on eventually consistent state without wait',
+]
 
 
-# Задание 2
-# Напиши коротко, что лучше использовать вместо:
-# - общего файла
-# - random без контроля
-# - sleep для ожидания
+def stabilization_actions() -> list[str]:
+    return [
+        'replace sleep with explicit wait',
+        'isolate test data and accounts',
+        'mock unstable dependency where appropriate',
+    ]
 
 
-# Задание 3
-# Представь, что тест падает только в CI.
-# Перечисли минимум 4 артефакта или факта, которые ты бы собрал для диагностики.
+def run_checks() -> list[tuple[str, bool]]:
+    actions = ' '.join(stabilization_actions()).lower()
+    return [
+        ('sleep mentioned as flaky pattern', 'sleep before assert' in FLAKY_PATTERNS),
+        ('shared state mentioned', any('shared' in item for item in FLAKY_PATTERNS)),
+        ('explicit wait suggested', 'explicit wait' in actions),
+        ('mock suggested', 'mock' in actions),
+    ]
 
 
-# Задание 4
-# Коротко объясни, почему retry — это не первый способ лечения flaky-теста.
+if __name__ == '__main__':
+    print('Разбери flaky-паттерны и способы стабилизации:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

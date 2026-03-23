@@ -1,13 +1,70 @@
-# День 5 — Практика: pairwise testing
+# Практика: pairwise testing
 
-# Задание 1
-# Предложи pairwise-подход для browser, role и locale.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три параметра, для которых pairwise имеет смысл.',
+    'task_2': 'Коротко объясни, почему pairwise уменьшает взрыв комбинаций.',
+    'task_3': 'Назови минимум три ограничения или риска pairwise.',
+    'task_4': 'Опиши, когда pairwise уместен, а когда нужен полный перебор.',
+}
 
-# Задание 2
-# Объясни, что pairwise покрывает хорошо, а что нет.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Приведи пример, когда pairwise недостаточно из-за критичной комбинации трёх условий.
+KEYWORDS = {
+    'task_1': ['browser', 'role'],
+    'task_2': ['combination', 'reduce'],
+    'task_3': ['business', 'interaction'],
+    'task_4': ['risk', 'coverage'],
+}
 
-# Задание 4
-# Напиши, почему pairwise всё равно лучше хаотичного выбора нескольких кейсов.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

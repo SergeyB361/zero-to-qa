@@ -1,13 +1,70 @@
-# День 4 — Практика: risk-based testing
+# Практика: risk-based testing
 
-# Задание 1
-# Приоритизируй риски для checkout, auth и reporting модулей.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три фактора, влияющих на риск сценария.',
+    'task_2': 'Коротко объясни, почему high-risk сценарии должны влиять на приоритизацию тестов.',
+    'task_3': 'Назови минимум три high-risk зоны для checkout, auth или reporting.',
+    'task_4': 'Опиши правило, как выбирать first-line smoke по риску.',
+}
 
-# Задание 2
-# Объясни, как вероятность и impact влияют на приоритет тестирования.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Приведи пример технического риска и продуктового риска.
+KEYWORDS = {
+    'task_1': ['impact', 'probability'],
+    'task_2': ['priority', 'risk'],
+    'task_3': ['checkout', 'auth'],
+    'task_4': ['smoke', 'critical'],
+}
 
-# Задание 4
-# Напиши, почему риск-приоритеты нужно пересматривать после изменений продукта.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

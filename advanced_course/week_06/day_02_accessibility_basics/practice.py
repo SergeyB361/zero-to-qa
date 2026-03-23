@@ -1,13 +1,70 @@
-# День 2 — Практика: accessibility basics
+# Практика: accessibility basics
 
-# Задание 1
-# Составь базовый accessibility checklist для формы логина.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три базовые accessibility проверки для формы логина.',
+    'task_2': 'Коротко объясни, почему a11y нельзя сводить только к color contrast.',
+    'task_3': 'Назови минимум три типовые a11y проблемы в веб-интерфейсах.',
+    'task_4': 'Опиши минимальный a11y smoke для критичной страницы.',
+}
 
-# Задание 2
-# Объясни, почему role и accessible name важны для QA, а не только для screen reader.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Перечисли минимум три keyboard сценария, которые стоит проверить.
+KEYWORDS = {
+    'task_1': ['label', 'keyboard'],
+    'task_2': ['screen', 'keyboard'],
+    'task_3': ['focus', 'aria'],
+    'task_4': ['tab', 'name'],
+}
 
-# Задание 4
-# Напиши, почему наличие aria-label не всегда означает реальную доступность.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

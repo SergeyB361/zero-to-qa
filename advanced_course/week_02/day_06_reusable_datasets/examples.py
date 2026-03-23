@@ -1,14 +1,15 @@
-USERS = {
-    "valid_user": {"email": "qa@example.com", "role": "user", "active": True},
-    "blocked_user": {"email": "blocked@example.com", "role": "user", "active": False},
+USER_DATASETS = {
+    'valid_user': {'email': 'qa@example.com', 'role': 'user', 'active': True},
+    'blocked_user': {'email': 'blocked@example.com', 'role': 'user', 'active': False},
 }
 
-ORDERS = {
-    "new_order": {"amount": 100, "status": "new"},
-    "discount_order": {"amount": 80, "status": "paid", "discount": 20},
-}
+ORDER_STATUS_DATASET = ['new', 'paid', 'cancelled']
 
 
-if __name__ == "__main__":
-    print(USERS["valid_user"])
-    print(ORDERS["discount_order"])
+def names(dataset: dict[str, object]) -> list[str]:
+    return sorted(dataset)
+
+
+if __name__ == '__main__':
+    print(names(USER_DATASETS))
+    print(ORDER_STATUS_DATASET)

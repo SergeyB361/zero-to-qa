@@ -1,11 +1,11 @@
-def validate_create_user_payload(payload: dict[str, object]) -> list[str]:
-    errors: list[str] = []
-    if not payload.get("email"):
-        errors.append("email is required")
-    if payload.get("role") not in {"user", "admin"}:
-        errors.append("unsupported role")
-    return errors
+def validate_create_payload(payload: dict[str, object]) -> tuple[int, str]:
+    if 'email' not in payload:
+        return 400, 'email is required'
+    if not isinstance(payload.get('age'), int):
+        return 400, 'age must be int'
+    return 201, 'created'
 
 
-if __name__ == "__main__":
-    print(validate_create_user_payload({"role": "owner"}))
+if __name__ == '__main__':
+    print(validate_create_payload({'age': 18}))
+    print(validate_create_payload({'email': 'qa@example.com', 'age': '18'}))

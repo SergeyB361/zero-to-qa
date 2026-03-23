@@ -2,25 +2,27 @@ from unittest.mock import Mock
 
 # День 4 — Практика: mocking deeper
 
-# Задание 1
-# Напиши функцию `notify_user(email, mailer)`, которая вызывает:
-# mailer.send(email, template="welcome")
-# Затем протестируй её через Mock и проверь вызов.
+def send_welcome(email: str, mailer: Mock) -> None:
+    mailer.send(email, template='welcome')
 
 
-# Задание 2
-# Создай Mock-клиент, у которого метод `load()`
-# выбрасывает `TimeoutError("service timeout")` через side_effect.
-# Проверь, что исключение действительно возникает.
+def send_bulk(emails: list[str], mailer: Mock) -> None:
+    for email in emails:
+        mailer.send(email, template='bulk')
 
 
-# Задание 3
-# Напиши функцию `get_status(api_client)`, которая возвращает
-# `api_client.fetch()["status"]`.
-# Замокай `fetch()` через return_value и проверь результат.
+def run_checks() -> list[tuple[str, bool]]:
+    mailer = Mock()
+    send_welcome('qa@example.com', mailer)
+    send_bulk(['a@example.com', 'b@example.com'], mailer)
+    return [
+        ('welcome call recorded', mailer.send.call_args_list[0].args[0] == 'qa@example.com'),
+        ('welcome template kept', mailer.send.call_args_list[0].kwargs == {'template': 'welcome'}),
+        ('bulk call count', mailer.send.call_count == 3),
+    ]
 
 
-# Задание 4
-# Коротко в комментарии ответь:
-# почему patch нужно делать там, где объект используется,
-# а не там, где он был изначально объявлен.
+if __name__ == '__main__':
+    print('Потренируйся читать call_args и считать вызовы mock:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')

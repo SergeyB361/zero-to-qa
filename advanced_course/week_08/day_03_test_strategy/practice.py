@@ -1,13 +1,70 @@
-# День 3 — Практика: test strategy
+# Практика: test strategy
 
-# Задание 1
-# Предложи слои тестирования для продукта с API и UI.
+QUESTIONS = {
+    'task_1': 'Перечисли минимум три раздела, которые должны быть в test strategy.',
+    'task_2': 'Коротко объясни, чем test strategy отличается от списка тест-кейсов.',
+    'task_3': 'Назови минимум три решения, которые strategy должна зафиксировать.',
+    'task_4': 'Опиши test strategy для среднего web-продукта с API и UI.',
+}
 
-# Задание 2
-# Напиши, какие риски должны влиять на test strategy в первую очередь.
+ANSWERS: dict[str, object] = {
+    'task_1': [],
+    'task_2': '',
+    'task_3': [],
+    'task_4': '',
+}
 
-# Задание 3
-# Объясни, почему стратегия — это всегда trade-off.
+KEYWORDS = {
+    'task_1': ['scope', 'risk'],
+    'task_2': ['level', 'approach'],
+    'task_3': ['priority', 'coverage'],
+    'task_4': ['api', 'ui'],
+}
 
-# Задание 4
-# Коротко опиши, почему невозможно одинаково глубоко покрыть всё подряд.
+MIN_ITEMS = {
+    'task_1': 3,
+    'task_2': 0,
+    'task_3': 3,
+    'task_4': 0,
+}
+
+def as_text(value: object) -> str:
+    if isinstance(value, list):
+        return ' '.join(str(item) for item in value).lower()
+    return str(value).lower()
+
+
+def keyword_check(task_id: str) -> bool:
+    text = as_text(ANSWERS[task_id])
+    if not text.strip():
+        return False
+    if all(keyword in text for keyword in KEYWORDS[task_id]):
+        return True
+    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+
+
+def size_check(task_id: str) -> bool:
+    expected = MIN_ITEMS[task_id]
+    value = ANSWERS[task_id]
+    if expected == 0:
+        return True
+    return isinstance(value, list) and len(value) >= expected
+
+
+def run_checks() -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    for task_id in QUESTIONS:
+        results.append((f'{task_id} keywords', keyword_check(task_id)))
+        if MIN_ITEMS[task_id]:
+            results.append((f'{task_id} size', size_check(task_id)))
+    return results
+
+
+if __name__ == '__main__':
+    for task_id, prompt in QUESTIONS.items():
+        print(f'[{task_id}] {prompt}')
+        print('Current answer:', ANSWERS[task_id])
+        print('Keyword check:', keyword_check(task_id))
+        if MIN_ITEMS[task_id]:
+            print('Size check:', size_check(task_id))
+        print('---')

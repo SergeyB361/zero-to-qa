@@ -1,14 +1,18 @@
 import os
 
 
-def load_base_url() -> str:
-    return os.getenv("API_BASE_URL", "https://api.example.com")
+def load_settings() -> dict[str, str | None]:
+    return {
+        'base_url': os.getenv('API_BASE_URL', 'https://api.example.com'),
+        'token': os.getenv('API_TOKEN'),
+    }
 
 
-def load_token() -> str | None:
-    return os.getenv("API_TOKEN")
+def build_headers(token: str | None) -> dict[str, str]:
+    if not token:
+        return {}
+    return {'Authorization': f'Bearer {token}'}
 
 
-if __name__ == "__main__":
-    print(load_base_url())
-    print(load_token())
+if __name__ == '__main__':
+    print(load_settings())
