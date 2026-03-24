@@ -6,11 +6,6 @@
 # Что нужно сделать:
 #
 #
-# Шаг 3 — Полиморфизм
-# Переопредели метод play() в каждом классе:
-# - Лев — "Симба охотится" и энергия -40
-# - Попугай — "Кеша летает" и энергия -20
-# - Черепаха — "Тортилла ползает" и энергия -10
 #
 # Шаг 4 — Зоопарк
 # Создай класс Zoo с:
@@ -68,12 +63,12 @@ class Animal:
         return self.__energy
 
     def status(self):
-        return print(f"Имя:{self.name} Энергия:{self.__energy}")
+        return f"Имя:{self.name} Энергия:{self.__energy}"
     
 parrot = Animal("Rici", "parrot", 10)
 print(parrot.eat())
 print(parrot.play())
-parrot.status()
+print(parrot.status())
 #
 # Шаг 2 — Наследование
 # Создай 3 дочерних класса:
@@ -86,23 +81,44 @@ class Lion(Animal):
     def __init__(self, name, species, energy):
         super().__init__(name, species, energy)
 
-    def roar():
-        return Print("Симба рычит!")
+    def roar(self):
+        return print(f"{self.name} рычит!")
+    
+    def play(self):
+        self._energy += -40
+        if self._energy < 0:
+            self._energy = 0
+        return print(f"{self.name} охотится и энергия {self._energy}")
 
 
 class Parrot(Animal):
     def __init__(self, name, species, energy):
         super().__init__(name, species, energy)
 
-    def talk(phrase):
-        return print(f"{Parrot.name} говорит {phrase}")
+    def talk(self, phrase):
+        self.phrase = phrase
+        return print(f"{self.name} говорит: {phrase}")
+
 
 class Turtle(Animal):
     def __init__(self, name, species, energy):
         super().__init__(name, species, energy)
     
-    def hide():
-        return print("Тортилла прячется в панцирь")
+    def hide(self):
+        return print(f"{self.name} прячется в панцирь")
+
+simba = Lion("Симба", "лев", 60).roar()
+kesha = Parrot("Кеша", "попугай", 50).talk("привет!")
+tortilla = Turtle("Тортилла", "черепаха",30).hide()
+
+# Шаг 3 — Полиморфизм
+# Переопредели метод play() в каждом классе:
+# - Лев — "Симба охотится" и энергия -40
+# - Попугай — "Кеша летает" и энергия -20
+# - Черепаха — "Тортилла ползает" и энергия -10
+
+simba = Lion("Симба", "лев", 60).play()
+
 
 
 class Zoo:
