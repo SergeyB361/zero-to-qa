@@ -12,6 +12,12 @@ class User:
         # Обычный метод работает с конкретным объектом.
         return f"Hello, {self.name}"
 
+    def __str__(self) -> str:
+        return f"User<{self.name}>"
+
+    def __repr__(self) -> str:
+        return f"User(name={self.name!r})"
+
     @classmethod
     def get_total(cls) -> int:
         # Classmethod работает с классом и его общими данными.
@@ -49,6 +55,8 @@ if __name__ == "__main__":
 
     print("=== User ===")
     print(first.greet())
+    print(str(first))
+    print(repr(second))
     print(User.get_total())
     print(User.is_valid_name("A"))
     print(User.is_valid_name("Ann"))

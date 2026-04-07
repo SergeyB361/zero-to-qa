@@ -27,6 +27,7 @@
 - `advanced_course/week_08/` — Senior QA Engineering
 - `advanced_course/week_09/` — Test Design и Requirements Engineering
 - `advanced_course/week_10/` — Quality Engineering и системное мышление
+- `advanced_course/bonus_advanced_python_oop/` — Bonus: Advanced Python OOP
 
 Важно:
 - `ROADMAP.md` описывает полный план базового курса и расширенного трека.
