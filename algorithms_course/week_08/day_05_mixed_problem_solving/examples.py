@@ -1,6 +1,14 @@
-# Неделя 8, День 5 - Смешанная практика
-# Примеры будут добавлены позже.
+def classify_problem(problem_name: str) -> str:
+    mapping = {
+        "pair sum": "hash or two pointers",
+        "range sum": "prefix sums",
+        "shortest path unweighted": "bfs",
+        "top k": "heap",
+    }
+    return mapping.get(problem_name, "analyze manually")
 
 
 if __name__ == "__main__":
-    print("Примеры для темы 'Смешанная практика' будут добавлены позже.")
+    print(classify_problem("pair sum"))
+    print(classify_problem("top k"))
+    print(classify_problem("unknown"))
