@@ -1,6 +1,21 @@
-# Неделя 5, День 6 - Практика на stack и queue
-# Примеры будут добавлены позже.
+from collections import deque
+
+
+def undo_last(actions: list[str]) -> str | None:
+    stack = actions[:]
+    if not stack:
+        return None
+    return stack.pop()
+
+
+
+def first_in_line(items: list[str]) -> str | None:
+    queue = deque(items)
+    if not queue:
+        return None
+    return queue.popleft()
 
 
 if __name__ == "__main__":
-    print("Примеры для темы 'Практика на stack и queue' будут добавлены позже.")
+    print(undo_last(["open", "edit", "save"]))
+    print(first_in_line(["client-1", "client-2"]))
