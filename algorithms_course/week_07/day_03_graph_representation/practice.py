@@ -1,6 +1,32 @@
 # Неделя 7, День 3 - Представление графа
-# Практика будет добавлена позже.
+#
+# Задание 1:
+# Реализуй build_directed_graph(edges).
+#
+# Задание 2:
+# Реализуй build_undirected_graph(edges).
+#
+# Задание 3:
+# Реализуй neighbors(graph, node) -> список соседей.
+
+
+def build_directed_graph(edges: list[tuple[str, str]]) -> dict[str, list[str]]:
+    return {}
+
+
+
+def build_undirected_graph(edges: list[tuple[str, str]]) -> dict[str, list[str]]:
+    return {}
+
+
+
+def neighbors(graph: dict[str, list[str]], node: str) -> list[str]:
+    return []
 
 
 if __name__ == "__main__":
-    print("Практика для темы 'Представление графа' будет добавлена позже.")
+    edges = [("A", "B"), ("A", "C"), ("B", "D")]
+    graph = build_directed_graph(edges)
+    print(graph)
+    print(neighbors(graph, "A"))
+    print("Реализуй базовые функции представления графа.")

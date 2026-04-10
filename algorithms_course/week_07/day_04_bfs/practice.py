@@ -1,6 +1,37 @@
 # Неделя 7, День 4 - BFS
-# Практика будет добавлена позже.
+#
+# Задание 1:
+# Реализуй bfs_order(graph, start).
+#
+# Задание 2:
+# Реализуй reachable(graph, start, target) -> True/False.
+#
+# Задание 3:
+# Реализуй bfs_levels(graph, start),
+# которая возвращает dict вершина -> расстояние от start.
+
+
+from collections import deque
+
+
+
+def bfs_order(graph: dict[str, list[str]], start: str) -> list[str]:
+    return []
+
+
+
+def reachable(graph: dict[str, list[str]], start: str, target: str) -> bool:
+    return False
+
+
+
+def bfs_levels(graph: dict[str, list[str]], start: str) -> dict[str, int]:
+    return {}
 
 
 if __name__ == "__main__":
-    print("Практика для темы 'BFS' будет добавлена позже.")
+    graph = {"A": ["B", "C"], "B": ["D"], "C": [], "D": []}
+    print(bfs_order(graph, "A"))
+    print(reachable(graph, "A", "D"))
+    print(bfs_levels(graph, "A"))
+    print("Реализуй BFS и связанные функции.")

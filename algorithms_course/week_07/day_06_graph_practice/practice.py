@@ -1,6 +1,37 @@
 # Неделя 7, День 6 - Практика на графы
-# Практика будет добавлена позже.
+#
+# Задание 1:
+# Реализуй node_count(graph).
+#
+# Задание 2:
+# Реализуй edge_count_directed(graph).
+#
+# Задание 3:
+# Реализуй shortest_reach(graph, start) через BFS,
+# возвращающую dict вершина -> расстояние.
+
+
+from collections import deque
+
+
+
+def node_count(graph: dict[str, list[str]]) -> int:
+    return -1
+
+
+
+def edge_count_directed(graph: dict[str, list[str]]) -> int:
+    return -1
+
+
+
+def shortest_reach(graph: dict[str, list[str]], start: str) -> dict[str, int]:
+    return {}
 
 
 if __name__ == "__main__":
-    print("Практика для темы 'Практика на графы' будет добавлена позже.")
+    graph = {"A": ["B", "C"], "B": ["D"], "C": [], "D": []}
+    print(node_count(graph))
+    print(edge_count_directed(graph))
+    print(shortest_reach(graph, "A"))
+    print("Реализуй mixed practice по графам.")
