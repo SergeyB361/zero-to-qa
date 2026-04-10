@@ -27,4 +27,5 @@ if __name__ == "__main__":
     data = [3, -5, 8, -1, 0]
     print("count_negative:", count_negative(data))
     print("first_even:", first_even(data))
+    print("Ожидается: count_negative = 2, first_even = 8")
     print("Реализуй функции и замени временные результаты.")

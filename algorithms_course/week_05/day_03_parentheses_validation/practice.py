@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(is_balanced("{[()]}"))
     print(only_parentheses("a+(b*c)-{d/e}"))
     print(has_empty_parentheses("a + () + b"))
+    print("Ожидается: is_balanced = True, only_parentheses = '(){}', has_empty_parentheses = True")
     print("Реализуй задачи на стек и проверку скобок.")

@@ -28,4 +28,5 @@ if __name__ == "__main__":
     print(unique_count([1, 1, 2, 3, 3]))
     print(frequency_map(["a", "b", "a"]))
     print(pair_lists(["ann", "bob"], [1, 2]))
+    print("Ожидается: unique_count = 3, frequency_map = {'a': 2, 'b': 1}, pair_lists = [('ann', 1), ('bob', 2)]")
     print("Используй built-in структуры вместо лишней ручной логики.")

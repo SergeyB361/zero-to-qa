@@ -34,4 +34,5 @@ if __name__ == "__main__":
     print(bfs_order(graph, "A"))
     print(reachable(graph, "A", "D"))
     print(bfs_levels(graph, "A"))
+    print("Ожидается: bfs_order = ['A', 'B', 'C', 'D'], reachable = True, bfs_levels = {'A': 0, 'B': 1, 'C': 1, 'D': 2}")
     print("Реализуй BFS и связанные функции.")

@@ -37,4 +37,5 @@ if __name__ == "__main__":
     print(preorder(root))
     print(inorder(root))
     print(postorder(root))
+    print("Ожидается: preorder = [2, 1, 3], inorder = [1, 2, 3], postorder = [1, 3, 2]")
     print("Реализуй DFS-обходы дерева.")

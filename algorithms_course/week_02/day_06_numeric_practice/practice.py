@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(are_coprime(14, 25))
     print(has_prime_in_range(14, 20))
     print(count_numbers_divisible_by_any([6, 10, 15, 21, 22], 2, 3))
+    print("Ожидается: are_coprime = True, has_prime_in_range = True, count_numbers_divisible_by_any = 5")
     print("Выбери правильные числовые алгоритмы для каждой задачи.")

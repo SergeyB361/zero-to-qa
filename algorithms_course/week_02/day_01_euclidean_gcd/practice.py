@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(gcd(54, 24))
     print(lcm(12, 18))
     print(simplify_fraction(24, 36))
+    print("Ожидается: gcd = 6, lcm = 36, simplify_fraction = (2, 3)")
     print("Реализуй числовые функции на базе НОД.")

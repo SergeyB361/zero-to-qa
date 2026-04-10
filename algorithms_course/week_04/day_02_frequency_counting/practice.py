@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(frequency_map(sample))
     print(count_distinct(sample))
     print(most_frequent_number(sample))
+    print("Ожидается: frequency_map = {4: 3, 1: 2, 2: 1}, count_distinct = 3, most_frequent_number = 4")
     print("Реализуй frequency counting через dict.")

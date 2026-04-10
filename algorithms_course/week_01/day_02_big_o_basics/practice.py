@@ -36,4 +36,5 @@ if __name__ == "__main__":
     print(get_last_item(sample))
     print(count_zeros(sample))
     print(has_pair_sum_bruteforce([2, 7, 11, 15], 9))
+    print("Ожидается: get_last_item = 5, count_zeros = 2, has_pair_sum_bruteforce = True")
     print("Реализуй функции и подпиши сложности в комментариях.")

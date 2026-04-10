@@ -8,6 +8,7 @@
 #
 # Задание 3:
 # Реализуй tree_height(root).
+# Считай высоту в узлах: для пустого дерева 0, для дерева из одного узла 1.
 
 
 class TreeNode:
@@ -37,4 +38,5 @@ if __name__ == "__main__":
     print(tree_sum(root))
     print(tree_size(root))
     print(tree_height(root))
+    print("Ожидается: tree_sum = 19, tree_size = 4, tree_height = 3")
     print("Реализуй базовые функции для дерева.")

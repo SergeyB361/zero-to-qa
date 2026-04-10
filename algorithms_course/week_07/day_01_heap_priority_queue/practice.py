@@ -33,4 +33,5 @@ if __name__ == "__main__":
     print(extract_all_sorted([4, 1, 7, 2]))
     print(smallest_two([9, 3, 5, 1, 6]))
     print(process_tasks([(3, "deploy"), (1, "fix"), (2, "test")]))
+    print("Ожидается: extract_all_sorted = [1, 2, 4, 7], smallest_two = [1, 3], process_tasks = ['fix', 'test', 'deploy']")
     print("Реализуй базовые задачи на heapq.")

@@ -28,4 +28,5 @@ if __name__ == "__main__":
     print(sort_and_deduplicate([3, 1, 3, 2, 2]))
     print(insertion_position([1, 3, 5, 7], 4))
     print(top_k_smallest([8, 2, 5, 1, 9, 3], 3))
+    print("Ожидается: sort_and_deduplicate = [1, 2, 3], insertion_position = 2, top_k_smallest = [1, 2, 3]")
     print("Реализуй смешанные задачи по поиску и сортировкам.")

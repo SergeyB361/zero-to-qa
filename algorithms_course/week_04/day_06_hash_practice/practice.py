@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(intersection_size([1, 2, 3], [2, 3, 4]))
     print(first_unique([9, 1, 2, 1, 2]))
     print(same_multiset([1, 2, 2, 3], [2, 1, 3, 2]))
+    print("Ожидается: intersection_size = 2, first_unique = 9, same_multiset = True")
     print("Реализуй смешанные задачи на dict и set.")

@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(has_pair_with_sum_sorted([1, 2, 4, 7, 9], 11))
     print(is_palindrome("radar"))
     print(remove_duplicates_sorted([1, 1, 2, 2, 3, 4, 4]))
+    print("Ожидается: has_pair_with_sum_sorted = True, is_palindrome = True, remove_duplicates_sorted = [1, 2, 3, 4]")
     print("Реализуй задачи на паттерн two pointers.")

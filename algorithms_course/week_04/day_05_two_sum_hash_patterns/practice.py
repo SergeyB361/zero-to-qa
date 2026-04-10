@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(has_pair_with_sum([2, 7, 11, 15], 9))
     print(two_sum_indices([2, 7, 11, 15], 26))
     print(has_pair_with_difference([1, 5, 9, 14], 4))
+    print("Ожидается: has_pair_with_sum = True, two_sum_indices = (2, 3), has_pair_with_difference = True")
     print("Реализуй hash-based паттерны поиска пар.")

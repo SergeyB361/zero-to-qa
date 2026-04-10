@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(middle_char("python"))
     print(rotate_right([1, 2, 3]))
     print(count_vowels("algorithm"))
+    print("Ожидается: middle_char = 't', rotate_right = [3, 1, 2], count_vowels = 3")
     print("Замени временные ответы на реальную реализацию.")

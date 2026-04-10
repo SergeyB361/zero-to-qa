@@ -34,4 +34,5 @@ if __name__ == "__main__":
     print(has_duplicate([1, 2, 3, 1]))
     print(max_sum_window([2, 1, 5, 1, 3, 2], 3))
     print(reachable({"A": ["B"], "B": ["C"], "C": []}, "A", "C"))
+    print("Ожидается: has_duplicate = True, max_sum_window = 9, reachable = True")
     print("Реализуй mixed practice по разным паттернам.")

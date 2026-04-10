@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(reverse_string("stack"))
     print(remove_last_two([1, 2, 3, 4]))
     print(stack_sum([5, 6, 7]))
+    print("Ожидается: reverse_string = 'kcats', remove_last_two = [1, 2], stack_sum = 18")
     print("Реализуй задачи на базовый стек.")

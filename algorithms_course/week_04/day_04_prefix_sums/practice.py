@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(build_prefix_sums(sample))
     print(range_sum([3, 2, 4, 4, 9], 1, 3))
     print(count_positives_prefix(sample))
+    print("Ожидается: build_prefix_sums = [3, 2, 4, 4, 9], range_sum = 1, count_positives_prefix = [1, 1, 2, 2, 3]")
     print("Реализуй задачи на префиксные суммы.")

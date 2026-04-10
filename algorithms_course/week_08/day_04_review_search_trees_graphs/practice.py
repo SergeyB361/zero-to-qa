@@ -41,4 +41,5 @@ if __name__ == "__main__":
     print(binary_search([1, 3, 5, 7], 5))
     print(bfs_levels(graph, "A"))
     print(preorder(root))
+    print("Ожидается: binary_search = 2, bfs_levels = {'A': 0, 'B': 1, 'C': 1, 'D': 2}, preorder = [2, 1, 3]")
     print("Реализуй mixed practice по search, trees и graphs.")

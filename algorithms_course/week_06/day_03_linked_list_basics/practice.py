@@ -29,4 +29,5 @@ def to_list(head: ListNode | None) -> list[int]:
 if __name__ == "__main__":
     head = build_list([5, 6, 7])
     print(to_list(head))
+    print("Ожидается: to_list(build_list([5, 6, 7])) = [5, 6, 7]")
     print("Реализуй базовые функции для linked list.")

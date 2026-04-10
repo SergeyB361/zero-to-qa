@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(has_duplicate([1, 2, 3, 1]))
     print(unique_count([1, 1, 2, 3, 3]))
     print(index_by_name([{"name": "Ann", "age": 20}, {"name": "Bob", "age": 30}]))
+    print("Ожидается: has_duplicate = True, unique_count = 3, index_by_name = {'Ann': {'name': 'Ann', 'age': 20}, 'Bob': {'name': 'Bob', 'age': 30}}")
     print("Реализуй задачи через dict и set.")

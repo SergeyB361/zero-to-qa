@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(find_first_negative([4, 2, -5, 7]))
     print(contains_word(["api", "ui", "db"], "ui"))
     print(count_occurrences([1, 2, 1, 1, 3], 1))
+    print("Ожидается: find_first_negative = -5, contains_word = True, count_occurrences = 3")
     print("Реализуй функции линейного поиска.")

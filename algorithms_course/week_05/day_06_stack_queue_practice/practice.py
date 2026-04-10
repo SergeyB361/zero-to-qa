@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(undo_last(["type", "copy", "paste"]))
     print(first_in_line(["req-1", "req-2", "req-3"]))
     print(recent_k([1, 2, 3, 4, 5], 3))
+    print("Ожидается: undo_last = 'paste', first_in_line = 'req-1', recent_k = [3, 4, 5]")
     print("Выбери правильную структуру: stack, queue или deque.")

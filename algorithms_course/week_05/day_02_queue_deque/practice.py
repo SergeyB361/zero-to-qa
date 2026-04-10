@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(first_processed(["job-1", "job-2"]))
     print(rotate_left_once([1, 2, 3, 4]))
     print(queue_sum([3, 5, 7]))
+    print("Ожидается: first_processed = 'job-1', rotate_left_once = [2, 3, 4, 1], queue_sum = 15")
     print("Реализуй задачи на очередь и deque.")

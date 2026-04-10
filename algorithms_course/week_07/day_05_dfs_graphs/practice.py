@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(dfs_order(graph, "A"))
     print(reachable_dfs(graph, "A", "D"))
     print(connected_component(graph, "A"))
+    print("Ожидается: dfs_order = ['A', 'B', 'D', 'C'], reachable_dfs = True, connected_component = {'A', 'B', 'C', 'D'}")
     print("Реализуй DFS и связанные функции.")

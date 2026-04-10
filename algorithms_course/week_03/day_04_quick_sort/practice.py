@@ -18,4 +18,5 @@ def quick_sort(items: list[int]) -> list[int]:
 
 if __name__ == "__main__":
     print(quick_sort([4, 1, 7, 3, 2, 9]))
+    print("Ожидается: quick_sort = [1, 2, 3, 4, 7, 9]")
     print("Реализуй quick sort в учебной форме.")

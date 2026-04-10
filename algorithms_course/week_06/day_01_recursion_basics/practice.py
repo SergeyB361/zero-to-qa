@@ -28,4 +28,5 @@ if __name__ == "__main__":
     print(factorial(5))
     print(count_down(5))
     print(power_of_two(6))
+    print("Ожидается: factorial = 120, count_down = [5, 4, 3, 2, 1], power_of_two = 64")
     print("Реализуй базовые рекурсивные функции.")

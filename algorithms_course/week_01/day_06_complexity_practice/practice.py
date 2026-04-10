@@ -29,4 +29,5 @@ def contains_duplicate(items: list[int]) -> bool:
 if __name__ == "__main__":
     print(count_matches_bruteforce([1, 2, 3], [2, 3, 4]))
     print(contains_duplicate([1, 2, 3, 2]))
+    print("Ожидается: count_matches_bruteforce = 2, contains_duplicate = True")
     print("Добавь оценку сложности и более эффективное решение.")

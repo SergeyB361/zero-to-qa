@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(process_jobs(["a", "b", "c"]))
     print(round_robin_twice(["A", "B", "C", "D"]))
     print(serve_until_empty([1, 2, 3, 4]))
+    print("Ожидается: process_jobs = ['a', 'b', 'c'], round_robin_twice = ['C', 'D', 'A', 'B'], serve_until_empty = 4")
     print("Реализуй симуляции на queue/deque.")

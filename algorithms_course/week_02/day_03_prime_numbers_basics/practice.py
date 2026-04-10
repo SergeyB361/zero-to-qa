@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(is_prime(17))
     print(next_prime(20))
     print(count_primes_in_range(1, 20))
+    print("Ожидается: is_prime = True, next_prime = 23, count_primes_in_range = 8")
     print("Реализуй функции для работы с простыми числами.")

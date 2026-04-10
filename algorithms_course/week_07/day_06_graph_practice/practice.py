@@ -34,4 +34,5 @@ if __name__ == "__main__":
     print(node_count(graph))
     print(edge_count_directed(graph))
     print(shortest_reach(graph, "A"))
+    print("Ожидается: node_count = 4, edge_count_directed = 3, shortest_reach = {'A': 0, 'B': 1, 'C': 1, 'D': 2}")
     print("Реализуй mixed practice по графам.")

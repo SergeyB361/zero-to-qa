@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(has_duplicate([1, 2, 3, 1]))
     print(first_unique([4, 1, 2, 1, 2]))
     print(range_sum_query([2, 5, 1, 3, 4], [(0, 2), (1, 3)]))
+    print("Ожидается: has_duplicate = True, first_unique = 4, range_sum_query = [8, 9]")
     print("Реализуй mixed practice по arrays и hashing.")

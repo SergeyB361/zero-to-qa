@@ -25,4 +25,5 @@ if __name__ == "__main__":
     sample = [9, 3, 7, 1]
     print(bubble_sort(sample))
     print(insertion_sort(sample))
+    print("Ожидается: bubble_sort = [1, 3, 7, 9], insertion_sort = [1, 3, 7, 9]")
     print("Реализуй учебные сортировки.")

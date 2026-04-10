@@ -30,4 +30,5 @@ if __name__ == "__main__":
     print(binary_search(sample, 7))
     print(contains_sorted(sample, 3))
     print(leftmost_position(sample, 4))
+    print("Ожидается: binary_search = 5, contains_sorted = False, leftmost_position = 2")
     print("Реализуй функции бинарного поиска.")

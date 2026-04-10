@@ -5,6 +5,7 @@
 #
 # Задание 2:
 # Реализуй has_overlap(intervals).
+# Считай касание по границе пересечением: (3, 4) и (4, 5) -> overlap.
 #
 # Задание 3:
 # Реализуй insert_interval(intervals, new_interval),
@@ -32,4 +33,5 @@ if __name__ == "__main__":
     print(merge_intervals([(1, 4), (2, 5), (8, 10)]))
     print(has_overlap([(1, 2), (3, 4), (4, 5)]))
     print(insert_interval(sample, (2, 5)))
+    print("Ожидается: merge_intervals = [(1, 5), (8, 10)], has_overlap = True, insert_interval = [(1, 5), (6, 9)]")
     print("Реализуй базовые interval tasks.")

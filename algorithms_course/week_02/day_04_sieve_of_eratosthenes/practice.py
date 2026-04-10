@@ -28,4 +28,5 @@ if __name__ == "__main__":
     print(sieve(20))
     print(count_primes_up_to(20))
     print(sum_primes_up_to(20))
+    print("Ожидается: sieve = [2, 3, 5, 7, 11, 13, 17, 19], count_primes_up_to = 8, sum_primes_up_to = 77")
     print("Реализуй решето и функции на его основе.")

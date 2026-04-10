@@ -24,4 +24,5 @@ def last_digit_of_power(base: int, power: int) -> int:
 if __name__ == "__main__":
     print(fast_pow(2, 10))
     print(last_digit_of_power(7, 5))
+    print("Ожидается: fast_pow = 1024, last_digit_of_power = 7")
     print("Реализуй быстрое возведение в степень.")

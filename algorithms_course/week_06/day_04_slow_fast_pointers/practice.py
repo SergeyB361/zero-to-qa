@@ -2,6 +2,8 @@
 #
 # Задание 1:
 # Реализуй middle_node(head).
+# Для списка чётной длины возвращай правую середину.
+# Для списка чётной длины возвращай правую середину.
 #
 # Задание 2:
 # Реализуй list_length(head) обычным проходом.
@@ -33,4 +35,5 @@ if __name__ == "__main__":
     middle = middle_node(head)
     print(middle.value if middle else None)
     print(list_length(head))
+    print("Ожидается: middle_node = 30, list_length = 4")
     print("Реализуй задачи на slow/fast pointers.")

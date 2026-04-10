@@ -24,4 +24,5 @@ if __name__ == "__main__":
     sample = [4, 8, 1, 7, 2, 9]
     print(sum_divide_and_conquer(sample))
     print(max_divide_and_conquer(sample))
+    print("Ожидается: sum_divide_and_conquer = 31, max_divide_and_conquer = 9")
     print("Реализуй divide and conquer решения.")

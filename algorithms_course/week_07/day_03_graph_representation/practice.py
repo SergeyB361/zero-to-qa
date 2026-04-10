@@ -29,4 +29,5 @@ if __name__ == "__main__":
     graph = build_directed_graph(edges)
     print(graph)
     print(neighbors(graph, "A"))
+    print("Ожидается: build_directed_graph = {'A': ['B', 'C'], 'B': ['D'], 'C': [], 'D': []}, neighbors('A') = ['B', 'C']")
     print("Реализуй базовые функции представления графа.")

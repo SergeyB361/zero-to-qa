@@ -29,4 +29,5 @@ if __name__ == "__main__":
     print(sort_words_by_last_char(["api", "ui", "db", "automation"]))
     print(sort_pairs_by_second([("a", 3), ("b", 1), ("c", 2)]))
     print(sort_users_by_age_desc([{"name": "Ann", "age": 20}, {"name": "Bob", "age": 30}]))
+    print("Ожидается: sort_words_by_last_char = ['db', 'api', 'ui', 'automation'], sort_pairs_by_second = [('b', 1), ('c', 2), ('a', 3)], sort_users_by_age_desc = [{'name': 'Bob', 'age': 30}, {'name': 'Ann', 'age': 20}]")
     print("Используй built-in sorted() и key-функции.")

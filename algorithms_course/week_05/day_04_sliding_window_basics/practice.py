@@ -8,6 +8,7 @@
 #
 # Задание 3:
 # Реализуй count_windows_above_threshold(items, k, threshold).
+# Считай только окна со строго большей суммой, чем threshold.
 
 
 def window_sums(items: list[int], k: int) -> list[int]:
@@ -29,4 +30,5 @@ if __name__ == "__main__":
     print(window_sums(sample, 3))
     print(max_sum_window(sample, 3))
     print(count_windows_above_threshold(sample, 3, 8))
+    print("Ожидается: window_sums = [8, 7, 9, 6], max_sum_window = 9, count_windows_above_threshold = 1")
     print("Реализуй задачи на sliding window.")

@@ -28,4 +28,5 @@ if __name__ == "__main__":
     print(divisors(24))
     print(prime_factorization(90))
     print(count_divisors(24))
+    print("Ожидается: divisors = [1, 2, 3, 4, 6, 8, 12, 24], prime_factorization = [2, 3, 3, 5], count_divisors = 8")
     print("Реализуй функции делителей и факторизации.")
