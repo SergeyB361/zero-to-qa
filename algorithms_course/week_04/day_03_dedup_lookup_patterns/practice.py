@@ -1,6 +1,33 @@
 # Неделя 4, День 3 - Дедупликация и lookup-паттерны
-# Практика будет добавлена позже.
+#
+# Задание 1:
+# Реализуй deduplicate_preserve_order(items).
+#
+# Задание 2:
+# Реализуй first_duplicate(items) -> первое значение,
+# которое встретилось повторно, или None.
+#
+# Задание 3:
+# Реализуй first_seen_indices(items),
+# которая возвращает словарь item -> первый индекс.
+
+
+def deduplicate_preserve_order(items: list[int]) -> list[int]:
+    return []
+
+
+
+def first_duplicate(items: list[int]) -> int | None:
+    return None
+
+
+
+def first_seen_indices(items: list[str]) -> dict[str, int]:
+    return {}
 
 
 if __name__ == "__main__":
-    print("Практика для темы 'Дедупликация и lookup-паттерны' будет добавлена позже.")
+    print(deduplicate_preserve_order([1, 2, 1, 3, 2, 4]))
+    print(first_duplicate([5, 8, 3, 8, 9]))
+    print(first_seen_indices(["a", "b", "a", "c"]))
+    print("Реализуй дедупликацию и lookup-паттерны.")
