@@ -29,19 +29,20 @@
 - `advanced_course/week_10/` — Quality Engineering и системное мышление
 - `advanced_course/bonus_advanced_python_oop/` — Bonus: Advanced Python OOP
 
-## Структура курса по алгоритмам
-- `algorithms_course/week_01/` — Введение в алгоритмы
-- `algorithms_course/week_02/` — Числовые алгоритмы
-- `algorithms_course/week_03/` — Поиск и сортировки
-- `algorithms_course/week_04/` — Hash-based подходы
-- `algorithms_course/week_05/` — Stack, Queue, Deque
-- `algorithms_course/week_06/` — Рекурсия, связные структуры и деревья
-- `algorithms_course/week_07/` — Heap и графы
-- `algorithms_course/week_08/` — Итоговая алгоритмическая неделя
+## Структура курсов по алгоритмам
+- `base_algorithms_course/week_01/` — Введение в алгоритмы
+- `base_algorithms_course/week_02/` — Числовые алгоритмы
+- `base_algorithms_course/week_03/` — Поиск и сортировки
+- `base_algorithms_course/week_04/` — Hash-based подходы
+- `base_algorithms_course/week_05/` — Stack, Queue, Deque
+- `advanced_algorithms_course/week_01/` — Рекурсия, связные структуры и деревья
+- `advanced_algorithms_course/week_02/` — Heap и графы
+- `advanced_algorithms_course/week_03/` — Продвинутые паттерны и итоговый toolkit
 
 Важно:
 - `ROADMAP.md` описывает полный план базового курса и расширенного трека.
-- `algorithms_course/ROADMAP.md` описывает отдельный курс по алгоритмам и структурам данных.
+- `base_algorithms_course/ROADMAP.md` описывает базовый курс по алгоритмам и структурам данных.
+- `advanced_algorithms_course/ROADMAP.md` описывает продвинутый курс по алгоритмам и структурам данных.
 - Папки следующих недель могут появляться постепенно по мере прохождения.
 
 ## Формат дня
