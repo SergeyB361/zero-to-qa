@@ -5,8 +5,9 @@
 ## Что есть в проекте
 - `base_course/` — основной 12-недельный курс по Python, QA automation и портфолио.
 - `advanced_course/` — расширенный QA-трек для более сильного инженерного уровня.
-- `base_sql_course/` — базовый курс по SQL.
-- `advanced_sql_course/` — продвинутый курс по SQL.
+- `base_sql_course/` — базовый pure-SQL курс.
+- `advanced_sql_course/` — продвинутый pure-SQL курс.
+- `sql_in_practice_course/` — прикладной SQL-трек для Python, тестов и расследований.
 - `base_algorithms_course/` — базовый курс по алгоритмам и структурам данных.
 - `advanced_algorithms_course/` — продвинутый алгоритмический трек.
 - `pet_project/` — отдельный проект для практики backend/API-мышления.
@@ -18,7 +19,8 @@
 4. `pet_project` как подготовка и проектирование
 5. `advanced_course`
 6. `advanced_sql_course`
-7. `advanced_algorithms_course`
+7. `sql_in_practice_course`
+8. `advanced_algorithms_course`
 
 ## Основной курс
 **Для кого:** старт с нуля или после очень фрагментарной базы.
@@ -58,15 +60,15 @@
 
 ## Базовый SQL-курс
 **Для кого:** после начального Python и первых данных/файлов.
-**Цель:** собрать рабочую базу по SQL для QA, backend и проверок БД.
+**Цель:** собрать фундамент по чистому SQL без Python-слоя внутри уроков.
 **Длительность:** `4` недели.
-**Что внутри:** SELECT, фильтрация, JOIN, GROUP BY, HAVING, подзапросы, схема данных, SQLite в Python, DB checks в тестах.
+**Что внутри:** SELECT, фильтрация, JOIN, GROUP BY, HAVING, подзапросы, схема данных, set operations, CASE, date/time и composite queries.
 
 Ключевые недели:
 - `base_sql_course/week_01/` — SELECT и фильтрация
 - `base_sql_course/week_02/` — Агрегации и JOINs
 - `base_sql_course/week_03/` — Подзапросы и схема данных
-- `base_sql_course/week_04/` — SQL для QA и Python
+- `base_sql_course/week_04/` — Чистый SQL: закрепление
 
 Связанные файлы:
 - `base_sql_course/README.md`
@@ -74,19 +76,33 @@
 
 ## Продвинутый SQL-курс
 **Для кого:** после базового SQL-трека.
-**Цель:** перейти к аналитическим запросам, performance, транзакциям и SQL в реальных системах.
+**Цель:** перейти к advanced SQL без смешения с Python- и QA-интеграцией.
 **Длительность:** `4` недели.
-**Что внутри:** CTE, window functions, ranking, query plan, indexes, anti-patterns, isolation levels, locks, data quality checks.
+**Что внутри:** CTE, window functions, ranking, indexes, `EXPLAIN`, recursive CTE, pivot-like отчёты, time-series analytics, integrity и consistency.
 
 Ключевые недели:
 - `advanced_sql_course/week_01/` — Advanced querying
 - `advanced_sql_course/week_02/` — Optimization and indexing
 - `advanced_sql_course/week_03/` — Transactions and consistency
-- `advanced_sql_course/week_04/` — SQL in real systems
+- `advanced_sql_course/week_04/` — Advanced SQL reporting
 
 Связанные файлы:
 - `advanced_sql_course/README.md`
 - `advanced_sql_course/ROADMAP.md`
+
+## SQL in Practice
+**Для кого:** после базового SQL или параллельно с ним как applied-слой.
+**Цель:** научиться использовать SQL в Python, тестах, миграциях и инженерных расследованиях.
+**Длительность:** `1` неделя + bonus.
+**Что внутри:** SQLite в Python, DB-checks, cleanup, migrations, debugging workflows, investigation toolkit.
+
+Ключевые недели:
+- `sql_in_practice_course/week_01/` — SQL в Python и тестах
+- `sql_in_practice_course/bonus_backend_api_analysis/` — bonus: SQL для backend и API-анализа
+
+Связанные файлы:
+- `sql_in_practice_course/README.md`
+- `sql_in_practice_course/ROADMAP.md`
 
 ## Базовый алгоритмический курс
 **Для кого:** как параллельный фундаментальный трек после начального Python.

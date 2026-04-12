@@ -1,4 +1,4 @@
-# ТЗ: Capstone: SQL Investigation Pack
+# ТЗ: Capstone: Advanced SQL Report
 
 ## Цель
 Собрать итоговый пакет SQL-расследований: производительность endpoint, failed runs по релизам, дефекты и data-quality checks.

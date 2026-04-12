@@ -152,11 +152,14 @@ def explain_query_plan(conn: sqlite3.Connection, query: str):
 def build_file_db() -> tuple[sqlite3.Connection, Path]:
     tmp_dir = Path(tempfile.mkdtemp())
     db_path = tmp_dir / "advanced_sql_demo.db"
+    mem_conn = build_demo_db()
+    script = "\n".join(mem_conn.iterdump())
+    mem_conn.close()
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
-    conn.executescript(build_demo_db().iterdump().__next__())
+    conn.executescript(script)
     conn.close()
-    file_conn = sqlite3.connect(db_path)
+    file_conn = sqlite3.connect(db_path, timeout=0.2)
     file_conn.row_factory = sqlite3.Row
     return file_conn, db_path
 

@@ -1,4 +1,4 @@
-# Data quality checks
+# Data quality queries
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -164,13 +164,31 @@ def build_file_db() -> tuple[sqlite3.Connection, Path]:
     return file_conn, db_path
 
 
+def find_5xx_api_checks(conn: sqlite3.Connection):
+    """Верни id api_checks со статусом 5xx."""
+    # Напиши SQL или Python + SQL по условию.
+    return []
+
+
+def find_duplicate_titles_in_temp_table(conn: sqlite3.Connection):
+    """Создай temp таблицу с дублем и верни дублирующийся title."""
+    # Напиши SQL или Python + SQL по условию.
+    return ''
+
+
+def find_open_defects_without_owner(conn: sqlite3.Connection):
+    """Верни количество open defects без owner. Ожидается 0."""
+    # Напиши SQL или Python + SQL по условию.
+    return -1
+
+
 def main() -> None:
     conn = build_demo_db()
-    print(fetch_all(conn, "SELECT id, endpoint, status_code FROM api_checks WHERE status_code >= 500 ORDER BY id"))
-    conn.execute("CREATE TABLE temp_quality (title TEXT)")
-    conn.executemany("INSERT INTO temp_quality(title) VALUES (?)", [('dup',), ('dup',), ('ok',)])
-    print(fetch_all(conn, "SELECT title, COUNT(*) AS cnt FROM temp_quality GROUP BY title HAVING COUNT(*) > 1"))
-    print(fetch_all(conn, "SELECT COUNT(*) AS broken_owner_count FROM defects WHERE owner_id IS NULL"))
+    print('find_5xx_api_checks ->', find_5xx_api_checks(conn), '| expected:', '[2, 7]')
+    print('find_duplicate_titles_in_temp_table ->', find_duplicate_titles_in_temp_table(conn), '| expected:', 'dup')
+    print('find_open_defects_without_owner ->', find_open_defects_without_owner(conn), '| expected:', '0')
+    print('Сначала добейся совпадения с expected, затем улучшай читаемость решений.')
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,6 @@
 # SQL — продвинутый уровень
 
-**Цель:** продвинутый SQL-трек по аналитическим запросам, производительности, транзакциям и реальным системам.
+**Цель:** pure advanced SQL-трек по аналитическим запросам, оптимизации и сложным отчётам.
 **Формат:** 4 недели · 7 дней · Русский язык
 
 ---
@@ -40,14 +40,14 @@
 - День 6 — Практика на consistency
 - **Мини-проект** — Мини-проект: transaction scenarios
 
-### Неделя 4 — SQL in real systems
+### Неделя 4 — Advanced SQL reporting
 - День 1 — Views и materialized views
-- День 2 — Миграции: база
-- День 3 — Data quality checks
-- День 4 — SQL debugging workflows
-- День 5 — SQL для backend и API-анализа
-- День 6 — Подготовка SQL capstone
-- **Мини-проект** — Capstone: SQL Investigation Pack
+- День 2 — Recursive CTE
+- День 3 — Pivot-like отчёты и advanced reporting
+- День 4 — Time-series analytics и bucketization
+- День 5 — Data quality queries
+- День 6 — Финальная advanced SQL practice
+- **Мини-проект** — Capstone: Advanced SQL Report
 
 ---
 
@@ -55,11 +55,11 @@
 
 > Обновляй по результатам прохождения курса
 
-```
+```text
 Неделя 1    Query    ░░░░░░░░░░░░░░░░  0%
 Неделя 2    Perf     ░░░░░░░░░░░░░░░░  0%
 Неделя 3    Tx       ░░░░░░░░░░░░░░░░  0%
-Неделя 4    Systems  ░░░░░░░░░░░░░░░░  0%
+Неделя 4    Report   ░░░░░░░░░░░░░░░░  0%
 ```
 
 ---
@@ -93,11 +93,11 @@
 - [ ] День 6 — Практика на consistency
 - [ ] День 7 — Мини-проект: transaction scenarios
 
-### Неделя 4 — SQL in real systems
+### Неделя 4 — Advanced SQL reporting
 - [ ] День 1 — Views и materialized views
-- [ ] День 2 — Миграции: база
-- [ ] День 3 — Data quality checks
-- [ ] День 4 — SQL debugging workflows
-- [ ] День 5 — SQL для backend и API-анализа
-- [ ] День 6 — Подготовка SQL capstone
-- [ ] День 7 — Capstone: SQL Investigation Pack
+- [ ] День 2 — Recursive CTE
+- [ ] День 3 — Pivot-like отчёты и advanced reporting
+- [ ] День 4 — Time-series analytics и bucketization
+- [ ] День 5 — Data quality queries
+- [ ] День 6 — Финальная advanced SQL practice
+- [ ] День 7 — Capstone: Advanced SQL Report

@@ -1,4 +1,4 @@
-# Подготовка SQL capstone
+# Финальная advanced SQL practice
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -164,12 +164,31 @@ def build_file_db() -> tuple[sqlite3.Connection, Path]:
     return file_conn, db_path
 
 
+def list_capstone_questions(conn: sqlite3.Connection):
+    """Верни 3-5 инженерных вопроса для capstone."""
+    # Напиши SQL или Python + SQL по условию.
+    return ''
+
+
+def choose_core_tables(conn: sqlite3.Connection):
+    """Верни строку с ядром таблиц capstone."""
+    # Напиши SQL или Python + SQL по условию.
+    return ''
+
+
+def define_output_sections(conn: sqlite3.Connection):
+    """Верни строку с секциями итогового отчёта."""
+    # Напиши SQL или Python + SQL по условию.
+    return ''
+
+
 def main() -> None:
     conn = build_demo_db()
-    print('Question 1 -> which endpoints are slowest?')
-    print(fetch_all(conn, "SELECT endpoint, AVG(response_ms) AS avg_ms FROM api_checks GROUP BY endpoint ORDER BY avg_ms DESC"))
-    print('Question 2 -> which releases contain failed runs?')
-    print(fetch_all(conn, "SELECT rel.build_tag, COUNT(*) AS failed_count FROM test_runs r JOIN releases rel ON rel.id = r.release_id WHERE r.status = 'failed' GROUP BY rel.id, rel.build_tag ORDER BY rel.deployed_at"))
+    print('list_capstone_questions ->', list_capstone_questions(conn), '| expected:', 'Ожидается список строк')
+    print('choose_core_tables ->', choose_core_tables(conn), '| expected:', 'Ожидается строка')
+    print('define_output_sections ->', define_output_sections(conn), '| expected:', 'Ожидается строка')
+    print('Сначала добейся совпадения с expected, затем улучшай читаемость решений.')
+
 
 if __name__ == "__main__":
     main()

@@ -8,8 +8,9 @@
 ## Структура материалов
 - `base_course/` — основной курс: недели 1-12
 - `advanced_course/` — расширенный курс: недели 1-10
-- `base_sql_course/` — базовый курс: SQL
-- `advanced_sql_course/` — продвинутый курс: SQL
+- `base_sql_course/` — базовый курс: pure SQL
+- `advanced_sql_course/` — продвинутый курс: pure SQL
+- `sql_in_practice_course/` — прикладной курс: SQL в Python, тестах и расследованиях
 - `base_algorithms_course/` — базовый курс: алгоритмы и структуры данных
 - `advanced_algorithms_course/` — продвинутый курс: алгоритмы и структуры данных
 - внутри каждого курса материалы организованы по схеме `week_XX/day_XX_topic`
@@ -662,5 +663,6 @@
 - Базовый план вынесен в `base_sql_course/ROADMAP.md`.
 - Продвинутый план вынесен в `advanced_sql_course/ROADMAP.md`.
 - Эти курсы не влияют на прогресс `base_course` и `advanced_course`.
-- Базовый SQL-трек покрывает SELECT, JOIN, GROUP BY, подзапросы, схему данных и SQL для QA.
-- Продвинутый SQL-трек покрывает аналитические запросы, performance, транзакции и SQL в реальных системах.
+- Базовый SQL-трек покрывает pure SQL: SELECT, JOIN, GROUP BY, подзапросы, set operations, CASE и date/time.
+- Продвинутый SQL-трек покрывает pure advanced SQL: CTE, window functions, performance, recursive CTE и advanced reporting.
+- Прикладной SQL-трек вынесен в `sql_in_practice_course/` и покрывает SQLite в Python, DB-checks, migrations и debugging workflows.
