@@ -8,6 +8,8 @@
 ## Структура материалов
 - `base_course/` — основной курс: недели 1-12
 - `advanced_course/` — расширенный курс: недели 1-10
+- `base_sql_course/` — базовый курс: SQL
+- `advanced_sql_course/` — продвинутый курс: SQL
 - `base_algorithms_course/` — базовый курс: алгоритмы и структуры данных
 - `advanced_algorithms_course/` — продвинутый курс: алгоритмы и структуры данных
 - внутри каждого курса материалы организованы по схеме `week_XX/day_XX_topic`
@@ -654,3 +656,11 @@
 - Эти курсы не влияют на прогресс `base_course` и `advanced_course`.
 - Базовый трек покрывает фундаментальные алгоритмы, hash-based подходы и queue/window patterns.
 - Продвинутый трек покрывает рекурсию, деревья, графы, heap и итоговый algorithmic toolkit.
+
+## ОТДЕЛЬНЫЕ КУРСЫ — SQL
+
+- Базовый план вынесен в `base_sql_course/ROADMAP.md`.
+- Продвинутый план вынесен в `advanced_sql_course/ROADMAP.md`.
+- Эти курсы не влияют на прогресс `base_course` и `advanced_course`.
+- Базовый SQL-трек покрывает SELECT, JOIN, GROUP BY, подзапросы, схему данных и SQL для QA.
+- Продвинутый SQL-трек покрывает аналитические запросы, performance, транзакции и SQL в реальных системах.
