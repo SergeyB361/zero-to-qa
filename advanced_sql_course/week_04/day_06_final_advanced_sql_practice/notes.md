@@ -17,10 +17,10 @@
 - делать capstone как случайный набор SELECT
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `list_capstone_questions` - Верни 3-5 инженерных вопроса для capstone.
 - `choose_core_tables` - Верни строку с ядром таблиц capstone.
 - `define_output_sections` - Верни строку с секциями итогового отчёта.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

@@ -16,10 +16,10 @@ JOIN часто становится источником дорогих зап�
 - join без индексов на связующих колонках
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `failed_runs_join_plan` - Верни текст плана для join failed runs + test_cases.
 - `filtered_join_result` - Верни названия test_cases только с failed runs.
 - `add_join_indexes_and_plan` - Создай индексы на join-колонках и верни обновлённый план.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

@@ -17,10 +17,10 @@
 - забывать PARTITION BY, когда рейтинг нужен внутри группы
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `rank_cases_by_failures` - Верни пары `title:rank` по числу failed runs.
 - `row_number_runs_per_engineer` - Верни пары `run_id:row_number` внутри engineer_id по времени.
 - `dense_rank_endpoints_by_latency` - Верни пары `endpoint:rank` по средней latency.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

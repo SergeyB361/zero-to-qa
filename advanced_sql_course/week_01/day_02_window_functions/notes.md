@@ -18,10 +18,10 @@ Window functions позволяют считать агрегаты по гру�
 - агрегировать там, где нужна строка-источник
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `avg_duration_per_area_window` - Верни пары `title:avg_area_duration`.
 - `runs_per_release_window` - Верни пары `run_id:release_run_count`.
 - `max_duration_per_engineer` - Верни пары `run_id:max_engineer_duration`.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

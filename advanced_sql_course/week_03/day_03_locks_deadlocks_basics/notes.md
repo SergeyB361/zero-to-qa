@@ -17,10 +17,10 @@
 - не закрывать транзакции и держать lock слишком долго
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `lock_error_happens` - Верни True, если второй writer ловит `database is locked`.
 - `sqlite_deadlock_note` - Верни строку о том, что deadlocks чаще обсуждаются в server DB.
 - `released_lock_allows_write` - Верни True, если после commit второй writer может обновить строку.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

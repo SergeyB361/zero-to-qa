@@ -15,10 +15,10 @@
 - оптимизировать SQL, который и так не является bottleneck
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `orders_plan_before_after` - Верни True, если план запроса по `/orders` меняется после индекса.
 - `top_slow_endpoints` - Верни endpoint, отсортированные по средней latency.
 - `failed_runs_index_usage` - Верни текст плана для failed runs после индекса.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

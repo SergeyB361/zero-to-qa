@@ -16,10 +16,10 @@
 - не проверять, что новый запрос возвращает те же данные
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `rewrite_failed_cases_with_exists` - Верни названия test_cases с failed runs через EXISTS.
 - `rewrite_open_defects_cte` - Верни пары `build_tag:open_defects` через CTE.
 - `same_result_check` - Верни True, если два варианта запроса на failed cases дают одинаковый результат.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

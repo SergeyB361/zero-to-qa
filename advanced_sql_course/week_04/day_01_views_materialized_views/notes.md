@@ -17,10 +17,10 @@ View помогает скрыть сложность повторяющегос
 - использовать view там, где лучше обычный запрос в коде
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `create_open_defects_view` - Создай view open_defects_view и верни True, если она появилась.
 - `query_open_defects_view` - Верни пары `title:severity` из open_defects_view.
 - `build_snapshot_table` - Создай table snapshot по open defects и верни количество строк.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

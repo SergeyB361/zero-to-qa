@@ -18,10 +18,10 @@
 - не различать бизнес-ошибку и откат
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `commit_defect_resolution` - Закрой defect id = 1 в транзакции и верни итоговый статус.
 - `rollback_defect_resolution` - Попробуй закрыть defect id = 2 и откати. Верни итоговый статус.
 - `count_open_defects_after_demo` - Верни количество open defects после rollback-сценария.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

@@ -16,10 +16,10 @@
 - путать COUNT и SUM(CASE...)
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `status_counts_per_area` - Верни пары `area:passed:failed`.
 - `severity_open_closed` - Верни пары `severity:open:closed`.
 - `api_status_buckets` - Верни словарь bucket -> count для api_checks.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

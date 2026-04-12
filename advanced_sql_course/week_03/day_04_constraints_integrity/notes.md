@@ -18,10 +18,10 @@
 - не тестировать негативные сценарии нарушения constraint
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `foreign_key_violation_detected` - Верни True, если вставка несуществующего owner_id приводит к ошибке.
 - `unique_violation_detected` - Создай временную таблицу с UNIQUE и поймай ошибку дубликата.
 - `check_constraint_violation` - Создай временную таблицу с CHECK и поймай ошибку.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

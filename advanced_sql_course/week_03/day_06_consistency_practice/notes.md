@@ -15,10 +15,10 @@
 - не проверять состояние БД после rollback или failed insert
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `resolve_defect_in_transaction` - Закрой defect id = 1 и добавь audit event в одной транзакции.
 - `rollback_on_invalid_owner` - Верни True, если invalid insert не меняет количество test_cases.
 - `audit_count_after_resolution` - Верни количество audit events для defect после успешного закрытия.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

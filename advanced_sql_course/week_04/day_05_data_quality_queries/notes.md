@@ -17,10 +17,10 @@
 - не определять, какое значение считается invalid
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `find_5xx_api_checks` - Верни id api_checks со статусом 5xx.
 - `find_duplicate_titles_in_temp_table` - Создай temp таблицу с дублем и верни дублирующийся title.
 - `find_open_defects_without_owner` - Верни количество open defects без owner. Ожидается 0.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

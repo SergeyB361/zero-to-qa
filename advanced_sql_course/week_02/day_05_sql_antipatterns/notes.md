@@ -18,10 +18,10 @@
 - делать вычисления в Python, когда проще в SQL
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `replace_select_star` - Верни исправленный SQL без SELECT * для поиска failed runs.
 - `spot_unnecessary_distinct` - Верни True, если DISTINCT в запросе не нужен.
 - `rewrite_late_filter` - Верни исправленный SQL с ранней фильтрацией.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.

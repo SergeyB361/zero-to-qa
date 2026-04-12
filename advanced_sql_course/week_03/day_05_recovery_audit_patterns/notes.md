@@ -17,10 +17,10 @@
 - не хранить actor и timestamp
 
 ## Практика
-В `practice.sql` реализуй функции:
+В `practice.sql` напиши запросы:
 - `audit_events_for_defects` - Верни пары `entity_id:action` для defect events.
 - `open_defects_with_owner` - Верни пары `defect:owner` для open defects.
 - `soft_close_summary` - Верни количество closed defects.
 
 ## Что дальше
-Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.
+Сначала выполни `examples.sql`, затем доведи запросы из `practice.sql` до expected-результатов.
