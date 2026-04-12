@@ -18,10 +18,10 @@ CTE помогает разбить тяжёлый запрос на имено�
 - терять смысл промежуточных имён
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `failed_runs_per_case` - Верни пары `title:failed_count` через CTE.
 - `latest_release_runs` - Верни количество test_runs для последнего релиза.
 - `open_defects_per_release` - Верни пары `build_tag:open_defects`.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

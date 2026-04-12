@@ -10,8 +10,8 @@ Pure advanced SQL-трек для аналитических запросов, �
 ## Формат
 - `4` недели
 - `7` дней в неделе
-- обычный день: `notes.md`, `examples.py`, `practice.py`
-- день мини-проекта: `notes.md`, `spec.md`, основной `.py` файл
+- обычный день: `notes.md`, `examples.sql`, `practice.sql`
+- день мини-проекта: `notes.md`, `spec.md`, основной `.sql` файл
 
 ## Структура курса
 - `week_01/` — Advanced querying

@@ -16,10 +16,10 @@
 - путать COUNT и SUM(CASE...)
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `status_counts_per_area` - Верни пары `area:passed:failed`.
 - `severity_open_closed` - Верни пары `severity:open:closed`.
 - `api_status_buckets` - Верни словарь bucket -> count для api_checks.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

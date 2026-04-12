@@ -16,10 +16,10 @@
 - не проверять промежуточные результаты
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `top_slowest_cases` - Верни top-3 test_cases по средней длительности.
 - `releases_with_failed_runs` - Верни пары `build_tag:failed_count` только для релизов с ошибками.
 - `engineer_failure_share` - Верни пары `engineer:failed_runs`.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

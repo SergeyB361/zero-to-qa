@@ -4,7 +4,7 @@
 Собрать компактный набор SQL-отчётов по проектам, задачам и тестовым запускам без использования Python-логики поверх данных.
 
 ## Deliverables
-- `project_load_report(conn)`
-- `priority_mix_report(conn)`
-- `daily_run_report(conn)`
-- `main()` с читаемым demo output
+- запрос `project_load_report`
+- запрос `priority_mix_report`
+- запрос `daily_run_report`
+- `analytical_sql_report.sql` с читаемым demo output

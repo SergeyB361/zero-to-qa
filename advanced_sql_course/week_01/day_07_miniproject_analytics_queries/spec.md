@@ -4,13 +4,13 @@
 Собрать набор аналитических запросов поверх test_runs, defects и api_checks с использованием CTE и оконных функций.
 
 ## Deliverables
-- `slowest_cases(conn)`
-- `failed_runs_by_release(conn)`
-- `api_latency_ranking(conn)`
-- `defect_summary(conn)`
-- `main()` с отчётом
+- запрос `slowest_cases`
+- запрос `failed_runs_by_release`
+- запрос `api_latency_ranking`
+- запрос `defect_summary`
+- `analytics_queries.sql` с отчётом
 
-## MVP-функции
+## MVP-запросы
 - `slowest_cases` - Top-3 test case по средней длительности.
 - `failed_runs_by_release` - Количество failed runs по релизам.
 - `api_latency_ranking` - Ранжирование endpoint по средней latency.
@@ -24,8 +24,8 @@ api_latency_ranking -> ['/payments/refund:1', '/reports:2', '/orders:3', '/login
 ```
 
 ## Критерии готовности
-- файл запускается без ошибок;
-- каждая функция решает отдельную задачу;
+- SQL-скрипт выполняется без ошибок на подготовленном dataset;
+- каждый запрос решает отдельную задачу;
 - запросы читаются без магии;
-- `main()` показывает рабочий demo flow;
+- `analytics_queries.sql` показывает рабочий demo flow;
 - решение использует темы недели.

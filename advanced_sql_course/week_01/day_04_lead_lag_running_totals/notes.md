@@ -17,10 +17,10 @@
 - сравнивать соседние строки без понятного ORDER BY
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `lag_release_dates` - Верни пары `build_tag:prev_date`.
 - `running_failed_runs` - Верни пары `run_id:cumulative_failed` по времени.
 - `lead_api_checks` - Верни пары `check_id:next_status_code`.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

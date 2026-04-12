@@ -148,7 +148,7 @@
 - `pet_project/COURSE_ALIGNMENT.md`
 
 ## Формат материалов
-Обычный учебный день обычно содержит:
+Python- и QA-курсы обычно содержат:
 ```text
 course_name/week_XX/
   day_XX_topic/
@@ -157,7 +157,7 @@ course_name/week_XX/
     practice.py
 ```
 
-Мини-проектный день обычно содержит:
+Мини-проектный день в Python- и QA-курсах обычно содержит:
 ```text
 course_name/week_XX/
   day_XX_miniproject_name/
@@ -166,7 +166,25 @@ course_name/week_XX/
     main_file.py
 ```
 
-Некоторые уроки дополнительно включают `.txt`, `.json` и другие data-файлы для практики.
+Pure SQL-треки содержат SQL-native файлы без Python-обвязки:
+```text
+sql_course/week_XX/
+  day_XX_topic/
+    notes.md
+    examples.sql
+    practice.sql
+```
+
+Мини-проектный день в pure SQL-треках обычно содержит:
+```text
+sql_course/week_XX/
+  day_XX_miniproject_name/
+    notes.md
+    spec.md
+    main_file.sql
+```
+
+Некоторые уроки дополнительно включают `.txt`, `.json`, `.csv` и другие data-файлы для практики.
 
 ## Стек
 Python 3.14 · PyTest · Requests · Playwright · SQLite · Allure · GitHub Actions

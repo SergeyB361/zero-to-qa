@@ -5,12 +5,12 @@
 
 ## Что должно получиться
 - `resolve_defect(conn, defect_id, actor_id)`
-- `try_invalid_case_insert(conn)`
+- `try_invalid_case_insert`
 - `defect_audit_count(conn, defect_id)`
-- `main()` с последовательным demo
+- `итоговый SQL-скрипт` с последовательным demo
 
 ## Как подходить к проекту
-1. Запусти starter-файл и посмотри expected demo flow.
-2. Реализуй функции по одной.
+1. Запусти starter SQL-скрипт и посмотри expected demo flow.
+2. Напиши запросы по одному.
 3. Проверяй, что SQL остаётся читаемым.
-4. В конце оформи нормальный `main()`.
+4. В конце оформи читаемый итоговый SQL-скрипт.

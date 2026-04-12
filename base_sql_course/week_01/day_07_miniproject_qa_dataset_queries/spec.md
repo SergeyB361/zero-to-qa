@@ -4,13 +4,13 @@
 Собрать набор базовых SQL-запросов к небольшому QA dataset и показать, что ты умеешь читать и фильтровать данные.
 
 ## Deliverables
-- функция `list_active_users(conn)`
-- функция `high_priority_cases(conn)`
-- функция `open_task_ids(conn)`
-- функция `failed_run_ids(conn)`
-- демо `main()` с печатью результатов
+- запрос `list_active_users`
+- запрос `high_priority_cases`
+- запрос `open_task_ids`
+- запрос `failed_run_ids`
+- демо `qa_dataset_queries.sql` с печатью результатов
 
-## Функции MVP
+## MVP-запросы
 - `list_active_users` - Список имён активных пользователей.
 - `high_priority_cases` - Список high priority test case.
 - `open_task_ids` - Список id открытых задач.
@@ -25,7 +25,7 @@ Failed run ids: [2, 6]
 ```
 
 ## Критерии готовности
-- файл запускается без ошибок;
-- каждая функция решает одну понятную задачу;
+- SQL-скрипт выполняется без ошибок на подготовленном dataset;
+- каждый запрос решает одну понятную задачу;
 - запросы читаются;
-- `main()` показывает рабочий demo flow.
+- `qa_dataset_queries.sql` показывает рабочий demo flow.

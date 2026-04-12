@@ -18,10 +18,10 @@
 - смешивать блокировки и уровни изоляции
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `reader_sees_old_value` - Верни True, если второй connection не видит незакоммиченный status.
 - `value_after_commit` - Верни статус после commit в первом connection.
 - `sqlite_isolation_note` - Верни короткую строку-заметку про SQLite isolation.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

@@ -4,12 +4,12 @@
 Собрать маленький SQL-отчёт по тестовым запускам, используя JOIN, GROUP BY и агрегаты.
 
 ## Deliverables
-- функция `runs_per_status(conn)`
-- функция `avg_duration_per_case(conn)`
-- функция `open_defects_by_severity(conn)`
-- читаемый `main()` с выводом отчёта
+- запрос `runs_per_status`
+- запрос `avg_duration_per_case`
+- запрос `open_defects_by_severity`
+- читаемый `metrics_report.sql` с выводом отчёта
 
-## Функции MVP
+## MVP-запросы
 - `runs_per_status` - Словарь status -> count.
 - `avg_duration_per_case` - Средняя длительность по test case.
 - `open_defects_by_severity` - Словарь severity -> count для open defects.
@@ -22,7 +22,7 @@ Open defects by severity: {'critical': 1, 'minor': 1}
 ```
 
 ## Критерии готовности
-- файл запускается без ошибок;
-- каждая функция решает одну понятную задачу;
+- SQL-скрипт выполняется без ошибок на подготовленном dataset;
+- каждый запрос решает одну понятную задачу;
 - запросы читаются;
-- `main()` показывает рабочий demo flow.
+- `metrics_report.sql` показывает рабочий demo flow.

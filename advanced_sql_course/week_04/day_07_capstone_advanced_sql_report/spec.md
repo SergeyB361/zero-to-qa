@@ -4,13 +4,13 @@
 Собрать итоговый пакет SQL-расследований: производительность endpoint, failed runs по релизам, дефекты и data-quality checks.
 
 ## Deliverables
-- `slow_endpoints(conn)`
-- `failed_runs_by_release(conn)`
-- `critical_defects(conn)`
-- `data_quality_summary(conn)`
-- `main()` с итоговым investigation report
+- запрос `slow_endpoints`
+- запрос `failed_runs_by_release`
+- запрос `critical_defects`
+- запрос `data_quality_summary`
+- `advanced_sql_report.sql` с итоговым investigation report
 
-## MVP-функции
+## MVP-запросы
 - `slow_endpoints` - Верни endpoint по убыванию средней latency.
 - `failed_runs_by_release` - Верни количество failed runs по релизам.
 - `critical_defects` - Верни critical defects.
@@ -24,8 +24,8 @@ critical_defects -> ['Refund 502']
 ```
 
 ## Критерии готовности
-- файл запускается без ошибок;
-- каждая функция решает отдельную задачу;
+- SQL-скрипт выполняется без ошибок на подготовленном dataset;
+- каждый запрос решает отдельную задачу;
 - запросы читаются без магии;
-- `main()` показывает рабочий demo flow;
+- `advanced_sql_report.sql` показывает рабочий demo flow;
 - решение использует темы недели.

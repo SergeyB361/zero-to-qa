@@ -17,10 +17,10 @@
 - не закрывать транзакции и держать lock слишком долго
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `lock_error_happens` - Верни True, если второй writer ловит `database is locked`.
 - `sqlite_deadlock_note` - Верни строку о том, что deadlocks чаще обсуждаются в server DB.
 - `released_lock_allows_write` - Верни True, если после commit второй writer может обновить строку.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

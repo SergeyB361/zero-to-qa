@@ -17,10 +17,10 @@
 - не смотреть план запроса
 
 ## Практика
-В `practice.py` реализуй функции:
+В `practice.sql` реализуй функции:
 - `create_runs_status_index` - Создай индекс на `test_runs(status)` и верни True, если индекс появился.
 - `list_indexes_for_runs` - Верни список индексов таблицы test_runs.
 - `query_plan_for_failed_runs` - Верни план запроса по status = failed после создания индекса.
 
 ## Что дальше
-Сначала запусти `examples.py`, затем доведи функции из `practice.py` до expected-результатов.
+Сначала запусти `examples.sql`, затем доведи функции из `practice.sql` до expected-результатов.

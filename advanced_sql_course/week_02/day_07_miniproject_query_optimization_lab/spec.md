@@ -4,13 +4,13 @@
 Собрать набор простых performance-исследований: план до индекса, план после индекса, и небольшие rewrite-примеры.
 
 ## Deliverables
-- `plan_for_failed_runs(conn)`
-- `plan_for_orders_endpoint(conn)`
-- `add_indexes(conn)`
-- `slow_endpoints(conn)`
-- `main()` с выводом before/after
+- запрос `plan_for_failed_runs`
+- запрос `plan_for_orders_endpoint`
+- запрос `add_indexes`
+- запрос `slow_endpoints`
+- `query_optimization_lab.sql` с выводом before/after
 
-## MVP-функции
+## MVP-запросы
 - `plan_for_failed_runs` - Верни план для выборки failed runs.
 - `plan_for_orders_endpoint` - Верни план для `/orders`.
 - `add_indexes` - Создай нужные индексы.
@@ -24,8 +24,8 @@ slow_endpoints -> ['/payments/refund', '/reports', '/orders', '/login']
 ```
 
 ## Критерии готовности
-- файл запускается без ошибок;
-- каждая функция решает отдельную задачу;
+- SQL-скрипт выполняется без ошибок на подготовленном dataset;
+- каждый запрос решает отдельную задачу;
 - запросы читаются без магии;
-- `main()` показывает рабочий demo flow;
+- `query_optimization_lab.sql` показывает рабочий demo flow;
 - решение использует темы недели.
