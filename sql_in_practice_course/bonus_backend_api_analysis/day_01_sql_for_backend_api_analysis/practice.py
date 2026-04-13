@@ -164,22 +164,38 @@ def build_file_db() -> tuple[sqlite3.Connection, Path]:
     return file_conn, db_path
 
 
-def slow_endpoints(conn: sqlite3.Connection):
+def slow_endpoints(conn: sqlite3.Connection) -> list[str]:
     """Верни endpoint по убыванию средней latency."""
     # Напиши SQL или Python + SQL по условию.
     return []
 
 
-def error_rate_by_release(conn: sqlite3.Connection):
+def error_rate_by_release(conn: sqlite3.Connection) -> list[str]:
     """Верни пары `build_tag:error_count` по api_checks со статусом >= 400."""
     # Напиши SQL или Python + SQL по условию.
     return []
 
 
-def critical_defects_by_release(conn: sqlite3.Connection):
+def critical_defects_by_release(conn: sqlite3.Connection) -> list[str]:
     """Верни build_tag для релизов с critical defect."""
     # Напиши SQL или Python + SQL по условию.
     return []
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert slow_endpoints(conn) == [
+        '/payments/refund',
+        '/reports',
+        '/orders',
+        '/login',
+    ]
+    assert error_rate_by_release(conn) == [
+        'build-101:1',
+        'build-102:1',
+        'build-104:1',
+    ]
+    assert critical_defects_by_release(conn) == ['build-104']
 
 
 def main() -> None:
@@ -187,7 +203,7 @@ def main() -> None:
     print('slow_endpoints ->', slow_endpoints(conn), '| expected:', "['/payments/refund', '/reports', '/orders', '/login']")
     print('error_rate_by_release ->', error_rate_by_release(conn), '| expected:', "['build-101:1', 'build-102:1', 'build-104:1']")
     print('critical_defects_by_release ->', critical_defects_by_release(conn), '| expected:', "['build-104']")
-    print('Сначала добейся совпадения с expected, затем улучшай читаемость решений.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

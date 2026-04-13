@@ -29,22 +29,34 @@ def fetch_all(conn: sqlite3.Connection, query: str):
     return [dict(row) for row in conn.execute(query).fetchall()]
 
 
-def flaky_case_titles(conn: sqlite3.Connection):
+def flaky_case_titles(conn: sqlite3.Connection) -> list[str]:
     """Верни названия test_cases, у которых есть и passed, и failed runs."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return []
 
 
-def open_defects_by_severity(conn: sqlite3.Connection):
+def open_defects_by_severity(conn: sqlite3.Connection) -> dict[str, int]:
     """Верни словарь severity -> count только для open defects."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return {}
 
 
-def avg_duration_by_area(conn: sqlite3.Connection):
+def avg_duration_by_area(conn: sqlite3.Connection) -> list[str]:
     """Верни пары `area:avg_duration`."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return []
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert flaky_case_titles(conn) == ['Create order', 'Login works']
+    assert open_defects_by_severity(conn) == {'critical': 1, 'minor': 1}
+    assert avg_duration_by_area(conn) == [
+        'admin:70.0',
+        'checkout:57.5',
+        'auth:38.0',
+        'catalog:0.0',
+    ]
 
 
 def main() -> None:
@@ -52,7 +64,7 @@ def main() -> None:
     print('flaky_case_titles ->', flaky_case_titles(conn), '| expected:', "['Create order', 'Login works']")
     print('open_defects_by_severity ->', open_defects_by_severity(conn), '| expected:', "{'critical': 1, 'minor': 1}")
     print('avg_duration_by_area ->', avg_duration_by_area(conn), '| expected:', "['admin:70.0', 'checkout:57.5', 'auth:38.0', 'catalog:0.0']")
-    print('Добейся совпадения с expected, затем перечитай SQL глазами.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

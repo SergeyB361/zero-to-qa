@@ -164,22 +164,29 @@ def build_file_db() -> tuple[sqlite3.Connection, Path]:
     return file_conn, db_path
 
 
-def add_column_via_migration(conn: sqlite3.Connection):
+def add_column_via_migration(conn: sqlite3.Connection) -> list[str]:
     """Добавь колонку squad к qa_engineers и верни список колонок."""
     # Напиши SQL или Python + SQL по условию.
     return []
 
 
-def create_migration_table(conn: sqlite3.Connection):
+def create_migration_table(conn: sqlite3.Connection) -> bool:
     """Создай служебную таблицу schema_migrations и верни True, если она есть."""
     # Напиши SQL или Python + SQL по условию.
     return False
 
 
-def insert_migration_record(conn: sqlite3.Connection):
+def insert_migration_record(conn: sqlite3.Connection) -> int:
     """Добавь запись о миграции и верни количество строк в schema_migrations."""
     # Напиши SQL или Python + SQL по условию.
     return -1
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert add_column_via_migration(conn) == ['id', 'name', 'team', 'squad']
+    assert create_migration_table(conn) is True
+    assert insert_migration_record(conn) == 1
 
 
 def main() -> None:
@@ -187,7 +194,7 @@ def main() -> None:
     print('add_column_via_migration ->', add_column_via_migration(conn), '| expected:', "['id', 'name', 'team', 'squad']")
     print('create_migration_table ->', create_migration_table(conn), '| expected:', 'True')
     print('insert_migration_record ->', insert_migration_record(conn), '| expected:', '1')
-    print('Сначала добейся совпадения с expected, затем улучшай читаемость решений.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

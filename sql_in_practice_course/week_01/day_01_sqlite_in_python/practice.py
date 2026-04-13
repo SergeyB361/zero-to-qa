@@ -29,22 +29,29 @@ def fetch_all(conn: sqlite3.Connection, query: str):
     return [dict(row) for row in conn.execute(query).fetchall()]
 
 
-def list_user_names(conn: sqlite3.Connection):
+def list_user_names(conn: sqlite3.Connection) -> list[str]:
     """Верни список имён пользователей через sqlite3."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return []
 
 
-def count_test_runs(conn: sqlite3.Connection):
+def count_test_runs(conn: sqlite3.Connection) -> int:
     """Верни количество test_runs."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return -1
 
 
-def failed_run_ids(conn: sqlite3.Connection):
+def failed_run_ids(conn: sqlite3.Connection) -> list[int]:
     """Верни id failed test_runs."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return []
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert list_user_names(conn) == ['Anna', 'Boris', 'Nina', 'Oleg']
+    assert count_test_runs(conn) == 6
+    assert failed_run_ids(conn) == [2, 6]
 
 
 def main() -> None:
@@ -52,7 +59,7 @@ def main() -> None:
     print('list_user_names ->', list_user_names(conn), '| expected:', "['Anna', 'Boris', 'Nina', 'Oleg']")
     print('count_test_runs ->', count_test_runs(conn), '| expected:', '6')
     print('failed_run_ids ->', failed_run_ids(conn), '| expected:', '[2, 6]')
-    print('Добейся совпадения с expected, затем перечитай SQL глазами.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

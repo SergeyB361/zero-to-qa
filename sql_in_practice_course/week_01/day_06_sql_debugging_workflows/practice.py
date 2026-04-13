@@ -164,22 +164,33 @@ def build_file_db() -> tuple[sqlite3.Connection, Path]:
     return file_conn, db_path
 
 
-def count_runs_before_join(conn: sqlite3.Connection):
+def count_runs_before_join(conn: sqlite3.Connection) -> int:
     """Верни количество строк в test_runs."""
     # Напиши SQL или Python + SQL по условию.
     return -1
 
 
-def count_runs_after_join(conn: sqlite3.Connection):
+def count_runs_after_join(conn: sqlite3.Connection) -> int:
     """Верни количество строк после join test_runs + test_cases."""
     # Напиши SQL или Python + SQL по условию.
     return -1
 
 
-def debug_failed_by_release(conn: sqlite3.Connection):
+def debug_failed_by_release(conn: sqlite3.Connection) -> list[str]:
     """Верни пары `build_tag:failed_count` как результат debugged запроса."""
     # Напиши SQL или Python + SQL по условию.
     return []
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert count_runs_before_join(conn) == 11
+    assert count_runs_after_join(conn) == 11
+    assert debug_failed_by_release(conn) == [
+        'build-101:1',
+        'build-102:2',
+        'build-104:1',
+    ]
 
 
 def main() -> None:
@@ -187,7 +198,7 @@ def main() -> None:
     print('count_runs_before_join ->', count_runs_before_join(conn), '| expected:', '11')
     print('count_runs_after_join ->', count_runs_after_join(conn), '| expected:', '11')
     print('debug_failed_by_release ->', debug_failed_by_release(conn), '| expected:', "['build-101:1', 'build-102:2', 'build-104:1']")
-    print('Сначала добейся совпадения с expected, затем улучшай читаемость решений.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

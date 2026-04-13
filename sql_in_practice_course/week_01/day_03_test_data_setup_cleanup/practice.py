@@ -29,22 +29,29 @@ def fetch_all(conn: sqlite3.Connection, query: str):
     return [dict(row) for row in conn.execute(query).fetchall()]
 
 
-def create_temp_case_and_count(conn: sqlite3.Connection):
+def create_temp_case_and_count(conn: sqlite3.Connection) -> int:
     """Добавь временный test_case и верни count строк с id = 10."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return -1
 
 
-def cleanup_temp_case(conn: sqlite3.Connection):
+def cleanup_temp_case(conn: sqlite3.Connection) -> int:
     """Удали test_case с id = 10 и верни count строк после удаления."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return -1
 
 
-def reset_temp_defect(conn: sqlite3.Connection):
+def reset_temp_defect(conn: sqlite3.Connection) -> int:
     """Добавь и затем удали временный дефект. Верни итоговое количество таких строк."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return -1
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    assert create_temp_case_and_count(conn) == 1
+    assert cleanup_temp_case(conn) == 0
+    assert reset_temp_defect(conn) == 0
 
 
 def main() -> None:
@@ -52,7 +59,7 @@ def main() -> None:
     print('create_temp_case_and_count ->', create_temp_case_and_count(conn), '| expected:', '1')
     print('cleanup_temp_case ->', cleanup_temp_case(conn), '| expected:', '0')
     print('reset_temp_defect ->', reset_temp_defect(conn), '| expected:', '0')
-    print('Добейся совпадения с expected, затем перечитай SQL глазами.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

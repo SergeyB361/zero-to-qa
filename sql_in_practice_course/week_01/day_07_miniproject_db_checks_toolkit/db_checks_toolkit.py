@@ -51,6 +51,34 @@ def status_distribution(
     return {}
 
 
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери встроенные self-check assertions."""
+    critical_defect_query = """
+        SELECT 1
+        FROM defects
+        WHERE severity = 'critical' AND status = 'open'
+        LIMIT 1;
+    """
+    open_tasks_query = """
+        SELECT id
+        FROM tasks
+        WHERE status = 'open';
+    """
+    failed_runs_query = """
+        SELECT COUNT(*)
+        FROM test_runs
+        WHERE status = 'failed';
+    """
+    assert row_exists(conn, critical_defect_query) is True
+    assert count_rows(conn, open_tasks_query) == 3
+    assert get_scalar(conn, failed_runs_query) == 2
+    assert status_distribution(conn, 'test_runs', 'status') == {
+        'failed': 2,
+        'passed': 3,
+        'skipped': 1,
+    }
+
+
 def main() -> None:
     conn = build_demo_db()
     critical_defect_query = """
@@ -78,7 +106,7 @@ def main() -> None:
         '| expected:',
         "{'failed': 2, 'passed': 3, 'skipped': 1}",
     )
-    print('Доведи функции до совпадения с expected и затем улучши формат вывода.')
+    print('Когда функции заработают, вызови run_checks(conn) и затем улучши формат вывода под spec.md.')
 
 
 if __name__ == "__main__":
