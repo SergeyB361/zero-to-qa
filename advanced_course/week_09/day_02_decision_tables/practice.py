@@ -57,12 +57,11 @@ def validate_field(name: str, value: object, rule: dict[str, object]) -> list[tu
     else:
         min_words = int(rule.get('min_words', 6))
         results.append((f'{name} min_words', len(text.split()) >= min_words))
-
-    if keywords:
-        detail_words = int(rule.get('detail_words', max(12, len(keywords) * 4)))
-        keyword_ok = all(keyword in text for keyword in keywords)
-        detail_ok = len(text.split()) >= detail_words
-        results.append((f'{name} keywords_or_detail', keyword_ok or detail_ok))
+        if keywords:
+            detail_words = int(rule.get('detail_words', max(12, len(keywords) * 4)))
+            keyword_ok = all(keyword in text for keyword in keywords)
+            detail_ok = len(text.split()) >= detail_words
+            results.append((f'{name} keywords_or_detail', keyword_ok or detail_ok))
     return results
 
 
