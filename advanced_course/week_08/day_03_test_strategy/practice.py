@@ -1,70 +1,76 @@
 # Практика: test strategy
 
-QUESTIONS = {
-    'task_1': 'Перечисли минимум три раздела, которые должны быть в test strategy.',
-    'task_2': 'Коротко объясни, чем test strategy отличается от списка тест-кейсов.',
-    'task_3': 'Назови минимум три решения, которые strategy должна зафиксировать.',
-    'task_4': 'Опиши test strategy для среднего web-продукта с API и UI.',
-}
+PROMPTS = {'scope': 'Опиши scope и границы test strategy.',
+ 'risks': 'Перечисли минимум три ключевых риска.',
+ 'levels': 'Опиши роль unit/API/UI/integration слоёв.',
+ 'gates': 'Перечисли минимум два gate или критерия достаточности.'}
 
-ANSWERS: dict[str, object] = {
-    'task_1': [],
-    'task_2': '',
-    'task_3': [],
-    'task_4': '',
-}
+SUBMISSION = {'scope': '', 'risks': [], 'levels': '', 'gates': []}
 
-KEYWORDS = {
-    'task_1': ['scope', 'risk'],
-    'task_2': ['level', 'approach'],
-    'task_3': ['priority', 'coverage'],
-    'task_4': ['api', 'ui'],
-}
+RULES = {'scope': {'type': 'text', 'min_words': 10, 'keywords': ['scope', 'boundary']},
+ 'risks': {'type': 'list', 'min_items': 3, 'keywords': ['risk', 'impact']},
+ 'levels': {'type': 'text', 'min_words': 12, 'keywords': ['api', 'ui']},
+ 'gates': {'type': 'list', 'min_items': 2, 'keywords': ['gate', 'quality']}}
 
-MIN_ITEMS = {
-    'task_1': 3,
-    'task_2': 0,
-    'task_3': 3,
-    'task_4': 0,
-}
 
-def as_text(value: object) -> str:
+def flatten(value: object) -> str:
+    if isinstance(value, dict):
+        parts: list[str] = []
+        for key, item in value.items():
+            parts.append(str(key))
+            parts.append(flatten(item))
+        return ' '.join(parts).lower()
     if isinstance(value, list):
-        return ' '.join(str(item) for item in value).lower()
+        return ' '.join(flatten(item) for item in value).lower()
     return str(value).lower()
 
 
-def keyword_check(task_id: str) -> bool:
-    text = as_text(ANSWERS[task_id])
-    if not text.strip():
-        return False
-    if all(keyword in text for keyword in KEYWORDS[task_id]):
-        return True
-    return len(text.split()) >= max(6, len(KEYWORDS[task_id]) * 3)
+def has_value(value: object) -> bool:
+    if isinstance(value, dict):
+        return all(has_value(item) for item in value.values()) if value else False
+    if isinstance(value, list):
+        return len(value) > 0 and all(has_value(item) for item in value)
+    return bool(str(value).strip())
 
 
-def size_check(task_id: str) -> bool:
-    expected = MIN_ITEMS[task_id]
-    value = ANSWERS[task_id]
-    if expected == 0:
-        return True
-    return isinstance(value, list) and len(value) >= expected
+def validate_field(name: str, value: object, rule: dict[str, object]) -> list[tuple[str, bool]]:
+    results: list[tuple[str, bool]] = []
+    rule_type = str(rule.get('type', 'text'))
+    text = flatten(value)
+    keywords = [str(item).lower() for item in rule.get('keywords', [])]
+
+    if rule_type == 'list':
+        min_items = int(rule.get('min_items', 1))
+        results.append((f'{name} min_items', isinstance(value, list) and len(value) >= min_items))
+    elif rule_type == 'dict':
+        required_keys = [str(item) for item in rule.get('required_keys', [])]
+        ok = isinstance(value, dict) and all(key in value and has_value(value[key]) for key in required_keys)
+        results.append((f'{name} required_keys', ok))
+    else:
+        min_words = int(rule.get('min_words', 6))
+        results.append((f'{name} min_words', len(text.split()) >= min_words))
+
+    if keywords:
+        detail_words = int(rule.get('detail_words', max(12, len(keywords) * 4)))
+        keyword_ok = all(keyword in text for keyword in keywords)
+        detail_ok = len(text.split()) >= detail_words
+        results.append((f'{name} keywords_or_detail', keyword_ok or detail_ok))
+    return results
 
 
 def run_checks() -> list[tuple[str, bool]]:
     results: list[tuple[str, bool]] = []
-    for task_id in QUESTIONS:
-        results.append((f'{task_id} keywords', keyword_check(task_id)))
-        if MIN_ITEMS[task_id]:
-            results.append((f'{task_id} size', size_check(task_id)))
+    for field_name, rule in RULES.items():
+        results.extend(validate_field(field_name, SUBMISSION[field_name], rule))
     return results
 
 
 if __name__ == '__main__':
-    for task_id, prompt in QUESTIONS.items():
-        print(f'[{task_id}] {prompt}')
-        print('Current answer:', ANSWERS[task_id])
-        print('Keyword check:', keyword_check(task_id))
-        if MIN_ITEMS[task_id]:
-            print('Size check:', size_check(task_id))
+    print('Заполни SUBMISSION и затем снова запусти файл.')
+    for field_name, prompt in PROMPTS.items():
+        print(f'[{field_name}] {prompt}')
+        print('Current value:', SUBMISSION[field_name])
         print('---')
+    print('Checks:')
+    for name, status in run_checks():
+        print(f'{name}: {status}')
