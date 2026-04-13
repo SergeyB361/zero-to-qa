@@ -1,15 +1,49 @@
 # UI: качество и масштабирование, День 7 — Мини-проект: UI suite in CI
 
-## Цель
-Спроектировать UI-suite, который можно стабильно и осмысленно запускать в CI.
+## Что это за день
 
-## Что тренируем
-- visual and a11y thinking
-- browser matrix
-- isolated UI data
-- parallel execution risks
-- CI artifacts and suite selection
+Это мини-проект про перенос UI-suite в управляемую CI-среду.
 
-## Материалы дня
-- spec.md
-- ci_plan.md
+Здесь нужно соединить:
+- visual и accessibility awareness;
+- browser strategy;
+- test data strategy;
+- parallel execution;
+- CI constraints и artifacts.
+
+## Что здесь проверяется
+
+Мини-проект проверяет, умеешь ли ты:
+- проектировать реальный UI CI-plan;
+- распределять browser scope и test scope;
+- учитывать flaky risk и data isolation;
+- делать UI job расследуемой после падения.
+
+## Как правильно проходить
+
+1. Сначала прочитай `spec.md`.
+2. Затем определи, что должно идти в быстрый signal, а что в тяжёлый run.
+3. Реши browser matrix и parallel strategy.
+4. После этого добавь артефакты и правила стабилизации.
+
+## Что считается хорошим результатом
+
+По сильному решению видно:
+- как UI suite делится по цели и стоимости;
+- как выбраны браузеры;
+- какие сценарии safe для parallel run;
+- какие артефакты останутся для расследования;
+- почему решение похоже на реальный CI plan, а не на список идей.
+
+## На что обратить внимание
+
+- не раздувай browser matrix без причины;
+- не обещай parallel run для конфликтующих сценариев;
+- не забывай про data/setup dependencies;
+- следи, чтобы артефакты действительно помогали дебагу.
+
+## Что делать дальше
+
+1. Открой [spec.md](/C:/Users/serge/zero-to-qa/advanced_course/week_06/day_07_miniproject_ui_suite_in_ci/spec.md).
+2. Собери план UI-suite в CI как инфраструктурный и тестовый артефакт одновременно.
+3. После выполнения проверь, можно ли по нему реально поднять и сопровождать UI-run в pipeline.
