@@ -1,16 +1,52 @@
 # Quality Engineering и системное мышление, День 7 — Capstone: quality engineering review pack
 
-## Цель
-Собрать финальный пакет артефактов, который показывает зрелое QA-мышление на уровне требований, рисков и качества системы.
+## Что это за день
 
-## Что тренируем
-- traceability
-- oracles
-- heuristics
-- failure modeling
-- non-functional design
-- workshop from requirements to tests
+Это финальный capstone недели, где нужно показать не отдельную технику, а связный quality engineering review pack.
 
-## Материалы дня
-- spec.md
-- review_input.md
+Здесь важно соединить:
+- traceability;
+- oracles;
+- heuristics;
+- failure modeling;
+- non-functional test design;
+- requirements-to-tests анализ.
+
+## Что здесь проверяется
+
+Capstone проверяет, умеешь ли ты:
+- анализировать требования как инженер;
+- связывать тестовые решения с рисками и quality concerns;
+- строить explainable coverage;
+- оформлять review pack как артефакт, пригодный для обсуждения с командой.
+
+## Как правильно проходить
+
+Рабочий порядок такой:
+1. сначала прочитай `spec.md` и `review_input.md`;
+2. выдели ключевые требования и риски;
+3. зафиксируй oracle и traceability;
+4. затем сформируй test ideas и non-functional checks;
+5. после этого оформи review pack как единый связный артефакт.
+
+## Что считается сильным результатом
+
+По хорошему review pack видно:
+- какие требования и риски считаются основными;
+- почему выбраны именно эти проверки;
+- откуда берутся expected results;
+- где coverage сильная, а где остаются осознанные ограничения;
+- что результат можно использовать как basis для дальнейшего тест-плана или review.
+
+## На что обратить внимание
+
+- не превращай итог в набор разрозненных заметок;
+- не подменяй traceability общими словами;
+- не генерируй много тестов без приоритета;
+- следи, чтобы весь pack можно было объяснить от requirement до конкретной проверки.
+
+## Что делать дальше
+
+1. Открой [spec.md](/C:/Users/serge/zero-to-qa/advanced_course/week_10/day_07_capstone_quality_engineering_review_pack/spec.md).
+2. Собери итоговый review pack как связный инженерный артефакт.
+3. После выполнения проверь, может ли другой человек понять твою логику принятия тестовых решений без устных пояснений.
