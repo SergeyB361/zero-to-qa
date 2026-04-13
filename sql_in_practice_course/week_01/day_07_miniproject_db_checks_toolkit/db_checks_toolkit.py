@@ -29,32 +29,55 @@ def fetch_all(conn: sqlite3.Connection, query: str):
     return [dict(row) for row in conn.execute(query).fetchall()]
 
 
-def row_exists(conn: sqlite3.Connection):
+def row_exists(conn: sqlite3.Connection, query: str) -> bool:
     """Верни True, если запрос возвращает хотя бы одну строку."""
     return False
 
 
-def count_rows(conn: sqlite3.Connection):
+def count_rows(conn: sqlite3.Connection, query: str) -> int:
     """Верни количество строк по запросу."""
     return -1
 
 
-def get_scalar(conn: sqlite3.Connection):
+def get_scalar(conn: sqlite3.Connection, query: str):
     """Верни скалярное значение из запроса."""
     return -1
 
 
-def status_distribution(conn: sqlite3.Connection):
+def status_distribution(
+    conn: sqlite3.Connection, table_name: str, column_name: str
+) -> dict[str, int]:
     """Верни словарь status -> count по таблице и колонке."""
     return {}
 
 
 def main() -> None:
     conn = build_demo_db()
-    print('row_exists ->', row_exists(conn), '| expected:', 'True')
-    print('count_rows ->', count_rows(conn), '| expected:', '3')
-    print('get_scalar ->', get_scalar(conn), '| expected:', '2')
-    print('status_distribution ->', status_distribution(conn), '| expected:', "{'failed': 2, 'passed': 3, 'skipped': 1}")
+    critical_defect_query = """
+        SELECT 1
+        FROM defects
+        WHERE severity = 'critical' AND status = 'open'
+        LIMIT 1;
+    """
+    open_tasks_query = """
+        SELECT id
+        FROM tasks
+        WHERE status = 'open';
+    """
+    failed_runs_query = """
+        SELECT COUNT(*)
+        FROM test_runs
+        WHERE status = 'failed';
+    """
+    print('row_exists ->', row_exists(conn, critical_defect_query), '| expected:', 'True')
+    print('count_rows ->', count_rows(conn, open_tasks_query), '| expected:', '3')
+    print('get_scalar ->', get_scalar(conn, failed_runs_query), '| expected:', '2')
+    print(
+        'status_distribution ->',
+        status_distribution(conn, 'test_runs', 'status'),
+        '| expected:',
+        "{'failed': 2, 'passed': 3, 'skipped': 1}",
+    )
     print('Доведи функции до совпадения с expected и затем улучши формат вывода.')
 
 

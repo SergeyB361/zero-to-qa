@@ -29,22 +29,29 @@ def fetch_all(conn: sqlite3.Connection, query: str):
     return [dict(row) for row in conn.execute(query).fetchall()]
 
 
-def critical_defect_exists(conn: sqlite3.Connection):
+def critical_defect_exists(conn: sqlite3.Connection) -> bool:
     """Верни True, если есть хотя бы один critical defect."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return False
 
 
-def failed_run_count(conn: sqlite3.Connection):
+def failed_run_count(conn: sqlite3.Connection) -> int:
     """Верни количество failed runs."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return -1
 
 
-def open_tasks_exist(conn: sqlite3.Connection):
+def open_tasks_exist(conn: sqlite3.Connection) -> bool:
     """Верни True, если есть хотя бы одна open задача."""
     # Напиши SQL-запрос и выполни его через conn.execute(...).
     return False
+
+
+def run_checks(conn: sqlite3.Connection) -> None:
+    """Собери маленький набор DB-check assertions."""
+    assert critical_defect_exists(conn) is True, 'critical defect должен существовать'
+    assert failed_run_count(conn) == 2, 'количество failed runs должно быть равно 2'
+    assert open_tasks_exist(conn) is True, 'должна существовать хотя бы одна open задача'
 
 
 def main() -> None:
@@ -52,7 +59,7 @@ def main() -> None:
     print('critical_defect_exists ->', critical_defect_exists(conn), '| expected:', 'True')
     print('failed_run_count ->', failed_run_count(conn), '| expected:', '2')
     print('open_tasks_exist ->', open_tasks_exist(conn), '| expected:', 'True')
-    print('Добейся совпадения с expected, затем перечитай SQL глазами.')
+    print('Когда функции заработают, вызови run_checks(conn) и добейся чистого прохода assert-ов.')
 
 
 if __name__ == "__main__":

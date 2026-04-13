@@ -16,10 +16,17 @@
 - `get_scalar` - Верни скалярное значение из запроса.
 - `status_distribution` - Верни словарь status -> count по таблице и колонке.
 
+## Пример запросов для demo
+- `row_exists(conn, "SELECT 1 FROM defects WHERE severity = 'critical' AND status = 'open' LIMIT 1;")`
+- `count_rows(conn, "SELECT id FROM tasks WHERE status = 'open';")`
+- `get_scalar(conn, "SELECT COUNT(*) FROM test_runs WHERE status = 'failed';")`
+- `status_distribution(conn, "test_runs", "status")`
+
 ## Пример допустимого вывода
 ```text
 Critical defect exists: True
 Open tasks count: 3
+Failed runs: 2
 Run status distribution: {'failed': 2, 'passed': 3, 'skipped': 1}
 ```
 

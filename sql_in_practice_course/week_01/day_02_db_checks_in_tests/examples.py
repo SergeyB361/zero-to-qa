@@ -25,29 +25,42 @@ def build_demo_db() -> sqlite3.Connection:
     return conn
 
 
-def fetch_all(conn: sqlite3.Connection, query: str):
-    return [dict(row) for row in conn.execute(query).fetchall()]
+def scalar(conn: sqlite3.Connection, query: str):
+    return conn.execute(query).fetchone()[0]
+
+
+def row_exists(conn: sqlite3.Connection, query: str) -> bool:
+    return conn.execute(query).fetchone() is not None
+
+
+def assert_scalar_equals(
+    conn: sqlite3.Connection, query: str, expected: object, message: str
+) -> None:
+    actual = scalar(conn, query)
+    assert actual == expected, f"{message}: expected {expected}, got {actual}"
+
+
+def assert_row_exists(conn: sqlite3.Connection, query: str, message: str) -> None:
+    assert row_exists(conn, query), message
 
 
 def main() -> None:
     conn = build_demo_db()
-    print('=' * 60)
-    print('Проверить, что critical defect существует')
-    query = """SELECT COUNT(*) FROM defects WHERE severity = 'critical';"""
-    print(query.strip())
-    print(fetch_all(conn, query))
-
-    print('=' * 60)
-    print('Проверить количество failed runs')
-    query = """SELECT COUNT(*) FROM test_runs WHERE status = 'failed';"""
-    print(query.strip())
-    print(fetch_all(conn, query))
-
-    print('=' * 60)
-    print('Проверить, что open задач больше нуля')
-    query = """SELECT COUNT(*) FROM tasks WHERE status = 'open';"""
-    print(query.strip())
-    print(fetch_all(conn, query))
+    assert_row_exists(
+        conn,
+        "SELECT 1 FROM defects WHERE severity = 'critical' AND status = 'open' LIMIT 1;",
+        'critical defect должен существовать',
+    )
+    assert_scalar_equals(
+        conn,
+        "SELECT COUNT(*) FROM test_runs WHERE status = 'failed';",
+        2,
+        'количество failed runs не совпало',
+    )
+    assert scalar(conn, "SELECT COUNT(*) FROM tasks WHERE status = 'open';") > 0, (
+        'должна существовать хотя бы одна open задача'
+    )
+    print('Все DB-checks прошли.')
 
 
 if __name__ == "__main__":
