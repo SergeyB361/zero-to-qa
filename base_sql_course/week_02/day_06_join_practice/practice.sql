@@ -33,3 +33,15 @@ SELECT 'TODO: task_count_per_user' AS todo;
 -- expected: "['Web Portal:1', 'Public API:1', 'Mobile App:0']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: projects_with_high_tasks' AS todo;
+
+-- Задание 4: failed_runs_by_executor
+-- Верни пары user:count_failed_runs только для пользователей с хотя бы одним failed run.
+-- expected: "['Anna:1', 'Boris:1']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: failed_runs_by_executor' AS todo;
+
+-- Задание 5: open_estimate_per_project
+-- Верни суммарную estimate_hours незакрытых задач по проектам.
+-- expected: "['Mobile App:13', 'Public API:10', 'Web Portal:5']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: open_estimate_per_project' AS todo;

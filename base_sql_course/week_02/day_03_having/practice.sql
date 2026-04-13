@@ -33,3 +33,15 @@ SELECT 'TODO: users_with_multiple_tasks' AS todo;
 -- expected: '[2, 3]'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: projects_with_large_backlog' AS todo;
+
+-- Задание 4: assignees_with_total_estimate_over_6
+-- Верни имена исполнителей, у которых суммарная estimate_hours по задачам больше 6.
+-- expected: "['Anna', 'Boris', 'Nina']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: assignees_with_total_estimate_over_6' AS todo;
+
+-- Задание 5: severities_with_single_defect
+-- Верни severity, которые встречаются ровно один раз.
+-- expected: "['critical', 'major', 'minor']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: severities_with_single_defect' AS todo;

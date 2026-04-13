@@ -33,3 +33,15 @@ SELECT 'TODO: active_users_ordered' AS todo;
 -- expected: '[1, 3, 5]'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: heavy_tasks' AS todo;
+
+-- Задание 4: critical_open_defects
+-- Верни названия critical дефектов со статусом open.
+-- expected: "['Login 500']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: critical_open_defects' AS todo;
+
+-- Задание 5: medium_duration_run_ids
+-- Верни id run'ов, у которых duration_sec BETWEEN 40 AND 60.
+-- expected: '[2, 3, 6]'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: medium_duration_run_ids' AS todo;

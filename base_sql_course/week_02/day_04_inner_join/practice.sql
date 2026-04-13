@@ -33,3 +33,15 @@ SELECT 'TODO: project_owners' AS todo;
 -- expected: "['Create order', 'Login works']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: failed_case_titles' AS todo;
+
+-- Задание 4: non_closed_task_projects
+-- Верни названия проектов для задач со статусом не closed.
+-- expected: "['Mobile App', 'Public API', 'Public API', 'Web Portal']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: non_closed_task_projects' AS todo;
+
+-- Задание 5: defects_with_authors
+-- Верни пары defect:user в формате title:name.
+-- expected: "['Login 500:Boris', 'Slow export:Oleg', 'Wrong total:Anna']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: defects_with_authors' AS todo;

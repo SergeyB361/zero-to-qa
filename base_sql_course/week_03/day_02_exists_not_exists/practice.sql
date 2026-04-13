@@ -33,3 +33,15 @@ SELECT 'TODO: users_with_open_tasks' AS todo;
 -- expected: "['Mobile App', 'Public API']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: projects_without_closed_tasks' AS todo;
+
+-- Задание 4: users_without_created_defects
+-- Верни имена пользователей, которые не создавали дефекты.
+-- expected: "['Nina']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: users_without_created_defects' AS todo;
+
+-- Задание 5: executors_with_failed_runs
+-- Верни имена пользователей, у которых есть хотя бы один failed run.
+-- expected: "['Anna', 'Boris']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: executors_with_failed_runs' AS todo;

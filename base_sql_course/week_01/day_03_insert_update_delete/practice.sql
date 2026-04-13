@@ -33,3 +33,15 @@ SELECT 'TODO: close_task_and_get_status' AS todo;
 -- expected: '2'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: delete_closed_defects_and_count' AS todo;
+
+-- Задание 4: raise_priority_for_task4
+-- Обнови priority задачи id = 4 до medium и верни новое значение.
+-- expected: 'medium'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: raise_priority_for_task4' AS todo;
+
+-- Задание 5: insert_and_delete_temp_user
+-- Добавь пользователя id = 99, затем удали его. Верни count строк с этим id.
+-- expected: '0'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: insert_and_delete_temp_user' AS todo;

@@ -33,3 +33,15 @@ SELECT 'TODO: task_overview_rows' AS todo;
 -- expected: "['Export report', 'Filter products']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: stable_case_titles' AS todo;
+
+-- Задание 4: open_estimate_by_team
+-- Верни суммарную estimate_hours открытых задач по командам assignee.
+-- expected: "['api:8', 'mobile:13', 'web:7']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: open_estimate_by_team' AS todo;
+
+-- Задание 5: active_users_without_open_tasks
+-- Верни активных пользователей, у которых нет задач со статусом open.
+-- expected: "['Boris', 'Oleg']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: active_users_without_open_tasks' AS todo;

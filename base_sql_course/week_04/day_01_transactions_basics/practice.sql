@@ -33,3 +33,15 @@ SELECT 'TODO: rollback_defect_close' AS todo;
 -- expected: '0'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: transactional_insert_and_rollback' AS todo;
+
+-- Задание 4: commit_new_defect_and_count
+-- В транзакции добавь defect id = 10 и закоммить. Верни количество строк с этим id.
+-- expected: '1'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: commit_new_defect_and_count' AS todo;
+
+-- Задание 5: rollback_task_reassign
+-- В транзакции переназначь task id = 1 на assignee_id = 2 и откати. Верни итоговый assignee_id задачи.
+-- expected: '1'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: rollback_task_reassign' AS todo;

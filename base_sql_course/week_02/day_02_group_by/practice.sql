@@ -33,3 +33,15 @@ SELECT 'TODO: tasks_per_priority' AS todo;
 -- expected: "{'admin': 1, 'auth': 1, 'catalog': 1, 'checkout': 1}"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: cases_per_area' AS todo;
+
+-- Задание 4: defects_per_status
+-- Верни количество дефектов по статусам в формате status:count.
+-- expected: "['closed:1', 'open:2']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: defects_per_status' AS todo;
+
+-- Задание 5: users_per_team
+-- Верни количество пользователей по командам в формате team:count.
+-- expected: "['api:1', 'mobile:1', 'web:2']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: users_per_team' AS todo;

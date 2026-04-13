@@ -33,3 +33,15 @@ SELECT 'TODO: cases_with_failed_runs' AS todo;
 -- expected: "['Anna', 'Boris', 'Nina']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: owners_of_projects' AS todo;
+
+-- Задание 4: projects_above_average_task_count
+-- Верни проекты, у которых число задач выше среднего по проектам.
+-- expected: "['Public API', 'Web Portal']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: projects_above_average_task_count' AS todo;
+
+-- Задание 5: runs_above_average_duration
+-- Верни id run'ов, у которых duration_sec выше среднего по таблице test_runs.
+-- expected: '[3, 5, 6]'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: runs_above_average_duration' AS todo;

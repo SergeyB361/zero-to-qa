@@ -33,3 +33,15 @@ SELECT 'TODO: users_with_defect_counts' AS todo;
 -- expected: "['Login works:2', 'Create order:2', 'Filter products:1', 'Export report:1']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: cases_with_run_counts' AS todo;
+
+-- Задание 4: users_with_project_counts
+-- Верни пары user:count_projects для всех пользователей.
+-- expected: "['Anna:1', 'Boris:1', 'Nina:1', 'Oleg:0']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: users_with_project_counts' AS todo;
+
+-- Задание 5: runs_executed_per_user
+-- Верни пары user:count_runs для всех пользователей.
+-- expected: "['Anna:2', 'Boris:2', 'Nina:0', 'Oleg:1']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: runs_executed_per_user' AS todo;

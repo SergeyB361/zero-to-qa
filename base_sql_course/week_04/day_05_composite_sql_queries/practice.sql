@@ -31,3 +31,15 @@ SELECT 'TODO: heavy_projects' AS todo;
 -- expected: "['Anna:1', 'Boris:2', 'Nina:1']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: owners_with_open_work' AS todo;
+
+-- Задание 4: owner_estimate_load
+-- Верни суммарную estimate_hours открытых задач по владельцам проектов.
+-- expected: "['Anna:5', 'Boris:11', 'Nina:6']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: owner_estimate_load' AS todo;
+
+-- Задание 5: users_with_high_priority_open_tasks
+-- Верни имена пользователей, у которых есть open задача с priority = high.
+-- expected: "['Anna', 'Boris']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: users_with_high_priority_open_tasks' AS todo;

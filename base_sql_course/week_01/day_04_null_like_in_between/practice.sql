@@ -33,3 +33,15 @@ SELECT 'TODO: areas_in_list' AS todo;
 -- expected: '[1, 2, 3, 6]'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: medium_size_runs' AS todo;
+
+-- Задание 4: unresolved_defect_titles
+-- Верни названия дефектов с unresolved_at = NULL в алфавитном порядке.
+-- expected: "['Login 500', 'Slow export']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: unresolved_defect_titles' AS todo;
+
+-- Задание 5: users_with_o_in_name
+-- Верни имена пользователей, в которых есть буква o.
+-- expected: "['Boris', 'Oleg']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: users_with_o_in_name' AS todo;

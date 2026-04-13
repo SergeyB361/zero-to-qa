@@ -33,3 +33,15 @@ SELECT 'TODO: joined_task_rows' AS todo;
 -- expected: '2'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: create_and_use_temp_table' AS todo;
+
+-- Задание 4: project_column_names
+-- Верни имена колонок таблицы projects.
+-- expected: "['id', 'name', 'owner_id']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: project_column_names' AS todo;
+
+-- Задание 5: open_task_assignees
+-- Верни open задачи в формате task_id:assignee.
+-- expected: "['1:Anna', '4:Anna', '5:Nina']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: open_task_assignees' AS todo;

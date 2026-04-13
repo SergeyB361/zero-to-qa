@@ -33,3 +33,15 @@ SELECT 'TODO: uppercase_user_names' AS todo;
 -- expected: '2'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: count_open_defects' AS todo;
+
+-- Задание 4: distinct_teams_lowercase
+-- Верни уникальные команды в lowercase и алфавитном порядке.
+-- expected: "['api', 'mobile', 'web']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: distinct_teams_lowercase' AS todo;
+
+-- Задание 5: rounded_avg_run_duration
+-- Верни среднюю duration_sec по всем run, округлённую до 1 знака.
+-- expected: '43.5'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: rounded_avg_run_duration' AS todo;

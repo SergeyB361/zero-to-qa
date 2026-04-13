@@ -24,3 +24,15 @@ SELECT 'TODO: repeated_failures' AS todo;
 -- expected: "['Login works']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: only_first_release_failures' AS todo;
+
+-- Задание 4: all_failures_with_duplicates
+-- Верни все падения из двух релизов с дубликатами.
+-- expected: "['Login works', 'Create order', 'Refund order', 'Create order', 'Filter products', 'Refund order', 'Refund order']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: all_failures_with_duplicates' AS todo;
+
+-- Задание 5: only_second_release_failures
+-- Верни падения, которые были только во втором релизе.
+-- expected: "['Filter products']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: only_second_release_failures' AS todo;

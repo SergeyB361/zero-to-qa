@@ -26,3 +26,15 @@ SELECT 'TODO: month_buckets' AS todo;
 -- expected: '2026-04-02'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: next_day_after_first_event' AS todo;
+
+-- Задание 4: login_event_times
+-- Верни created_at для endpoint = /login по возрастанию времени.
+-- expected: "['2026-04-01 10:00:00', '2026-04-02 08:50:00']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: login_event_times' AS todo;
+
+-- Задание 5: event_hours_only
+-- Верни часы событий в формате HH по порядку id.
+-- expected: "['10', '11', '08', '09']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: event_hours_only' AS todo;

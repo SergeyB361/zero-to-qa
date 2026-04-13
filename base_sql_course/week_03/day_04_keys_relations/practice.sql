@@ -33,3 +33,15 @@ SELECT 'TODO: test_runs_foreign_keys' AS todo;
 -- expected: '5'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: project_task_user_rows' AS todo;
+
+-- Задание 4: tasks_without_valid_project
+-- Верни количество задач без валидной связи с projects.
+-- expected: '0'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: tasks_without_valid_project' AS todo;
+
+-- Задание 5: task_project_assignee_rows
+-- Верни первые три строки в формате task_id:project:assignee.
+-- expected: "['1:Web Portal:Anna', '2:Web Portal:Oleg', '3:Public API:Boris']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: task_project_assignee_rows' AS todo;

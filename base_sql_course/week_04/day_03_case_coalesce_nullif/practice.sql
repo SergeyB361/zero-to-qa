@@ -25,3 +25,15 @@ SELECT 'TODO: owner_or_unassigned' AS todo;
 -- expected: '[4, None, 12]'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: normalized_resolution_hours' AS todo;
+
+-- Задание 4: resolution_speed_labels
+-- Верни пары title:label, где fast для <= 4 часов, none для 0, slow для остальных.
+-- expected: "['Login 500:fast', 'Wrong total:none', 'Slow export:slow']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: resolution_speed_labels' AS todo;
+
+-- Задание 5: safe_resolution_hours
+-- Замени 0 часов на -1 через NULLIF и COALESCE.
+-- expected: '[4, -1, 12]'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: safe_resolution_hours' AS todo;

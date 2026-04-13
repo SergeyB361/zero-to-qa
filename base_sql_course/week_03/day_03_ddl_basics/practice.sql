@@ -33,3 +33,15 @@ SELECT 'TODO: add_released_at_column' AS todo;
 -- expected: 'True'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: drop_temp_table' AS todo;
+
+-- Задание 4: rename_release_version_column
+-- Переименуй колонку version в release_version и верни список колонок releases.
+-- expected: "['id', 'release_version', 'released_at']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: rename_release_version_column' AS todo;
+
+-- Задание 5: create_release_notes_table
+-- Создай таблицу release_notes с FK на releases и верни True, если она появилась.
+-- expected: 'True'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: create_release_notes_table' AS todo;

@@ -33,3 +33,15 @@ SELECT 'TODO: postgres_strengths' AS todo;
 -- expected: 'Например: local_demo -> sqlite, production_api -> postgres'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: choose_engine' AS todo;
+
+-- Задание 4: choose_transaction_engine
+-- Для сценария many_parallel_users верни рекомендуемый engine.
+-- expected: 'postgres'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: choose_transaction_engine' AS todo;
+
+-- Задание 5: choose_local_lab_engine
+-- Для сценария single_file_local_lab верни рекомендуемый engine.
+-- expected: 'sqlite'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: choose_local_lab_engine' AS todo;

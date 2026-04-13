@@ -33,3 +33,15 @@ SELECT 'TODO: sum_open_task_estimates' AS todo;
 -- expected: '(0, 70)'
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: min_and_max_run_duration' AS todo;
+
+-- Задание 4: avg_passed_run_duration
+-- Верни среднюю duration_sec по passed run, округлённую до 1 знака.
+-- expected: '53.3'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: avg_passed_run_duration' AS todo;
+
+-- Задание 5: max_open_task_estimate
+-- Верни максимальную estimate_hours среди open задач.
+-- expected: '13'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: max_open_task_estimate' AS todo;

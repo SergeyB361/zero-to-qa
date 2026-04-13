@@ -33,3 +33,15 @@ SELECT 'TODO: count_users' AS todo;
 -- expected: "['api', 'web']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: list_active_teams' AS todo;
+
+-- Задание 4: list_defect_titles
+-- Верни названия дефектов в алфавитном порядке.
+-- expected: "['Login 500', 'Slow export', 'Wrong total']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: list_defect_titles' AS todo;
+
+-- Задание 5: count_projects
+-- Верни количество проектов.
+-- expected: '3'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: count_projects' AS todo;

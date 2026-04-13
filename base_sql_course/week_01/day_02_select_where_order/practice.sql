@@ -33,3 +33,15 @@ SELECT 'TODO: active_web_users' AS todo;
 -- expected: "['Mobile App', 'Public API', 'Web Portal']"
 -- TODO: замени заглушку реальным SQL-запросом
 SELECT 'TODO: projects_sorted' AS todo;
+
+-- Задание 4: longest_failed_runs
+-- Верни id failed test_runs по убыванию duration_sec.
+-- expected: '[6, 2]'
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: longest_failed_runs' AS todo;
+
+-- Задание 5: last_two_users
+-- Верни имена двух пользователей с максимальным id.
+-- expected: "['Oleg', 'Nina']"
+-- TODO: замени заглушку реальным SQL-запросом
+SELECT 'TODO: last_two_users' AS todo;
