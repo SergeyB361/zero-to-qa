@@ -8,9 +8,13 @@
 ## Структура материалов
 - `base_course/` — основной курс: недели 1-12
 - `advanced_course/` — расширенный курс: недели 1-10
-- `base_sql_course/` — базовый курс: pure SQL
-- `advanced_sql_course/` — продвинутый курс: pure SQL
-- `sql_in_practice_course/` — прикладной курс: SQL в Python, тестах и расследованиях
+- `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов
+- `postgres_base_sql_course/` — новый базовый курс: pure SQL на Postgres
+- `postgres_advanced_sql_course/` — новый продвинутый курс: pure SQL на Postgres
+- `postgres_sql_in_practice_course/` — новый прикладной SQL-трек на Postgres
+- `base_sql_course/` — legacy SQLite pure-SQL курс
+- `advanced_sql_course/` — legacy SQLite advanced SQL курс
+- `sql_in_practice_course/` — legacy SQLite applied SQL курс
 - `base_algorithms_course/` — базовый курс: алгоритмы и структуры данных
 - `advanced_algorithms_course/` — продвинутый курс: алгоритмы и структуры данных
 - внутри каждого курса материалы организованы по схеме `week_XX/day_XX_topic`
@@ -660,9 +664,10 @@
 
 ## ОТДЕЛЬНЫЕ КУРСЫ — SQL
 
-- Базовый план вынесен в `base_sql_course/ROADMAP.md`.
-- Продвинутый план вынесен в `advanced_sql_course/ROADMAP.md`.
+- Новый основной SQL-путь строится вокруг `Postgres`.
+- Общее окружение вынесено в `postgres_lab/`.
+- Базовый Postgres-план вынесен в `postgres_base_sql_course/ROADMAP.md`.
+- Продвинутый Postgres-план вынесен в `postgres_advanced_sql_course/ROADMAP.md`.
+- Applied Postgres-план вынесен в `postgres_sql_in_practice_course/ROADMAP.md`.
 - Эти курсы не влияют на прогресс `base_course` и `advanced_course`.
-- Базовый SQL-трек покрывает pure SQL: SELECT, JOIN, GROUP BY, подзапросы, set operations, CASE и date/time.
-- Продвинутый SQL-трек покрывает pure advanced SQL: CTE, window functions, performance, recursive CTE и advanced reporting.
-- Прикладной SQL-трек вынесен в `sql_in_practice_course/` и покрывает SQLite в Python, DB-checks, migrations и debugging workflows.
+- Старые SQLite-треки сохранены в репозитории для истории: `base_sql_course/`, `advanced_sql_course/`, `sql_in_practice_course/`.

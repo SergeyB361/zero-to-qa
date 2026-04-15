@@ -1,0 +1,3 @@
+-- Capstone: SQL investigation pack
+-- Scaffold для мини-проекта.
+-- Используй `postgres_lab` и оформи финальный SQL-артефакт здесь.

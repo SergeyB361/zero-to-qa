@@ -5,22 +5,28 @@
 ## Что есть в проекте
 - `base_course/` — основной 12-недельный курс по Python, QA automation и портфолио.
 - `advanced_course/` — расширенный QA-трек для более сильного инженерного уровня.
-- `base_sql_course/` — базовый pure-SQL курс.
-- `advanced_sql_course/` — продвинутый pure-SQL курс.
-- `sql_in_practice_course/` — прикладной SQL-трек для Python, тестов и расследований.
+- `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов.
+- `postgres_base_sql_course/` — новый базовый pure-SQL курс на Postgres.
+- `postgres_advanced_sql_course/` — новый продвинутый pure-SQL курс на Postgres.
+- `postgres_sql_in_practice_course/` — новый applied SQL-трек на Postgres.
+- `base_sql_course/` — legacy SQLite pure-SQL курс, оставлен для истории.
+- `advanced_sql_course/` — legacy SQLite advanced SQL курс, оставлен для истории.
+- `sql_in_practice_course/` — legacy SQLite applied SQL курс, оставлен для истории.
 - `base_algorithms_course/` — базовый курс по алгоритмам и структурам данных.
 - `advanced_algorithms_course/` — продвинутый алгоритмический трек.
 - `pet_project/` — отдельный проект для практики backend/API-мышления.
 
 ## Рекомендуемый порядок
 1. `base_course`
-2. `base_sql_course`
+2. `postgres_base_sql_course`
 3. `base_algorithms_course`
 4. `pet_project` как подготовка и проектирование
 5. `advanced_course`
-6. `advanced_sql_course`
-7. `sql_in_practice_course`
+6. `postgres_advanced_sql_course`
+7. `postgres_sql_in_practice_course`
 8. `advanced_algorithms_course`
+
+Legacy SQL-треки на `SQLite` сохранены в репозитории отдельно и не удаляются, но основной путь дальше — через `Postgres`.
 
 ## Основной курс
 **Для кого:** старт с нуля или после очень фрагментарной базы.
@@ -58,51 +64,60 @@
 - `ROADMAP.md` — общий roadmap основного и расширенного QA-трека
 - `advanced_course/` — материалы по дням
 
-## Базовый SQL-курс
+## Базовый SQL-курс (Postgres)
 **Для кого:** после начального Python и первых данных/файлов.
-**Цель:** собрать фундамент по чистому SQL без Python-слоя внутри уроков.
+**Цель:** собрать фундамент по чистому SQL уже на реальном Postgres runtime.
 **Длительность:** `4` недели.
-**Что внутри:** SELECT, фильтрация, JOIN, GROUP BY, HAVING, подзапросы, схема данных, set operations, CASE, date/time и composite queries.
+**Что внутри:** setup через `postgres_lab`, SELECT, фильтрация, JOIN, GROUP BY, HAVING, подзапросы, схема данных, set operations, CASE, date/time и Postgres-specific patterns.
 
 Ключевые недели:
-- `base_sql_course/week_01/` — SELECT и фильтрация
-- `base_sql_course/week_02/` — Агрегации и JOINs
-- `base_sql_course/week_03/` — Подзапросы и схема данных
-- `base_sql_course/week_04/` — Чистый SQL: закрепление
+- `postgres_base_sql_course/week_01/` — Базовые запросы и изменения данных
+- `postgres_base_sql_course/week_02/` — Агрегации и JOIN
+- `postgres_base_sql_course/week_03/` — Подзапросы и схема данных
+- `postgres_base_sql_course/week_04/` — Postgres-native SQL: закрепление
 
 Связанные файлы:
-- `base_sql_course/README.md`
-- `base_sql_course/ROADMAP.md`
+- `postgres_lab/README.md`
+- `postgres_base_sql_course/README.md`
+- `postgres_base_sql_course/ROADMAP.md`
 
-## Продвинутый SQL-курс
-**Для кого:** после базового SQL-трека.
-**Цель:** перейти к advanced SQL без смешения с Python- и QA-интеграцией.
+## Продвинутый SQL-курс (Postgres)
+**Для кого:** после базового Postgres SQL-трека.
+**Цель:** перейти к real-world SQL: планы выполнения, индексы, consistency, reporting и investigation.
 **Длительность:** `4` недели.
-**Что внутри:** CTE, window functions, ranking, indexes, `EXPLAIN`, recursive CTE, pivot-like отчёты, time-series analytics, integrity и consistency.
+**Что внутри:** CTE, recursive CTE, window functions, ranking, `EXPLAIN ANALYZE`, индексы, locks, MVCC, views, JSONB и investigation patterns.
 
 Ключевые недели:
-- `advanced_sql_course/week_01/` — Advanced querying
-- `advanced_sql_course/week_02/` — Optimization and indexing
-- `advanced_sql_course/week_03/` — Transactions and consistency
-- `advanced_sql_course/week_04/` — Advanced SQL reporting
+- `postgres_advanced_sql_course/week_01/` — CTE и аналитические функции
+- `postgres_advanced_sql_course/week_02/` — Планы выполнения и индексы
+- `postgres_advanced_sql_course/week_03/` — Transactions и consistency
+- `postgres_advanced_sql_course/week_04/` — Reporting и investigation
 
 Связанные файлы:
-- `advanced_sql_course/README.md`
-- `advanced_sql_course/ROADMAP.md`
+- `postgres_lab/README.md`
+- `postgres_advanced_sql_course/README.md`
+- `postgres_advanced_sql_course/ROADMAP.md`
 
-## SQL in Practice
-**Для кого:** после базового SQL или параллельно с ним как applied-слой.
-**Цель:** научиться использовать SQL в Python, тестах, миграциях и инженерных расследованиях.
-**Длительность:** `1` неделя + bonus.
-**Что внутри:** SQLite в Python, DB-checks, cleanup, migrations, debugging workflows, investigation toolkit.
+## SQL in Practice (Postgres)
+**Для кого:** после базового Postgres SQL или параллельно с ним как applied-слой.
+**Цель:** научиться использовать Postgres в Python, тестах, миграциях, CI и инженерных расследованиях.
+**Длительность:** `2` недели.
+**Что внутри:** Docker workflow, `psql`, `DBeaver`, `psycopg`, DB-checks, setup/cleanup, migrations, debugging with `EXPLAIN`, backend/API analysis.
 
 Ключевые недели:
-- `sql_in_practice_course/week_01/` — SQL в Python и тестах
-- `sql_in_practice_course/bonus_backend_api_analysis/` — bonus: SQL для backend и API-анализа
+- `postgres_sql_in_practice_course/week_01/` — Postgres в локальной и тестовой работе
+- `postgres_sql_in_practice_course/week_02/` — Applied workflows вокруг Postgres
 
 Связанные файлы:
-- `sql_in_practice_course/README.md`
-- `sql_in_practice_course/ROADMAP.md`
+- `postgres_lab/README.md`
+- `postgres_sql_in_practice_course/README.md`
+- `postgres_sql_in_practice_course/ROADMAP.md`
+
+## Legacy SQL-треки (SQLite / history)
+Старые SQL-курсы не удалены и остаются в репозитории как историческая версия:
+- `base_sql_course/`
+- `advanced_sql_course/`
+- `sql_in_practice_course/`
 
 ## Базовый алгоритмический курс
 **Для кого:** как параллельный фундаментальный трек после начального Python.
@@ -187,4 +202,4 @@ sql_course/week_XX/
 Некоторые уроки дополнительно включают `.txt`, `.json`, `.csv` и другие data-файлы для практики.
 
 ## Стек
-Python 3.14 · PyTest · Requests · Playwright · SQLite · Allure · GitHub Actions
+Python 3.14 · PyTest · Requests · Playwright · Postgres · SQLite (legacy) · Allure · GitHub Actions

@@ -1,5 +1,6 @@
 # Курс: SQL in Practice
 
+Legacy SQLite-based applied track. Сохраняется в репозитории для истории. Новый основной путь — `postgres_sql_in_practice_course/`.
 Прикладной SQL-трек про использование SQL в Python, тестах, инженерных сценариях и расследовании проблем.
 
 ## Зачем нужен курс
