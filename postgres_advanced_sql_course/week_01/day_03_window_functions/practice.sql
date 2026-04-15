@@ -1,17 +1,26 @@
--- Практика: Window functions
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
+-- Практика: window functions
 
--- Задание 1
--- TODO
+-- Задание 1: total_runs_on_each_row
+-- Верни id, status и COUNT(*) OVER () для test_runs.
+-- expected: total_runs = 4 на каждой строке
+SELECT 'TODO: total_runs_on_each_row' AS todo;
 
--- Задание 2
--- TODO
+-- Задание 2: avg_duration_per_executor_window
+-- Верни id, executed_by и AVG(duration_seconds) OVER (PARTITION BY executed_by).
+-- expected: Anna = 35.00, Boris = 48.00, Oleg = 12.00
+SELECT 'TODO: avg_duration_per_executor_window' AS todo;
 
--- Задание 3
--- TODO
+-- Задание 3: project_total_points_window
+-- Верни tasks с total_points_by_project через SUM(...) OVER (PARTITION BY project_id).
+-- expected: project 1 -> 8, project 2 -> 8, project 3 -> 5
+SELECT 'TODO: project_total_points_window' AS todo;
 
--- Задание 4
--- TODO
+-- Задание 4: defects_per_reporter_window
+-- Верни defects с COUNT(*) OVER (PARTITION BY reported_by).
+-- expected: reported_by = 1 -> 1, reported_by = 2 -> 2
+SELECT 'TODO: defects_per_reporter_window' AS todo;
 
--- Задание 5
--- TODO
+-- Задание 5: unfinished_tasks_per_project_window
+-- Верни tasks и COUNT(*) FILTER (WHERE status <> 'closed') OVER (PARTITION BY project_id).
+-- expected: для project 1 значение unfinished = 1, для project 2 = 1, для project 3 = 1
+SELECT 'TODO: unfinished_tasks_per_project_window' AS todo;
