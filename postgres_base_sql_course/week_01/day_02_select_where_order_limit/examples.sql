@@ -1,6 +1,20 @@
 -- SELECT, WHERE, ORDER BY, LIMIT
--- Scaffold для Postgres-native примеров.
--- Запуск:
--- psql -h localhost -U postgres -d zero_to_qa -f examples.sql
 
--- TODO: добавить examples для day_02_select_where_order_limit
+-- Пример 1: активные пользователи.
+SELECT id, name, team
+FROM users
+WHERE is_active IS TRUE
+ORDER BY name ASC;
+
+-- Пример 2: две самые "тяжёлые" незакрытые задачи.
+SELECT id, status, estimate_points
+FROM tasks
+WHERE status <> 'closed'
+ORDER BY estimate_points DESC
+LIMIT 2;
+
+-- Пример 3: последние по времени test runs.
+SELECT id, status, duration_seconds, executed_at
+FROM test_runs
+ORDER BY executed_at DESC
+LIMIT 2;
