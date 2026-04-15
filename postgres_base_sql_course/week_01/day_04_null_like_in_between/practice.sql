@@ -22,5 +22,5 @@ SELECT 'TODO: medium_duration_runs' AS todo;
 
 -- Задание 5: open_or_blocked_tasks
 -- Верни id и status задач со статусом open или blocked.
--- expected: ids 1 и 4
+-- expected: ids 1, 3, 4
 SELECT 'TODO: open_or_blocked_tasks' AS todo;
