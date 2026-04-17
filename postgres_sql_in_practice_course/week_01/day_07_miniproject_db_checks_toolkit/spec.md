@@ -1,13 +1,16 @@
-# Мини-проект: DB Checks Toolkit
+# ТЗ: Мини-проект — DB Checks Toolkit
 
-Статус: scaffold для нового applied Postgres-трека.
+## Цель
+Собрать маленький toolkit для Postgres-проверок из Python: existence checks, counts, scalar values и status distribution.
 
 ## Deliverables
-- `notes.md`
-- `spec.md`
-- `db_checks_toolkit.py`
+- функция `row_exists(conn, query)`
+- функция `count_rows(conn, query)`
+- функция `get_scalar(conn, query)`
+- функция `status_distribution(conn, table_name, column_name)`
+- демо `main()` в `db_checks_toolkit.py`
 
-## Ожидаемый результат
-- рабочий applied-артефакт под Postgres;
-- использование `psycopg` или CLI, если это оправдано темой;
-- привязка к `postgres_lab`.
+## Критерии готовности
+- файл запускается без ошибок;
+- каждая функция решает одну понятную задачу;
+- `main()` показывает рабочий demo flow против `zero_to_qa`.

@@ -1,10 +1,10 @@
 # ROADMAP — Postgres SQL in Practice
 
-**Статус:** Scaffold applied-трека под Postgres. Старый SQLite-based applied track оставлен для истории.
+**Статус:** курс наполнен полностью по `week_01-week_02`. Старый SQLite-based applied track оставлен для истории.
 
 ## Прогресс
-- `Week 1` — `0/7`
-- `Week 2` — `0/7`
+- `Week 1` — `7/7`
+- `Week 2` — `7/7`
 
 ## По неделям
 

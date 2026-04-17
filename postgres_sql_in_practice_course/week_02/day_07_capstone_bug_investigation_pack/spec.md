@@ -1,13 +1,16 @@
-# Capstone: bug investigation pack
+# ТЗ: Capstone — bug investigation pack
 
-Статус: scaffold для нового applied Postgres-трека.
+## Цель
+Собрать applied Python+Postgres toolkit для расследования бага поверх `postgres_lab`.
 
 ## Deliverables
-- `notes.md`
-- `spec.md`
-- `bug_investigation_pack.py`
+- функция `collect_context()`
+- функция `run_core_queries()`
+- функция `summarize_findings()`
+- один файл `bug_investigation_pack.py`
 
-## Ожидаемый результат
-- рабочий applied-артефакт под Postgres;
-- использование `psycopg` или CLI, если это оправдано темой;
-- привязка к `postgres_lab`.
+## Критерии готовности
+- файл запускается без ошибок;
+- workflow читается как инженерное расследование;
+- есть понятный вывод по findings;
+- toolkit привязан к `zero_to_qa`, а не к абстрактной БД.
