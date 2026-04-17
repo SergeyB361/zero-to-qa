@@ -1,17 +1,6 @@
--- Практика: Locks и blocking
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+-- Практика: locks и blocking
+SELECT 'TODO: blocking_demo_sessions' AS todo;
+SELECT 'TODO: inspect_pg_stat_activity' AS todo;
+SELECT 'TODO: inspect_pg_locks' AS todo;
+SELECT 'TODO: explain_blocking_notes' AS todo;
+SELECT 'TODO: safe_cleanup' AS todo;

@@ -1,17 +1,6 @@
--- Практика: Практика на consistency
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+-- Практика: consistency
+SELECT 'TODO: blocking_vs_deadlock_notes' AS todo;
+SELECT 'TODO: consistency_layers' AS todo;
+SELECT 'TODO: safe_update_order_rule' AS todo;
+SELECT 'TODO: inspect_integrity_on_real_table' AS todo;
+SELECT 'TODO: session_demo_outline' AS todo;

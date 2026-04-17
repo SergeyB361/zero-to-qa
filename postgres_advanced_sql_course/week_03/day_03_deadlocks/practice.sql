@@ -1,17 +1,6 @@
--- Практика: Deadlocks
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+-- Практика: deadlocks
+SELECT 'TODO: two_session_deadlock_demo' AS todo;
+SELECT 'TODO: explain_cycle' AS todo;
+SELECT 'TODO: safe_ordering_strategy' AS todo;
+SELECT 'TODO: identify_deadlock_vs_blocking' AS todo;
+SELECT 'TODO: rollback_cleanup' AS todo;

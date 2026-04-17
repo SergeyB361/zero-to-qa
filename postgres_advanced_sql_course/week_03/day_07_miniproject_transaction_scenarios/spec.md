@@ -1,13 +1,17 @@
-# Мини-проект: transaction scenarios
+# ТЗ: Мини-проект — transaction scenarios
 
-Статус: scaffold для новой Postgres-native версии.
+## Цель
+Собрать набор демонстрационных Postgres-сценариев по isolation, blocking и deadlocks.
 
 ## Deliverables
-- `notes.md`
-- `spec.md`
-- `transaction_scenarios.sql`
+- блок `isolation_case`
+- блок `blocking_case`
+- блок `deadlock_case`
+- блок `inspection_queries`
+- один SQL-файл `transaction_scenarios.sql`
 
-## Ожидаемый результат
-- самостоятельный SQL-артефакт, который запускается на `postgres_lab`;
-- понятные assumptions;
-- запросы и/или схема, соответствующие теме недели.
+## Обязательные требования
+- используй dataset из `postgres_lab`;
+- для blocking/deadlock сценариев явно раздели шаги по session A / session B;
+- добавь cleanup-блоки;
+- добавь минимум один inspection-запрос к `pg_stat_activity` или `pg_locks`.

@@ -1,17 +1,6 @@
 -- Практика: JSONB basics
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+SELECT 'TODO: build_task_payload' AS todo;
+SELECT 'TODO: extract_defect_fields_from_jsonb' AS todo;
+SELECT 'TODO: filter_users_by_jsonb_team' AS todo;
+SELECT 'TODO: jsonb_key_presence_comment' AS todo;
+SELECT 'TODO: compare_arrow_operators' AS todo;

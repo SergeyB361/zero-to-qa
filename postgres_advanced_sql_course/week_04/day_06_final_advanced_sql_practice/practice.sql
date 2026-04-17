@@ -1,17 +1,6 @@
--- Практика: Финальная advanced SQL-практика
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+-- Практика: final advanced SQL practice
+SELECT 'TODO: latest_run_dashboard' AS todo;
+SELECT 'TODO: project_points_and_rank' AS todo;
+SELECT 'TODO: daily_runs_with_zero_days' AS todo;
+SELECT 'TODO: defect_quality_snapshot' AS todo;
+SELECT 'TODO: jsonb_payload_report' AS todo;

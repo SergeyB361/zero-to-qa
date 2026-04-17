@@ -1,17 +1,6 @@
--- Практика: Data quality queries
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+-- Практика: data quality queries
+SELECT 'TODO: closed_tasks_without_timestamp' AS todo;
+SELECT 'TODO: duplicate_defect_titles' AS todo;
+SELECT 'TODO: orphan_defects_check' AS todo;
+SELECT 'TODO: suspicious_duration_runs' AS todo;
+SELECT 'TODO: blocked_tasks_with_closed_at' AS todo;

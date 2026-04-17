@@ -1,3 +1,6 @@
 -- Capstone: SQL investigation pack
--- Scaffold для мини-проекта.
--- Используй `postgres_lab` и оформи финальный SQL-артефакт здесь.
+SELECT 'TODO: latest_activity_pack' AS todo;
+SELECT 'TODO: quality_pack' AS todo;
+SELECT 'TODO: time_series_pack' AS todo;
+SELECT 'TODO: ranking_pack' AS todo;
+SELECT 'TODO: jsonb_pack' AS todo;

@@ -1,6 +1,13 @@
 -- Deadlocks
--- Scaffold для Postgres-native примеров.
--- Запуск:
--- psql -h localhost -U postgres -d zero_to_qa -f examples.sql
+-- Session A
+BEGIN;
+UPDATE tasks SET estimate_points = estimate_points + 1 WHERE id = 1;
+UPDATE tasks SET estimate_points = estimate_points + 1 WHERE id = 2;
 
--- TODO: добавить examples для day_03_deadlocks
+-- Session B
+BEGIN;
+UPDATE tasks SET estimate_points = estimate_points + 1 WHERE id = 2;
+UPDATE tasks SET estimate_points = estimate_points + 1 WHERE id = 1;
+
+-- Один из сеансов получит deadlock detected.
+ROLLBACK;

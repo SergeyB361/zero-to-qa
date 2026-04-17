@@ -1,17 +1,6 @@
 -- Практика: ACID и isolation
--- Выполняй задания на базе `zero_to_qa` из `postgres_lab`.
-
--- Задание 1
--- TODO
-
--- Задание 2
--- TODO
-
--- Задание 3
--- TODO
-
--- Задание 4
--- TODO
-
--- Задание 5
--- TODO
+SELECT 'TODO: show_default_isolation' AS todo;
+SELECT 'TODO: set_repeatable_read_transaction' AS todo;
+SELECT 'TODO: temp_atomicity_demo' AS todo;
+SELECT 'TODO: write_acid_notes' AS todo;
+SELECT 'TODO: compare_read_committed_vs_repeatable_read' AS todo;

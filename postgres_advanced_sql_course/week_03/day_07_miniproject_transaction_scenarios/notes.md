@@ -1,18 +1,7 @@
 # Мини-проект: transaction scenarios
 
-Статус: scaffold для новой Postgres-native версии.
+## Зачем нужен этот день
+Это финальная сборка concurrency-недели: isolation, blocking, deadlocks и inspection queries в одном lab-файле.
 
-## Цель дня
-- зафиксировать место темы в новом курсе;
-- привязать тему к `postgres_lab/`;
-- позже наполнить урок полноценной теорией и практикой.
-
-## Что здесь должно появиться
-- объяснение темы на языке Postgres, а не SQLite;
-- примеры, которые выполняются на `postgres_lab`;
-- практика под `psql`/`DBeaver` или Python+`psycopg`, если это applied-день.
-
-## Источник данных
-Используй:
-- `postgres_lab/init/001_schema.sql`
-- `postgres_lab/init/002_seed.sql`
+## Что считается сильным результатом
+Сильный результат — это 3-4 понятных сценария, чёткое разделение по session A / session B и аккуратный cleanup.

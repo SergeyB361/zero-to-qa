@@ -1,3 +1,5 @@
 -- Мини-проект: transaction scenarios
--- Scaffold для мини-проекта.
--- Используй `postgres_lab` и оформи финальный SQL-артефакт здесь.
+SELECT 'TODO: isolation_case' AS todo;
+SELECT 'TODO: blocking_case' AS todo;
+SELECT 'TODO: deadlock_case' AS todo;
+SELECT 'TODO: inspection_queries' AS todo;
