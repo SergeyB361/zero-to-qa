@@ -1,10 +1,10 @@
 # ROADMAP — Postgres SQL — продвинутый курс
 
-**Статус:** `Week 1` наполнена. `Week 2-4` пока scaffold новой Postgres-native версии. Старые SQLite/pure-SQL треки сохранены как history/legacy.
+**Статус:** `Week 1-2` наполнены. `Week 3-4` пока scaffold новой Postgres-native версии. Старые SQLite/pure-SQL треки сохранены как history/legacy.
 
 ## Прогресс
 - `Week 1` — `7/7`
-- `Week 2` — `0/7`
+- `Week 2` — `7/7`
 - `Week 3` — `0/7`
 - `Week 4` — `0/7`
 

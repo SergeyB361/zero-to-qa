@@ -2,7 +2,7 @@
 
 **Цель:** Дойти до real-world SQL: планы выполнения, индексы, consistency, reporting и investigation.
 **Длительность:** `4 недели`
-**Статус:** `Week 1` наполнена. `Week 2-4` пока остаются scaffold новой Postgres-native версии.
+**Статус:** `Week 1-2` наполнены. `Week 3-4` пока остаются scaffold новой Postgres-native версии.
 
 ## Общее правило
 - Используй общее окружение из `postgres_lab/`.
