@@ -1,0 +1,42 @@
+name: Validate Postgres SQL
+
+on:
+  push:
+    paths:
+      - "postgres_base_sql_course/**"
+      - "postgres_advanced_sql_course/**"
+      - "postgres_sql_in_practice_course/**"
+      - "postgres_lab/**"
+      - "scripts/validate_postgres_sql_courses.py"
+      - ".github/workflows/validate-postgres-sql.yml"
+  pull_request:
+    paths:
+      - "postgres_base_sql_course/**"
+      - "postgres_advanced_sql_course/**"
+      - "postgres_sql_in_practice_course/**"
+      - "postgres_lab/**"
+      - "scripts/validate_postgres_sql_courses.py"
+      - ".github/workflows/validate-postgres-sql.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-sql-courses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Postgres SQL courses
+        run: python scripts/validate_postgres_sql_courses.py
+
+      - name: Stop postgres_lab
+        if: always()
+        working-directory: postgres_lab
+        run: docker compose down -v
