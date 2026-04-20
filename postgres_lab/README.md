@@ -33,6 +33,25 @@ SELECT * FROM users LIMIT 5;
 psql -h localhost -U postgres -d zero_to_qa -f path\to\examples.sql
 ```
 
+## Reset и re-init
+Важно: файлы из `init/` выполняются только при первом создании volume.
+
+Если ты изменил `001_schema.sql` или `002_seed.sql` и хочешь поднять базу заново с нуля, нужен полный reset volume:
+```powershell
+docker compose down -v
+docker compose up -d
+```
+
+Когда это нужно:
+- схема была изменена;
+- seed-данные были изменены;
+- локальная база ушла в состояние, которое уже не совпадает с курсом.
+
+Когда это не нужно:
+- ты просто перезапускаешь контейнер;
+- схема и seed не менялись;
+- тебе достаточно сохранить текущие данные в volume.
+
 ## Параметры по умолчанию
 - host: `localhost`
 - port: `5432`
