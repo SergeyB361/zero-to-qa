@@ -3,20 +3,44 @@
 
 -- list_active_users
 -- expected: Anna, Boris, Oleg
-SELECT 'TODO: list_active_users' AS todo;
+SELECT id,
+       name,
+       team
+FROM users
+WHERE is_active = TRUE
+ORDER BY name;
 
 -- high_priority_cases
 -- expected: Login works, Create order, Refresh token
-SELECT 'TODO: high_priority_cases' AS todo;
+SELECT id,
+       title,
+       priority
+FROM test_cases
+WHERE priority IN ('high', 'critical')
+ORDER BY priority DESC, id;
 
 -- unfinished_task_ids
 -- expected: 1, 3, 4
-SELECT 'TODO: unfinished_task_ids' AS todo;
+SELECT id,
+       status
+FROM tasks
+WHERE status <> 'closed'
+ORDER BY id;
 
 -- failed_run_ids
 -- expected: 2
-SELECT 'TODO: failed_run_ids' AS todo;
+SELECT id,
+       case_id,
+       executed_by
+FROM test_runs
+WHERE status = 'failed';
 
 -- open_defects
 -- expected: Login 500, Refresh loop
-SELECT 'TODO: open_defects' AS todo;
+SELECT id,
+       title,
+       severity,
+       status
+FROM defects
+WHERE status IN ('open', 'in_progress')
+ORDER BY id;
