@@ -13,3 +13,4 @@ allure-report/
 !.vscode/launch.json
 program_oop.md
 pet_project/*/*.db
+pet_project/.server_pids
