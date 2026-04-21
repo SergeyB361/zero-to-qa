@@ -6,6 +6,7 @@
 - `base_course/` — основной 12-недельный курс по Python, QA automation и портфолио.
 - `advanced_course/` — расширенный QA-трек для более сильного инженерного уровня.
 - `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI.
+- `sqlalchemy_basics_course/` — отдельный базовый ORM-трек на SQLAlchemy.
 - `fastapi_lab/` — Docker-окружение для FastAPI-практики.
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов.
 - `postgres_base_sql_course/` — новый базовый pure-SQL курс на Postgres.
@@ -23,11 +24,12 @@
 2. `postgres_base_sql_course`
 3. `base_algorithms_course`
 4. `fastapi_basics_course`
-5. `pet_project` как подготовка и проектирование
-6. `advanced_course`
-7. `postgres_advanced_sql_course`
-8. `postgres_sql_in_practice_course`
-9. `advanced_algorithms_course`
+5. `sqlalchemy_basics_course`
+6. `pet_project` как подготовка и проектирование
+7. `advanced_course`
+8. `postgres_advanced_sql_course`
+9. `postgres_sql_in_practice_course`
+10. `advanced_algorithms_course`
 
 Legacy SQL-треки на `SQLite` сохранены в репозитории отдельно и не удаляются, но основной путь дальше — через `Postgres`.
 
@@ -81,6 +83,20 @@ Legacy SQL-треки на `SQLite` сохранены в репозитории
 Связанные файлы:
 - `fastapi_basics_course/README.md`
 - `fastapi_basics_course/ROADMAP.md`
+
+## SQLAlchemy Basics
+**Для кого:** после базового Postgres SQL и после FastAPI basics.
+**Цель:** закрыть ORM-слой между raw SQL и реальным backend-кодом.
+**Длительность:** `2` недели.
+**Что внутри:** engine/session/base, модели и relationships, CRUD, query patterns, repository/service layer, FastAPI integration, migrations intro.
+
+Ключевые недели:
+- `sqlalchemy_basics_course/week_01/` — Core ORM
+- `sqlalchemy_basics_course/week_02/` — Applied ORM patterns
+
+Связанные файлы:
+- `sqlalchemy_basics_course/README.md`
+- `sqlalchemy_basics_course/ROADMAP.md`
 
 ## Базовый SQL-курс (Postgres)
 **Для кого:** после начального Python и первых данных/файлов.

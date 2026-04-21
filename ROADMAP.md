@@ -9,6 +9,7 @@
 - `base_course/` — основной курс: недели 1-12
 - `advanced_course/` — расширенный курс: недели 1-10
 - `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI
+- `sqlalchemy_basics_course/` — отдельный базовый ORM-трек на SQLAlchemy
 - `fastapi_lab/` — Docker-окружение для практики FastAPI
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов
 - `postgres_base_sql_course/` — новый базовый курс: pure SQL на Postgres
@@ -35,6 +36,16 @@
 |---|------|-----------------|
 | 1 | Week 1 | ASGI, routes, params, Pydantic, response models, dependencies |
 | 2 | Week 2 | APIRouter, service layer, TestClient, auth headers, middleware, lifespan |
+
+## SQLALCHEMY BASICS — отдельный ORM-трек
+
+**Цель:** закрыть ORM-слой отдельно от raw SQL и FastAPI.
+**Длительность:** `2 недели`
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Week 1 | engine, session, declarative models, CRUD, relationships, query patterns |
+| 2 | Week 2 | transactions, loading strategies, repository/service layer, FastAPI integration, Alembic intro |
 
 ## НЕДЕЛЯ 1 — Python с нуля
 
