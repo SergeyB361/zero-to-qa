@@ -8,6 +8,8 @@
 ## Структура материалов
 - `base_course/` — основной курс: недели 1-12
 - `advanced_course/` — расширенный курс: недели 1-10
+- `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI
+- `fastapi_lab/` — Docker-окружение для практики FastAPI
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов
 - `postgres_base_sql_course/` — новый базовый курс: pure SQL на Postgres
 - `postgres_advanced_sql_course/` — новый продвинутый курс: pure SQL на Postgres
@@ -20,6 +22,19 @@
 - внутри каждого курса материалы организованы по схеме `week_XX/day_XX_topic`
 
 ---
+
+
+---
+
+## FASTAPI BASICS — отдельный backend-трек
+
+**Цель:** закрыть framework-базу по FastAPI отдельно от QA- и SQL-треков.
+**Длительность:** `2 недели`
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Week 1 | ASGI, routes, params, Pydantic, response models, dependencies |
+| 2 | Week 2 | APIRouter, service layer, TestClient, auth headers, middleware, lifespan |
 
 ## НЕДЕЛЯ 1 — Python с нуля
 

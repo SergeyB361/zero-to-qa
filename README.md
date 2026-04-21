@@ -5,6 +5,8 @@
 ## Что есть в проекте
 - `base_course/` — основной 12-недельный курс по Python, QA automation и портфолио.
 - `advanced_course/` — расширенный QA-трек для более сильного инженерного уровня.
+- `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI.
+- `fastapi_lab/` — Docker-окружение для FastAPI-практики.
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов.
 - `postgres_base_sql_course/` — новый базовый pure-SQL курс на Postgres.
 - `postgres_advanced_sql_course/` — новый продвинутый pure-SQL курс на Postgres.
@@ -20,11 +22,12 @@
 1. `base_course`
 2. `postgres_base_sql_course`
 3. `base_algorithms_course`
-4. `pet_project` как подготовка и проектирование
-5. `advanced_course`
-6. `postgres_advanced_sql_course`
-7. `postgres_sql_in_practice_course`
-8. `advanced_algorithms_course`
+4. `fastapi_basics_course`
+5. `pet_project` как подготовка и проектирование
+6. `advanced_course`
+7. `postgres_advanced_sql_course`
+8. `postgres_sql_in_practice_course`
+9. `advanced_algorithms_course`
 
 Legacy SQL-треки на `SQLite` сохранены в репозитории отдельно и не удаляются, но основной путь дальше — через `Postgres`.
 
@@ -63,6 +66,21 @@ Legacy SQL-треки на `SQLite` сохранены в репозитории
 Связанные файлы:
 - `ROADMAP.md` — общий roadmap основного и расширенного QA-трека
 - `advanced_course/` — материалы по дням
+
+
+## FastAPI Basics
+**Для кого:** после базового Python и до первого backend pet project.
+**Цель:** отдельно закрыть framework-базу по FastAPI без смешивания с ORM.
+**Длительность:** `2` недели.
+**Что внутри:** routes, request/response models, dependencies, APIRouter, TestClient, auth headers, middleware, lifespan.
+
+Ключевые недели:
+- `fastapi_basics_course/week_01/` — Core FastAPI
+- `fastapi_basics_course/week_02/` — Structure, testing and applied patterns
+
+Связанные файлы:
+- `fastapi_basics_course/README.md`
+- `fastapi_basics_course/ROADMAP.md`
 
 ## Базовый SQL-курс (Postgres)
 **Для кого:** после начального Python и первых данных/файлов.
@@ -202,4 +220,4 @@ sql_course/week_XX/
 Некоторые уроки дополнительно включают `.txt`, `.json`, `.csv` и другие data-файлы для практики.
 
 ## Стек
-Python 3.14 · PyTest · Requests · Playwright · Postgres · SQLite (legacy) · Allure · GitHub Actions
+Python 3.14 · FastAPI · PyTest · Requests · Playwright · Postgres · SQLite (legacy) · Allure · GitHub Actions

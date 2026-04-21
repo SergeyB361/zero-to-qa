@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: zero_to_qa_fastapi_lab
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+    ports:
+      - "8000:8000"
+    command: sleep infinity
