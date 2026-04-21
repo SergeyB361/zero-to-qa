@@ -22,14 +22,15 @@ from fastapi.testclient import TestClient
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.mode = 'practice'
+    # TODO: инициализируй mode как practice.
+    app.state.mode = 'TODO'
     yield
 
 
 app = FastAPI(title='Practice Week 2 Day 5', lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['http://localhost:5173'],
+    allow_origins=['http://localhost:3000'],
     allow_methods=['*'],
     allow_headers=['*'],
 )
@@ -39,7 +40,8 @@ app.add_middleware(
 async def timing_middleware(request: Request, call_next):
     started = perf_counter()
     response = await call_next(request)
-    response.headers['X-Process-Time'] = f'{perf_counter() - started:.6f}'
+    # TODO: запиши реальный timing header.
+    response.headers['X-Process-Time'] = 'TODO'
     return response
 
 

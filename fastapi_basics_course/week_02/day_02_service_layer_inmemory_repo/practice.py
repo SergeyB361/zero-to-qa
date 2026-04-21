@@ -12,7 +12,7 @@
 Критерий готовности: `run_checks()` проходит без ошибок.
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.testclient import TestClient
 from pydantic import BaseModel
 
@@ -44,7 +44,8 @@ class AccountService:
         return self.repo.list_all()
 
     def create_account(self, login: str) -> dict[str, object]:
-        return self.repo.create({'login': login})
+        # TODO: создать аккаунт через repository и вернуть созданный item.
+        return {'id': 0, 'login': 'TODO'}
 
 
 repo = AccountRepository()
@@ -56,7 +57,7 @@ def list_accounts() -> list[dict[str, object]]:
     return service.list_accounts()
 
 
-@app.post('/accounts')
+@app.post('/accounts', status_code=status.HTTP_201_CREATED)
 def create_account(payload: AccountCreate) -> dict[str, object]:
     return service.create_account(payload.login)
 
@@ -70,8 +71,8 @@ def run_checks() -> None:
     assert response.json() == [{'id': 1, 'login': 'admin'}], 'list route should return seeded admin account'
 
     response = client.post('/accounts', json={'login': 'qa-user'})
-    assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json()['login'] == 'qa-user', 'POST /accounts should create qa-user account'
+    assert response.status_code == 201, 'expected 201 Created response'
+    assert response.json() == {'id': 2, 'login': 'qa-user'}, 'POST /accounts should create qa-user account'
 
     response = client.get('/accounts')
     assert len(response.json()) == 2, 'after creation there should be two accounts'

@@ -28,7 +28,8 @@ class TaskRepository:
         self._items = [{'id': 1, 'title': 'Prepare demo', 'status': 'open', 'assignee': 'Anna'}]
 
     def list_all(self) -> list[dict[str, object]]:
-        return list(self._items)
+        # TODO: return actual storage snapshot.
+        return [{'id': 0, 'title': 'TODO', 'status': 'TODO', 'assignee': None}]
 
     def get_by_id(self, task_id: int) -> dict[str, object] | None:
         for item in self._items:
@@ -37,14 +38,11 @@ class TaskRepository:
         return None
 
     def create(self, payload: dict[str, object]) -> dict[str, object]:
-        item = {'id': len(self._items) + 1, 'status': 'open', **payload}
-        self._items.append(item)
-        return item
+        # TODO: persist created task in repository.
+        return {'id': 0, 'title': 'TODO', 'status': 'TODO', 'assignee': None}
 
     def delete(self, task_id: int) -> dict[str, object] | None:
-        for index, item in enumerate(self._items):
-            if item['id'] == task_id:
-                return self._items.pop(index)
+        # TODO: delete task by id from repository.
         return None
 
 
@@ -56,7 +54,11 @@ class TaskService:
         return self.repo.list_all()
 
     def get_task(self, task_id: int) -> dict[str, object] | None:
-        return self.repo.get_by_id(task_id)
+        task = self.repo.get_by_id(task_id)
+        if task is None:
+            return None
+        # TODO: return the real repository task without placeholder mutation.
+        return {'id': 0, 'title': 'TODO', 'status': 'TODO', 'assignee': None}
 
     def create_task(self, payload: TaskCreate) -> dict[str, object]:
         return self.repo.create(payload.model_dump())
@@ -65,8 +67,8 @@ class TaskService:
         task = self.repo.get_by_id(task_id)
         if task is None:
             return None
-        task['status'] = new_status
-        return task
+        # TODO: persist new_status in repository and return updated task.
+        return {'id': task_id, 'title': 'TODO', 'status': 'TODO', 'assignee': None}
 
     def delete_task(self, task_id: int) -> dict[str, object] | None:
         return self.repo.delete(task_id)
@@ -123,7 +125,7 @@ HEADERS = {'x-api-key': 'task-demo-token'}
 def run_smoke_checks() -> None:
     response = client.get('/tasks', headers=HEADERS)
     assert response.status_code == 200, 'expected 200 OK response'
-    assert isinstance(response.json(), list), 'endpoint should return a JSON list'
+    assert response.json() == [{'id': 1, 'title': 'Prepare demo', 'status': 'open', 'assignee': 'Anna'}], 'GET /tasks should return seeded task list'
 
     response = client.get('/tasks/1', headers=HEADERS)
     assert response.status_code == 200, 'expected 200 OK response'
@@ -132,6 +134,7 @@ def run_smoke_checks() -> None:
     response = client.post('/tasks', headers=HEADERS, json={'title': 'Review contract', 'assignee': 'Boris'})
     assert response.status_code == 201, 'expected 201 Created response'
     created_id = response.json()['id']
+    assert response.json()['title'] == 'Review contract', 'POST /tasks should create Review contract task'
 
     response = client.patch(f'/tasks/{created_id}/status', headers=HEADERS, json={'status': 'done'})
     assert response.status_code == 200, 'expected 200 OK response'

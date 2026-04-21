@@ -21,12 +21,14 @@ app = FastAPI(title='Practice Day 6')
 
 
 def get_actor(x_actor: Annotated[str | None, Header()] = None) -> str:
-    return x_actor or 'system'
+    # TODO: default actor should be system.
+    return x_actor or 'TODO'
 
 
 @app.get('/audit/events')
 def list_events(actor: Annotated[str, Depends(get_actor)], limit: int = Query(default=20, ge=1, le=50), offset: int = Query(default=0, ge=0)) -> dict[str, object]:
-    return {'actor': actor, 'limit': limit, 'offset': offset}
+    # TODO: верни actor, limit и offset без placeholder-значений.
+    return {'actor': actor, 'limit': limit, 'offset': -1}
 
 
 client = TestClient(app)

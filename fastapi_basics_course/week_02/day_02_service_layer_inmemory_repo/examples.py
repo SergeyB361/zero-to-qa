@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
+from fastapi.testclient import TestClient
 from pydantic import BaseModel
 
 app = FastAPI(title='FastAPI Basics Week 2 Day 2')
@@ -41,6 +42,14 @@ def list_projects() -> list[dict[str, object]]:
     return service.list_projects()
 
 
-@app.post('/projects')
+@app.post('/projects', status_code=status.HTTP_201_CREATED)
 def create_project(payload: ProjectCreate) -> dict[str, object]:
     return service.create_project(payload.name)
+
+
+if __name__ == '__main__':
+    client = TestClient(app)
+    print('GET /projects ->', client.get('/projects').json())
+    created = client.post('/projects', json={'name': 'Billing'})
+    print('POST /projects ->', created.status_code, created.json())
+    print('GET /projects after create ->', client.get('/projects').json())

@@ -3,6 +3,7 @@ from time import perf_counter
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.testclient import TestClient
 
 
 @asynccontextmanager
@@ -26,3 +27,11 @@ async def timing_middleware(request: Request, call_next):
 @app.get('/info')
 def info() -> dict[str, str]:
     return {'service': app.state.service_name}
+
+
+if __name__ == '__main__':
+    with TestClient(app) as client:
+        response = client.get('/info', headers={'Origin': 'http://localhost:3000'})
+        print('GET /info ->', response.status_code, response.json())
+        print('X-Process-Time ->', response.headers.get('x-process-time'))
+        print('Access-Control-Allow-Origin ->', response.headers.get('access-control-allow-origin'))

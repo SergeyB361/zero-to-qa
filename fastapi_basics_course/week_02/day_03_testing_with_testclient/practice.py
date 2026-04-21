@@ -33,13 +33,15 @@ client = TestClient(app)
 def test_health() -> None:
     response = client.get('/health')
     assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json() == {'status': 'ok'}, 'health endpoint should return exact status ok payload'
+    # TODO: замени placeholder на точный ожидаемый JSON.
+    assert response.json() == {'status': 'TODO'}, 'health endpoint should return exact status ok payload'
 
 
 def test_create_job() -> None:
     response = client.post('/jobs')
     assert response.status_code == 201, 'expected 201 Created response'
-    assert response.json() == {'detail': 'job created'}, 'POST /jobs should return creation payload'
+    # TODO: замени placeholder на точный ожидаемый JSON.
+    assert response.json() == {'detail': 'TODO'}, 'POST /jobs should return creation payload'
 
 
 def run_checks() -> None:

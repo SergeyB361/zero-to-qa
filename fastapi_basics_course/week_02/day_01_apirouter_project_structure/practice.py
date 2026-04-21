@@ -22,12 +22,14 @@ reports_router = APIRouter(prefix='/reports', tags=['reports'])
 
 @accounts_router.get('/')
 def list_accounts() -> list[dict[str, object]]:
-    return [{'id': 1, 'login': 'demo'}]
+    # TODO: верни осмысленный demo account.
+    return [{'id': 0, 'login': 'TODO'}]
 
 
 @reports_router.get('/')
 def list_reports() -> list[dict[str, object]]:
-    return [{'id': 1, 'status': 'ready'}]
+    # TODO: верни осмысленный report status.
+    return [{'id': 0, 'status': 'TODO'}]
 
 
 app.include_router(accounts_router)
@@ -42,11 +44,11 @@ def run_checks() -> None:
 
     response = client.get('/accounts/')
     assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json()[0]['login'] == 'demo', 'accounts router response is incorrect'
+    assert response.json() == [{'id': 1, 'login': 'demo'}], 'accounts router response is incorrect'
 
     response = client.get('/reports/')
     assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json()[0]['status'] == 'ready', 'reports router response is incorrect'
+    assert response.json() == [{'id': 1, 'status': 'ready'}], 'reports router response is incorrect'
 
 
 if __name__ == '__main__':

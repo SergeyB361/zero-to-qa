@@ -28,8 +28,9 @@ class CommentOut(BaseModel):
 def get_comment(comment_id: int) -> CommentOut:
     comment = comments.get(comment_id)
     if comment is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='comment not found')
-    return CommentOut(**comment)
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='TODO')
+    # TODO: верни реальный comment вместо placeholder.
+    return CommentOut(id=0, text='TODO')
 
 
 client = TestClient(app)
@@ -38,7 +39,7 @@ client = TestClient(app)
 def run_checks() -> None:
     response = client.get('/comments/1')
     assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json() == {'id': 1, 'text': 'first comment'}
+    assert response.json() == {'id': 1, 'text': 'first comment'}, 'detail route should return exact comment payload'
 
     response = client.get('/comments/999')
     assert response.status_code == 404, 'expected 404 Not Found response'

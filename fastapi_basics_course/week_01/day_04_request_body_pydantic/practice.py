@@ -12,7 +12,7 @@
 Критерий готовности: `run_checks()` проходит без ошибок.
 """
 
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.testclient import TestClient
 from pydantic import BaseModel, Field
 
@@ -32,9 +32,10 @@ class TicketOut(BaseModel):
     description: str | None = None
 
 
-@app.post('/tickets', response_model=TicketOut)
+@app.post('/tickets', response_model=TicketOut, status_code=status.HTTP_201_CREATED)
 def create_ticket(payload: TicketCreate) -> TicketOut:
-    return TicketOut(id=1, title=payload.title, priority=payload.priority, description=payload.description)
+    # TODO: верни реальный TicketOut на основе payload, а не placeholder.
+    return TicketOut(id=0, title='TODO', priority='TODO', description='TODO')
 
 
 client = TestClient(app)
@@ -42,13 +43,12 @@ client = TestClient(app)
 
 def run_checks() -> None:
     response = client.post('/tickets', json={'title': 'Checkout bug', 'priority': 'high', 'description': 'repro steps'})
-    assert response.status_code == 200, 'expected 200 OK response'
-    assert response.json() == {
-        'id': 1,
-        'title': 'Checkout bug',
-        'priority': 'high',
-        'description': 'repro steps',
-    }
+    assert response.status_code == 201, 'expected 201 Created response'
+    body = response.json()
+    assert body['id'] > 0, 'created ticket should have positive id'
+    assert body['title'] == 'Checkout bug', 'created ticket should echo request title'
+    assert body['priority'] == 'high', 'created ticket should echo request priority'
+    assert body['description'] == 'repro steps', 'created ticket should echo request description'
 
     response = client.post('/tickets', json={'title': 'bad', 'priority': 'low'})
     assert response.status_code == 422, 'expected validation error 422'

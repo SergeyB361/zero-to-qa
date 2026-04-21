@@ -21,13 +21,15 @@ app = FastAPI(title='Practice Week 2 Day 4')
 
 def require_actor_token(x_actor_token: Annotated[str | None, Header()] = None) -> str:
     if x_actor_token != 'qa-demo-token':
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='invalid actor token')
-    return x_actor_token
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='TODO')
+    # TODO: верни реальный токен из header, а не placeholder.
+    return 'TODO'
 
 
 @app.get('/admin/tasks')
 def admin_tasks(token: Annotated[str, Depends(require_actor_token)]) -> dict[str, str]:
-    return {'detail': 'protected tasks list', 'token': token}
+    # TODO: верни осмысленный protected response.
+    return {'detail': 'TODO', 'token': token}
 
 
 client = TestClient(app)

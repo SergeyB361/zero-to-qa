@@ -1,4 +1,5 @@
 from fastapi import APIRouter, FastAPI
+from fastapi.testclient import TestClient
 
 app = FastAPI(title='FastAPI Basics Week 2 Day 1')
 users_router = APIRouter(prefix='/users', tags=['users'])
@@ -17,3 +18,9 @@ def list_projects() -> list[dict[str, object]]:
 
 app.include_router(users_router)
 app.include_router(projects_router)
+
+
+if __name__ == '__main__':
+    client = TestClient(app)
+    print('GET /users/ ->', client.get('/users/').json())
+    print('GET /projects/ ->', client.get('/projects/').json())

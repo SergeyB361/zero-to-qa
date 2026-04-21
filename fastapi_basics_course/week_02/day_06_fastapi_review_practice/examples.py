@@ -1,6 +1,7 @@
 from typing import Annotated
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, status
+from fastapi.testclient import TestClient
 from pydantic import BaseModel
 
 app = FastAPI(title='FastAPI Basics Week 2 Day 6')
@@ -33,3 +34,11 @@ def get_task(task_id: int) -> dict[str, object]:
         if task['id'] == task_id:
             return task
     raise HTTPException(status_code=404, detail='task not found')
+
+
+if __name__ == '__main__':
+    client = TestClient(app)
+    print('GET /tasks ->', client.get('/tasks').json())
+    created = client.post('/tasks', json={'title': 'Review API docs'})
+    print('POST /tasks ->', created.status_code, created.json())
+    print('GET /tasks/2 ->', client.get('/tasks/2').json())

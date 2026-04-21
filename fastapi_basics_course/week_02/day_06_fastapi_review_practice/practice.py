@@ -28,7 +28,8 @@ class TicketCreate(BaseModel):
 
 
 def get_actor(x_actor: Annotated[str | None, Header()] = None) -> str:
-    return x_actor or 'anonymous'
+    # TODO: default actor should be anonymous.
+    return x_actor or 'TODO'
 
 
 @app.get('/tickets')
@@ -41,12 +42,13 @@ def get_ticket(ticket_id: int) -> dict[str, object]:
     for ticket in tickets:
         if ticket['id'] == ticket_id:
             return ticket
-    raise HTTPException(status_code=404, detail='ticket not found')
+    raise HTTPException(status_code=404, detail='TODO')
 
 
 @app.post('/tickets', status_code=status.HTTP_201_CREATED)
 def create_ticket(payload: TicketCreate) -> dict[str, object]:
-    item = {'id': len(tickets) + 1, 'title': payload.title, 'status': 'open'}
+    # TODO: create route should append real ticket data.
+    item = {'id': len(tickets) + 1, 'title': 'TODO', 'status': 'open'}
     tickets.append(item)
     return item
 
@@ -65,6 +67,7 @@ def run_checks() -> None:
 
     response = client.get('/tickets/999')
     assert response.status_code == 404, 'expected 404 Not Found response'
+    assert response.json()['detail'] == 'ticket not found', 'missing ticket branch should explain the error'
 
     response = client.post('/tickets', json={'title': 'Auth issue'})
     assert response.status_code == 201, 'expected 201 Created response'
