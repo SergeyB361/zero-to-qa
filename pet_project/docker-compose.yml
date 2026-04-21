@@ -1,0 +1,54 @@
+services:
+  audit-timeline-service:
+    build:
+      context: ./audit_timeline_service
+    container_name: pet_project_audit_timeline_service
+    environment:
+      DATABASE_URL: sqlite:////data/audit_timeline.db
+    volumes:
+      - audit_timeline_data:/data
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=3).read()",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+  task-service:
+    build:
+      context: ./task_service
+    container_name: pet_project_task_service
+    environment:
+      DATABASE_URL: sqlite:////data/task_service.db
+      AUDIT_SERVICE_URL: http://audit-timeline-service:8001
+    volumes:
+      - task_service_data:/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      audit-timeline-service:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).read()",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+volumes:
+  task_service_data:
+  audit_timeline_data:

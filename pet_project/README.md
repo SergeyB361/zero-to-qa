@@ -6,6 +6,7 @@ Pet project для портфолио Junior Python Developer.
 MVP реализован и проверен в двух режимах:
 - unit/in-process через `pytest` и `TestClient`;
 - live flow через два поднятых `uvicorn`-сервиса.
+- live flow через `docker compose`.
 
 Проверенный бизнес-поток:
 
@@ -51,7 +52,7 @@ MVP реализован и проверен в двух режимах:
 - изменение заголовка задачи;
 - сложная авторизация;
 - retry / outbox / брокеры сообщений;
-- обязательный Docker-слой;
+- обязательный Kubernetes/production orchestration-слой;
 - production-ready observability.
 
 ## Архитектура MVP
@@ -94,6 +95,30 @@ Audit Timeline Service
 
 ## Локальный запуск
 
+### Вариант 1 — через Docker Compose
+```powershell
+cd pet_project
+docker compose up -d --build
+```
+
+Проверка:
+```powershell
+curl http://127.0.0.1:8000/health
+curl http://127.0.0.1:8001/health
+```
+
+Остановка:
+```powershell
+docker compose down
+```
+
+Сброс SQLite-данных контейнеров:
+```powershell
+docker compose down -v
+```
+
+### Вариант 2 — вручную через локальный Python
+
 ### 1. Установить зависимости
 ```powershell
 venv\Scripts\python -m pip install -r pet_project\task_service\requirements.txt
@@ -128,7 +153,9 @@ venv\Scripts\python -m pytest pet_project\audit_timeline_service\tests\test_audi
 6. `GET /timeline/users/{actor_id}`
 7. `GET /snapshot/tasks/{task_id}`
 
-Именно этот flow уже был проверен live.
+Именно этот flow уже был проверен:
+- через два локально поднятых `uvicorn`-сервиса;
+- через `docker compose`.
 
 ## Ограничения текущей версии
 - SQLite используется для простоты MVP;
@@ -143,10 +170,13 @@ pet_project/
   README.md
   ROADMAP.md
   spec.md
+  docker-compose.yml
   task_service/
+    Dockerfile
     app/
     tests/
   audit_timeline_service/
+    Dockerfile
     app/
     tests/
 ```
