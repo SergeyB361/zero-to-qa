@@ -7,6 +7,7 @@
 - `advanced_course/` — расширенный QA-трек для более сильного инженерного уровня.
 - `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI.
 - `sqlalchemy_basics_course/` — отдельный базовый ORM-трек на SQLAlchemy.
+- `backend_application_patterns_course/` — отдельный backend-трек по сборке реального сервиса.
 - `fastapi_lab/` — Docker-окружение для FastAPI-практики.
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов.
 - `postgres_base_sql_course/` — новый базовый pure-SQL курс на Postgres.
@@ -97,6 +98,22 @@ Legacy SQL-треки на `SQLite` сохранены в репозитории
 Связанные файлы:
 - `sqlalchemy_basics_course/README.md`
 - `sqlalchemy_basics_course/ROADMAP.md`
+
+## Backend Application Patterns
+**Для кого:** после `FastAPI`, `SQLAlchemy` и базового `Postgres`.
+**Цель:** собрать из отдельных backend-блоков нормальный сервисный слой, а не набор несвязанных тем.
+**Длительность:** `4` недели.
+**Что внутри:** project layout, settings, DI boundaries, API contracts, Alembic, auth basics, filtering/sorting/pagination, integration testing, Docker Compose, CI basics.
+
+Ключевые недели:
+- `backend_application_patterns_course/week_01/` — Application Structure
+- `backend_application_patterns_course/week_02/` — Database and Migrations
+- `backend_application_patterns_course/week_03/` — Auth, CRUD and Business Rules
+- `backend_application_patterns_course/week_04/` — Testing, Delivery and Capstone
+
+Связанные файлы:
+- `backend_application_patterns_course/README.md`
+- `backend_application_patterns_course/ROADMAP.md`
 
 ## Базовый SQL-курс (Postgres)
 **Для кого:** после начального Python и первых данных/файлов.

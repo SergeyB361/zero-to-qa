@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - TODO
+    healthcheck:
+      test: ["CMD-SHELL", "TODO"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    environment:
+      DATABASE_URL: TODO
+    depends_on:
+      db:
+        condition: TODO
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:

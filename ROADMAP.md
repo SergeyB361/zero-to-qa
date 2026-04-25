@@ -10,6 +10,7 @@
 - `advanced_course/` — расширенный курс: недели 1-10
 - `fastapi_basics_course/` — отдельный базовый backend-трек по FastAPI
 - `sqlalchemy_basics_course/` — отдельный базовый ORM-трек на SQLAlchemy
+- `backend_application_patterns_course/` — отдельный backend-трек по сборке реального сервиса
 - `fastapi_lab/` — Docker-окружение для практики FastAPI
 - `postgres_lab/` — общее Postgres-окружение для новых SQL-курсов
 - `postgres_base_sql_course/` — новый базовый курс: pure SQL на Postgres
@@ -46,6 +47,18 @@
 |---|------|-----------------|
 | 1 | Week 1 | engine, session, declarative models, CRUD, relationships, query patterns |
 | 2 | Week 2 | transactions, loading strategies, repository/service layer, FastAPI integration, Alembic intro |
+
+## BACKEND APPLICATION PATTERNS — отдельный backend-трек
+
+**Цель:** собрать из `FastAPI`, `SQLAlchemy`, `Postgres` и `Docker` нормальный backend-service.
+**Длительность:** `4 недели`
+
+| # | Тема | Ключевые понятия |
+|---|------|-----------------|
+| 1 | Week 1 | project layout, settings, dependency boundaries, API contracts, CRUD style |
+| 2 | Week 2 | session patterns, Postgres integration, Alembic, schema evolution, relationships |
+| 3 | Week 3 | auth basics, roles, filtering, sorting, pagination, partial update, soft delete |
+| 4 | Week 4 | test DB strategy, integration testing, seed data, Docker Compose, CI, capstone |
 
 ## НЕДЕЛЯ 1 — Python с нуля
 
